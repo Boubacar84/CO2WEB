@@ -1,0 +1,21 @@
+footer {
+    text-align: center;
+}
+
+.ul-nav-footer {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    list-style-type: none;
+
+    a {
+        text-decoration: none;
+        color: $greendark;
+    }
+}
+
+.footer-line {
+    height: 1.5px;
+    background: linear-gradient(to right, $lightergreen, $greendark);
+    margin-bottom: 15px;
+}
