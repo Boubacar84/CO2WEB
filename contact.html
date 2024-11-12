@@ -4,58 +4,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Document</title>
+    <link rel="stylesheet" href="sass/main.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="sass/main.css">
-    <title>Calculateur d'émissions de CO2</title>
 </head>
 
 <body>
 
+
     <header>
-        <a href="index.html" aria-label="Accueil"><img src="img/logo-CO2.svg" alt="Logo CO2WEB"></a>
+        <a href="index.html"><img src="img/logo-CO2.svg" alt=""></a>
         <nav>
             <ul class="ul-nav-header">
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="">Mode d'emploi</a></li>
                 <li><a href="">Trouver un velib</a></li>
-                <li><a href="calculator.html">Calculateur</a></li>
+                <li><a href="calc.html">Calculateur</a></li>
                 <li><a href="about.html">A propos</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="calculateur-page">
-        <section aria-labelledby="calculateur-heading">
-            <h1 id="calculateur-heading">Calculateur d'émissions de CO2</h1>
-            <h2>Trajets domicile / travail en voiture</h2>
-        </section>
-        
-        <section aria-labelledby="form-section">
-            <form class="form" action="/submit" method="post">
-                <div class="form__field">
-                    <label for="distance" class="form__label">Votre Distance parcourue par jour (en kilomètres) :</label>
-                    <input type="text" id="distance" name="distance" class="form__input" required placeholder="ex. 15" pattern="^[0-9]*$">
-                </div>
 
-                <div class="form__field">
-                    <label for="jours" class="form__label">Nombre de jours travaillés par semaine :</label>
-                    <input type="number" id="jours" name="jours" class="form__input" required placeholder="ex. 5" min="1" max="7">
-                </div>
 
-                <button class="button" type="submit">Commencer</button>
-            </form>
 
-            <p class="form__disclaimer">
-                En utilisant ce calculateur d'émission de carbone, vous acceptez que les informations soient inscrites et
-                stockées dans notre base de données publique.
-            </p>
-        </section>
+
+
+
+    <main>
+        <h1>Contactez-nous</h1>
+
+        <div class="form-wrapper">
+            <img src="img/calc-haut-gauche.svg" alt="Image à gauche" class="side-image-left-top">
+            <img src="img/calc-bac-gauche.svg" alt="Image à gauche" class="side-image-left-bot">
+            <div class="contact-form">
+                <form action="form" method="post">
+
+                    <div class="carre1">
+
+                        <div class="contact-column">
+                            <label for="#">Prénom</label>
+                            <input type="text" name="prenom" class="champ" placeholder="Prénom" required />
+                        </div>
+
+                        <div class="contact-column">
+                            <label for="#">Nom</label>
+                            <input type="text" name="nom" class="champ" placeholder="Nom" required />
+                        </div>
+                    </div>
+
+                    <div class="carre1">
+                        <div class="contact-column">
+                            <label for="#">Votre email</label>
+                            <input type="email" name="email" class="email" placeholder="Votre@email.com" required />
+                        </div>
+
+
+                        <div class="contact-column">
+                            <label for="#">Téléphone</label>
+                            <input type="text" name="telephone" class="telephone" placeholder="Numéro" required />
+                        </div>
+                    </div>
+                    <div class="contact-column">
+                        <label for="#">Votre message</label>
+                        <textarea name="message" id="message" placeholder="Message" required></textarea>
+                    </div>
+
+
+                    <div class="bouton">
+                        <input type="submit" value="Commencer" id="form-button" />
+                    </div>
+                </form>
+            </div>
+            <img src="img/calc-bas-droite.svg" alt="Image à droite" class="side-image-right">
+        </div>
     </main>
+
+
+
+
+
+
 
     <footer>
         <div class="footer-line"></div>
@@ -65,13 +97,14 @@
                     <li><a href="index.html">Accueil</a></li>
                     <li><a href="">Mode d'emploi</a></li>
                     <li><a href="">Trouver un velib</a></li>
-                    <li><a href="calculator.html">Calculateur</a></li>
+                    <li><a href="calc.html">Calculateur</a></li>
                     <li><a href="about.html">A propos</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </footer>
+
 </body>
 
 </html>
