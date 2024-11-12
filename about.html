@@ -5,58 +5,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Compte à rebours CSS</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="sass/main.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <a href=""></a>
+        <a href="index.html"><img src="img/logo-CO2.svg" alt=""></a>
         <nav>
-            <ul>
+            <ul class="ul-nav-header">
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="">Mode d'emploi</a></li>
                 <li><a href="">Trouver un velib</a></li>
-                <li><a href="">Calculateur</a></li>
-                <li><a href="">A propos</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="calc.html">Calculateur</a></li>
+                <li><a href="about.html">A propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
-    <div class="img-apropos">
-        <img src="" alt="">
+
+    <div class="background-apropos">
+        <img class="img1app" src="img/a-propos-pc.svg" alt="prdinateur">
+        <img class="img2app" src="img/a-propos-feuille.svg" alt="feille-apropos">
     </div>
-    <div>
-        <div class="a propos-projet">
-            <h1>A propos du projet </h1>
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem rerum magni aspernatur eveniet
-                doloribus,<br> harum non officia! Omnis saepe at vero. Non recusandae praesentium, exercitationem
-                obcaecati
-                aliquid enim rem libero.
-            </p>
-        </div>
-        <div class="description-apropos">
-            <h3>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Cum iste voluptatem voluptas totam aliquid.
-            </h3>
-        </div>
+
+    <div class="section-apropos">
+        <section>
+
+            <div class="apropos-projet">
+                <h1>A propos du projet </h1>
+                <p class="text2-apropos">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem rerum magni aspernatur
+                    eveniet
+                    doloribus, harum non officia! Omnis saepe at vero. Non recusandae praesentium,
+                    exercitationem
+                    obcaecati
+                    aliquid enim rem libero.
+                </p>
+            </div>
+            <div class="description-apropos">
+
+                <p class="text-apropos">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum iste voluptatem voluptas totam
+                    aliquid.
+                </p>
+                <div class="fleche-apropos">→</div>
+            </div>
+
     </div>
+    </section>
     <footer>
-        <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="">Mode d'emploi</a></li>
-                <li><a href="">Trouver un velib</a></li>
-                <li><a href="">Calculateur</a></li>
-                <li><a href="">A propos</a></li>
-                <li><a href="">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="footer-line"></div>
+        <div class="footer-container">
+            <nav>
+                <ul class="ul-nav-footer">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="">Mode d'emploi</a></li>
+                    <li><a href="">Trouver un velib</a></li>
+                    <li><a href="">Calculateur</a></li>
+                    <li><a href="">A propos</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </footer>
-
-
-
-
 </body>
 
 </html>
