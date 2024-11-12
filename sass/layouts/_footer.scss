@@ -1,21 +1,40 @@
 footer {
-    text-align: center;
+    background-color: $white;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+
+    .footer-container {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .footer-line {
+        height: 2px;
+        background: linear-gradient(to right, $lightergreen, $greendark);
+        margin-bottom: 15px;
+        width: 100%;
+    }
 }
 
 .ul-nav-footer {
     display: flex;
-    flex-direction: row;
-    gap: 1rem;
+    gap: 1.5rem;
     list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding: 1rem 1rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: large;
 
     a {
         text-decoration: none;
         color: $greendark;
-    }
-}
 
-.footer-line {
-    height: 1.5px;
-    background: linear-gradient(to right, $lightergreen, $greendark);
-    margin-bottom: 15px;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }
