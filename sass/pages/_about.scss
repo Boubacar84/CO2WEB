@@ -38,39 +38,29 @@
 
     .apropos-projet {
 
-
-
-        h1 {
-            font-size: 2rem;
-            color: black;
-            margin-bottom: 2rem;
-            display: flex;
-            align-items: center;
-
-        }
-
-        .text2-apropos {
-            color: rgb(155, 42, 42);
-            line-height: 1.6;
-            margin-bottom: 1.5rem;
-            justify-content: space-between;
-            display: flex;
-
-
-        }
+        font-size: 2rem;
+        color: rgb(202, 33, 33);
+        margin-bottom: 2rem;
+        display: flex;
+        align-items: center;
     }
 
-    .description-apropos {
-        height: 0.25rem;
+    .text2-apropos {
+        color: rgb(155, 42, 42);
+        line-height: 1.6;
         margin-bottom: 1.5rem;
+        justify-content: space-between;
         display: flex;
 
-    }
 
-    .fleche-apropos {
-        .arrow {
-            font-size: 2rem;
-            margin-top: 1rem;
-        }
+    }
+}
+
+
+
+.fleche-apropos {
+    .arrow {
+        font-size: 2rem;
+        margin-top: 1rem;
     }
 }
