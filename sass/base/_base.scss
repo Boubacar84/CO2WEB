@@ -1,12 +1,12 @@
 body {
     h1 {
-        font-family: "Montserrat", sans-serif;
+        font-family: $font-montserrat;
         font-weight: 500;
         font-style: inherit;
     }
 
     p {
-        font-family: "Roboto", sans-serif;
+        font-family: $font-roboto;
         font-weight: 400;
         font-style: large;
     }
