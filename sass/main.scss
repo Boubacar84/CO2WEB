@@ -10,11 +10,11 @@
 @import 'base/base';
 
 // Layout
-@import 'layout/header';
-@import 'layout/footer';
-@import 'layout/sidebar';
-@import 'layout/grid';
-@import 'layout/container';
+@import 'layouts/header';
+@import 'layouts/footer';
+@import 'layouts/sidebar';
+@import 'layouts/grid';
+@import 'layouts/containers';
 
 // Components
 @import 'components/buttons';
@@ -26,6 +26,10 @@
 @import 'pages/home';
 @import 'pages/about';
 @import 'pages/contact';
+@import 'pages/calculator';
+@import 'pages/instructions';
+@import 'pages/velib';
+
 
 // Themes
 @import 'themes/dark';
@@ -34,4 +38,3 @@
 // Vendors
 @import 'vendors/bootstrap';
 @import 'vendors/normalize';
-
