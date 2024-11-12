@@ -6,55 +6,105 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="sass/main.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <h1>Contactez-nous</h1>
 
-    <div class="form-wrapper">
-        <img src="img/calc-haut-gauche.svg" alt="Image à gauche" class="side-image left">
-        <img src="img/calc-bac-gauche.svg" alt="Image à gauche" class="side-image left">
-        <div class="contact-form">
-            <form action="form" method="post">
 
-                <div class="carre1">
+    <header>
+        <a href="index.html"><img src="img/logo-CO2.svg" alt=""></a>
+        <nav>
+            <ul class="ul-nav-header">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="">Mode d'emploi</a></li>
+                <li><a href="">Trouver un velib</a></li>
+                <li><a href="calc.html">Calculateur</a></li>
+                <li><a href="about.html">A propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-                    <div class="contact-column">
-                        <label for="#">Prénom</label>
-                        <input type="text" name="prenom" class="champ" placeholder="Prénom" required />
+
+
+
+
+
+
+    <main>
+        <h1>Contactez-nous</h1>
+
+        <div class="form-wrapper">
+            <img src="img/calc-haut-gauche.svg" alt="Image à gauche" class="side-image-left-top">
+            <img src="img/calc-bac-gauche.svg" alt="Image à gauche" class="side-image-left-bot">
+            <div class="contact-form">
+                <form action="form" method="post">
+
+                    <div class="carre1">
+
+                        <div class="contact-column">
+                            <label for="#">Prénom</label>
+                            <input type="text" name="prenom" class="champ" placeholder="Prénom" required />
+                        </div>
+
+                        <div class="contact-column">
+                            <label for="#">Nom</label>
+                            <input type="text" name="nom" class="champ" placeholder="Nom" required />
+                        </div>
                     </div>
 
-                    <div class="contact-column">
-                        <label for="#">Nom</label>
-                        <input type="text" name="nom" class="champ" placeholder="Nom" required />
+                    <div class="carre1">
+                        <div class="contact-column">
+                            <label for="#">Votre email</label>
+                            <input type="email" name="email" class="email" placeholder="Votre@email.com" required />
+                        </div>
+
+
+                        <div class="contact-column">
+                            <label for="#">Téléphone</label>
+                            <input type="text" name="telephone" class="telephone" placeholder="Numéro" required />
+                        </div>
                     </div>
-                </div>
-
-                <div class="carre1">
                     <div class="contact-column">
-                        <label for="#">Votre email</label>
-                        <input type="email" name="email" class="email" placeholder="Votre@email.com" required />
+                        <label for="#">Votre message</label>
+                        <textarea name="message" id="message" placeholder="Message" required></textarea>
                     </div>
 
 
-                    <div class="contact-column">
-                        <label for="#">Téléphone</label>
-                        <input type="text" name="telephone" class="telephone" placeholder="Numéro" required />
+                    <div class="bouton">
+                        <input type="submit" value="Commencer" id="form-button" />
                     </div>
-                </div>
-                <div class="contact-column">
-                    <label for="#">Votre message</label>
-                    <textarea name="message" id="message" placeholder="Message" required></textarea>
-                </div>
-
-
-                <div class="bouton">
-                    <input type="submit" value="Commencer" id="form-button" />
-                </div>
-            </form>
+                </form>
+            </div>
+            <img src="img/calc-bas-droite.svg" alt="Image à droite" class="side-image-right">
         </div>
-        <img src="img/calc-bas-droite.svg" alt="Image à droite" class="side-image right">
-    </div>
+    </main>
+
+
+
+
+
+
+
+    <footer>
+        <div class="footer-line"></div>
+        <div class="footer-container">
+            <nav>
+                <ul class="ul-nav-footer">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="">Mode d'emploi</a></li>
+                    <li><a href="">Trouver un velib</a></li>
+                    <li><a href="calc.html">Calculateur</a></li>
+                    <li><a href="about.html">A propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
 </body>
 
 </html>
