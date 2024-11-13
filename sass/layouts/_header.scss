@@ -1,10 +1,16 @@
 header {
+    z-index: 2;
+    position: relative;
     display: flex;
     align-items: center;
     padding-left: 5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     background-color: $white;
     gap: 2rem;
+    width: 100%;
+    margin: 0;
 
     img {
         margin-right: 1rem;

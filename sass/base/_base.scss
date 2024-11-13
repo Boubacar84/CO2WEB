@@ -1,8 +1,12 @@
 body {
+    margin: 0;
+    padding: 0;
+
     h1 {
         font-family: $font-montserrat;
         font-weight: 500;
         font-style: inherit;
+        color: $black;
     }
 
     p {

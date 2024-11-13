@@ -1,7 +1,39 @@
 .home-img {
-    height: 650px;
+    z-index: 1;
+    height: 700px;
     position: absolute;
-    top: 5.5%;
-    right: 0%;
+    top: -4%;
+    right: -5%;
+}
+
+.hero-left-home {
+    width: 50%;
+    padding-top: 200px;
+    padding-bottom: 300px;
+    padding-left: 5rem;
+    display: flex;
+    flex-direction: column;
+
+    .hero-text-home {
+        margin-right: 570px;
+
+        h1 {
+            display: inline;
+            align-items: start;
+            text-align: start;
+            font-size: 30px;
+        }
+
+        p {
+            text-align: justify;
+        }
+    }
+
+    .hero-button-home {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+    }
 
 }
