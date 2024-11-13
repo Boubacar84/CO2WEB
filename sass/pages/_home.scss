@@ -9,23 +9,29 @@
 .hero-left-home {
     width: 50%;
     padding-top: 200px;
-    padding-bottom: 365px;
+    padding-bottom: 165px;
     padding-left: 5rem;
     display: flex;
     flex-direction: column;
 
     .hero-text-home {
-        margin-right: 570px;
+        margin-right: 30px;
 
         h1 {
             display: inline;
             align-items: start;
             text-align: start;
-            font-size: 30px;
+            font-size: 50px;
+            font-weight: 500;
         }
 
         p {
-            text-align: justify;
+            margin-right: 260px;
+            font-size: 25px;
+            line-height: 3rem;
+            font-family: $font-roboto;
+            font-weight: 400;
+            color: $black;
         }
     }
 
