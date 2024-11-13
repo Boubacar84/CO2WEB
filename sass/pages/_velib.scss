@@ -1,11 +1,7 @@
-* {
+.main-velib {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
-}
-
-body {
     min-height: 100vh;
     width: 100%;
     display: flex;
@@ -17,7 +13,9 @@ body {
     background-size: cover;
     color: white;
     font-family: sans-serif;
+
 }
+
 
 #wrapper {
     display: flex;

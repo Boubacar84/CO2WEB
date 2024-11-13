@@ -4,33 +4,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="sass/main.css">
-
     <title>Compteyr velib</title>
 </head>
 
 <body>
-    <div id="wrapper">
+    <header class="header">
+        <div class="header__logo">
+            <a href="index.html"><img src="img/logo-CO2.svg" alt=""></a>
+        </div>
+        <nav>
+            <ul class="ul-nav-header">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="">Mode d'emploi</a></li>
+                <li><a href="">Trouver un velib</a></li>
+                <li><a href="calculator.html">Calculateur</a></li>
+                <li><a href="about.html">A propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <div id="minuteur">
-            <div class="box">
-                <div id="j"></div>
-                <div class="unite">Jours</div>
-            </div>
-            <div class="box">
-                <div id="h"></div>
-                <div class="unite">Heures</div>
-            </div>
-            <div class="box">
-                <div id="m"></div>
-                <div class="unite">Minutes</div>
-            </div>
-            <div class="box">
-                <div id="s"></div>
-                <div class="unite">Secondes</div>
-            </div>
-            <script src="./velib.js"></script>
+    <main class="main-velib">
+        <div id="wrapper">
 
+            <div id="minuteur">
+                <div class="box">
+                    <div id="j"></div>
+                    <div class="unite">Jours</div>
+                </div>
+                <div class="box">
+                    <div id="h"></div>
+                    <div class="unite">Heures</div>
+                </div>
+                <div class="box">
+                    <div id="m"></div>
+                    <div class="unite">Minutes</div>
+                </div>
+                <div class="box">
+                    <div id="s"></div>
+                    <div class="unite">Secondes</div>
+                </div>
+                <script src="./velib.js"></script>
+    </main>
+
+
+    <footer>
+        <div class="footer-line"></div>
+        <div class="footer-container">
+            <nav>
+                <ul class="ul-nav-footer">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="">Mode d'emploi</a></li>
+                    <li><a href="">Trouver un velib</a></li>
+                    <li><a href="calculator.html">Calculateur</a></li>
+                    <li><a href="about.html">A propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
 </body>
 
 </html>
