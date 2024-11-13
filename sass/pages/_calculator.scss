@@ -1,3 +1,82 @@
-title-clc {
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.form-content {
+    background-color: #ffffff;
+    padding: 30px;
+    width: 400px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.form-content label {
+    font-weight: 500;
+    display: block;
+    text-align: left;
+    margin-top: 15px;
+    color: #333;
+}
+
+.form-content input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.form-content input[type="number"]::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+.form-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    color: #fff;
+    background: linear-gradient(90deg, #4CAF50, #66BB6A);
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-weight: 600;
+}
+
+.form-button:hover {
+    background: linear-gradient(90deg, #66BB6A, #4CAF50);
+}
+
+.form-footer {
+    font-size: 12px;
+    color: #777;
+    margin-top: 20px;
+    line-height: 1.4;
+    font-style: italic;
+}
+
+.resultat-popup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-size: 1.2em;
+    color: #333;
     text-align: center;
 }
