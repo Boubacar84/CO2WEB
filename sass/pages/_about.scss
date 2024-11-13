@@ -1,51 +1,44 @@
-.section-apropos {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 2rem;
-    max-width: 1200px;
-    margin: -150px auto 0; /* Pour remonter la section au-dessus de l'arrière-plan */
+.about {
+    padding: 2rem 0;
 
-    /* Styles pour le conteneur des images à gauche */
-    .background-apropos {
-        position: relative;
-        flex: 1; /* Occupe 50% de l'espace */
+    &__intro {
         display: flex;
-        justify-content: center;
         align-items: center;
-
-        .img1app {
-            width: 300px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .img2app {
-            position: absolute;
-            width: 400px;
-            top: 0;
-            z-index: 0;
-            opacity: 0.5;
-        }
+        gap: 2rem;
     }
 
-    /* Styles pour la section de texte à droite */
-    .apropos-projet {
-        flex: 1; /* Occupe 50% de l'espace */
-        padding-left: 2rem; /* Ajoute de l'espace entre le texte et les images */
+    &__image img {
+        max-width: 100%;
+        height: auto;
+    }
 
-        h1 {
-            font-family: $font-montserrat;
-            font-weight: 700;
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: $greendark;
+    &__title {
+        color: $black;
+        font-size: 2rem;
+    }
+
+    &__description {
+        color: $black;
+        line-height: 1.5;
+        margin-top: 1rem;
+    }
+
+    .about__image {
+        position: relative;
+        display: inline-block;
+
+        &--background {
+            width: 100%;
+            height: auto;
         }
 
-        .text2-apropos {
-            font-size: 1rem;
-            line-height: 1.6;
-            color: $black;
+        &--overlay {
+            position: absolute;
+            top: 0; // Ajustez la position selon vos besoins
+            left: 0; // Ajustez la position selon vos besoins
+            width: 50%; // Ajustez la taille selon vos besoins
+            height: auto;
+            opacity: 0.7; // Réglage de la transparence pour l’effet de superposition
         }
     }
 }
