@@ -6,13 +6,13 @@
 }
 
 .form-content {
-    background-color: #ffffff;
+    background-color: $white;
     padding: 30px;
     width: 400px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
     text-align: center;
-    font-family: 'Roboto', sans-serif;
+    font-family: $font-roboto;
 }
 
 .form-content label {
@@ -41,20 +41,21 @@
 }
 
 .form-button {
-    width: 100%;
+    width: 35%;
     padding: 12px;
     font-size: 18px;
-    color: #fff;
-    background: linear-gradient(90deg, #4CAF50, #66BB6A);
+    color: $white;
+    background: linear-gradient(150deg, $lightergreen 1%, $green);
     border: none;
     border-radius: 24px;
     cursor: pointer;
-    transition: background 0.3s ease;
     font-weight: 600;
+    transition: background 0.9s ease;
+
 }
 
 .form-button:hover {
-    background: linear-gradient(90deg, #66BB6A, #4CAF50);
+    background: $greendark;
 }
 
 .form-footer {
