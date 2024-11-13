@@ -147,46 +147,41 @@ form {
 
 .circle-img1 {
     position: absolute;
-    width: 100px;
-    height: 100px;
+    width: 110px;
+    height: 110px;
     background-color: white;
     border-radius: 50%;
     margin: 10px;
     top: 13%;
     right: 23%;
     z-index: 4;
-    border-width: 15px;
-    border-style: 10px;
-    border: 10px solid #019961;
-    box-shadow: 0 0 0 10px #019961;
+    border: 25px solid $greendark;
 }
 
 .circle-img2 {
     position: absolute;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     background-color: white;
     border-radius: 50%;
     margin: 10px;
-    top: 11%;
-    right: 18%;
+    top: 9%;
+    right: 17%;
     border-width: 15px;
     border-style: 10px;
-    border: 10px solid #3DAD5C;
-    box-shadow: 0 0 0 8px #3DAD5C;
+    border: 25px solid $greenlight;
 }
 
 .circle-img3 {
     position: absolute;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     background-color: white;
     border-radius: 50%;
     margin: 10px;
-    top: 21%;
-    right: 18.5%;
+    top: 22%;
+    right: 17.5%;
     border-width: 25px;
     border-style: 10px;
-    border: 10px solid #B5D653;
-    box-shadow: 0 0 0 8px #B5D653;
+    border: 25px solid $lightergreen;
 }
