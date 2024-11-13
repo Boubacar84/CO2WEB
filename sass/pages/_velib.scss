@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-position: center;
+    background-size: cover;
+    color: white;
+    font-family: sans-serif;
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    backdrop-filter: blur(8px);
+    padding: 40px 80px;
+    border-radius: 10px;
+    height: 100px;
+}
+
+
+
+#minuteur {
+    display: grid;
+    grid-template-columns: repeat(4, 200px);
+    gap: 25px;
+    margin: 10vh auto;
+}
+
+.box {
+    height: 200px;
+    text-align: center;
+    background-color: $greendark;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    height: ;
+}
+
+.box>div:first-child {
+    font-size: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 20px;
+}
+
+.unite {
+    padding: 10px 20px;
+    background-color: $greendark;
+    font-size: 20px;
+}
