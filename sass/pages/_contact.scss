@@ -58,23 +58,22 @@ form {
 
 .bouton {
     margin-left: auto;
-    border: 1px;
-    border-radius: 1px 1px 1px 1px;
+    border: 2px;
     cursor: pointer;
-    color: #3DAD5C;
+    width: 110px;
+    font-size: 16px;
+    border-radius: 2.5px 2.5px 2.5px 2.5px;
 }
 
 
-.contact-form button {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    font-weight: bold;
-    background-color: #4CAF50;
+#form-button {
+    background-color: $greendark;
+    color: white;
+    padding: 10px 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 15px 15px 15px 15px;
     cursor: pointer;
-    border-radius: 2px 4px 2px 4px;
+    font-size: 14px;
 }
 
 .carre1 {
