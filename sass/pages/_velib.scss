@@ -1,6 +1,15 @@
 $greendark: #008037; // Couleur verte pour le fond des compteurs
 $font-roboto: 'Roboto', sans-serif; // Police utilisée dans la description
 
+.link-img-velib {
+    width: 188.5px;
+    padding-left: 5rem;
+    display: flex;
+    align-items: center;
+    height: 49px;
+}
+
+
 .main-velib {
     margin: 0;
     padding: 0;
@@ -48,7 +57,7 @@ $font-roboto: 'Roboto', sans-serif; // Police utilisée dans la description
 
 .box>div:first-child {
     font-size: 24px;
-    font-weight: bold;
+    font-weight: 400;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,7 +80,7 @@ $font-roboto: 'Roboto', sans-serif; // Police utilisée dans la description
 
     h1 {
         font-size: 32px; // Taille du texte pour le titre
-        font-weight: bold;
+        font-weight: 400;
         margin: 0 0 10px 0; // Espace entre le titre et le paragraphe
     }
 
