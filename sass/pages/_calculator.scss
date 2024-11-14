@@ -68,23 +68,6 @@
     font-style: italic;
 }
 
-.form-button {
-    width: 35%;
-    padding: 12px;
-    font-size: 18px;
-    color: $white;
-    background: linear-gradient(150deg, $lightergreen, $green 50%);
-    border: none;
-    border-radius: 24px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: background 0.9s ease;
-}
-
-.form-button:hover {
-    background: $greendark;
-}
-
 .form-footer {
     font-size: 12px;
     color: #777;
