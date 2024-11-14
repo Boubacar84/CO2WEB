@@ -35,20 +35,20 @@
 
 #minuteur {
     display: grid;
-    grid-template-columns: repeat(4, 80px);
+    grid-template-columns: repeat(4, 45px);
     gap: 15px;
     margin-bottom: 20px; // Espace entre le minuteur et la description
 }
 
 .box {
-    height: 70px;
-    width: 80px;
+    height: 60px;
+    width: 50px;
     text-align: center;
     background-color: $greendark;
     color: white;
     display: flex;
     flex-direction: column;
-    border-radius: 4px; // Arrondi des coins pour correspondre au style
+
 }
 
 .box>div:first-child {
@@ -58,12 +58,16 @@
     justify-content: center;
     align-items: center;
     flex: 1;
+    padding-top: 10px;
+
 }
 
 .unite {
-    font-size: 12px;
+    font-size: 8px;
     padding: 5px 0;
+    font-weight: bold;
     background-color: $greendark;
+    padding-bottom: 10px;
 }
 
 .description-velib {
