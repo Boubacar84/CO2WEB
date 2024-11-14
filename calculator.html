@@ -22,30 +22,35 @@
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="instructions.html">Mode d'emploi</a></li>
                 <li><a href="velib.html">Trouver un velib</a></li>
-                <li><a href="calculator.html">Calculateur</a></li>
+                <li><a href="calculator.html" class="active">Calculateur</a></li>
                 <li><a href="about.html">A propos</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
-    <div class="title-clc">
-        <h1>Calculateur d'émissions de CO2</h1>
-        <h1>Trajets domicile / Travail en voiture</h1>
-    </div>
-    <div class="form-container">
-        <!-- Formulaire pour les entrées de calcul -->
-        <form class="form-content" onsubmit="return false;">
-            <label for="distanceParJour">Votre Distance parcourue par jour (en kilomètres) :</label>
-            <input type="number" id="distanceParJour" placeholder="www.exemple.com" min="1" required>
 
-            <label for="joursParSemaine">Nombre de jours travaillés par semaine :</label>
-            <input type="number" id="joursParSemaine" placeholder="Nombre" min="1" max="7" required>
 
-            <button type="button" class="form-button" onclick="calculerEmissionHebdomadaire(event)">Commencer</button>
-            <p class="form-footer">En utilisant cette calculatrice d’émission de carbone, vous acceptez que les
+
+    <main>
+        <section class="title-clc">
+            <h1>Calculateur d'émissions de CO2</h1>
+            <h1>Trajets domicile / Travail en voiture</h1>
+        </section>
+
+        <section class="form-container">
+            <!-- Formulaire pour les entrées de calcul -->
+            <form class="form-content" onsubmit="return false;">
+                <label for="distanceParJour">Votre Distance parcourue par jour (en kilomètres) :</label>
+                <input type="number" id="distanceParJour" placeholder="www.exemple.com" min="1" required>
+
+                <label for="joursParSemaine">Nombre de jours travaillés par semaine :</label>
+                <input type="number" id="joursParSemaine" placeholder="Nombre" min="1" max="7" required>
+
+                <button type="button" class="form-button" onclick="calculerEmissionHebdomadaire(event)">Commencer</button>
+                <p class="form-footer">En utilisant cette calculatrice d’émission de carbone, vous acceptez que les
                 informations soient inscrites et stockées dans notre base de données publique.</p>
-        </form>
-    </div>
+            </form>
+        </section>
 
     <!-- Arrière-plan semi-transparent pour superposition -->
     <div class="overlay" id="overlay" style="display: none;"></div>
@@ -54,6 +59,9 @@
     <div id="resultat-container" class="resultat-popup" style="display: none;">
         <p id="resultat"></p>
     </div>
+
+</main>
+
 
     <footer>
         <div class="footer-line"></div>

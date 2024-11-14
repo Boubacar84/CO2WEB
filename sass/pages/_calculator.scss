@@ -1,9 +1,24 @@
+.title-clc {
+    display: flex;
+    align-items: center;
+    text-align: start;
+    flex-direction: column;
+    font-size: 20px;
+    font-weight: 600;
+    padding-bottom: 30px;
+    padding-top: 50px;
+
+    h1 {
+        margin: 0;
+    }
+}
+
 /* Container principal pour centrer le formulaire */
 .form-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 50px 0;
+    padding-bottom: 50px;
 }
 
 .form-content {
