@@ -1,6 +1,3 @@
-$greendark: #008037; // Couleur verte pour le fond des compteurs
-$font-roboto: 'Roboto', sans-serif; // Police utilisée dans la description
-
 .link-img-velib {
     width: 192px;
     padding-left: 5rem;
@@ -11,8 +8,7 @@ $font-roboto: 'Roboto', sans-serif; // Police utilisée dans la description
 
 
 .main-velib {
-    margin: 0;
-    padding: 0;
+
     box-sizing: border-box;
     min-height: 80vh;
     width: 100%;
