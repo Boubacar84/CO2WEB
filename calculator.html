@@ -43,19 +43,24 @@
             <div class="circle-calc-img1"></div>
             <div class="circle-calc-img2"></div>
             <div class="circle-calc-img3"></div>
-            <!-- Formulaire pour les entrées de calcul -->
+
             <form class="form-content" onsubmit="return false;">
                 <label for="distanceParJour">Votre Distance parcourue par jour (en kilomètres) :</label>
-                <input type="number" id="distanceParJour" placeholder="www.exemple.com" min="1" required>
+                <input type="number" id="distanceParJour" placeholder="Distance" min="1" required>
 
                 <label for="joursParSemaine">Nombre de jours travaillés par semaine :</label>
                 <input type="number" id="joursParSemaine" placeholder="Nombre" min="1" max="7" required>
 
-                <button type="button" class="form-button"
-                    onclick="calculerEmissionHebdomadaire(event)">Commencer</button>
+                <!-- Conteneur pour le bouton pour faciliter l'alignement en bas -->
+                <div class="button-container">
+                    <button type="button" class="button form-button"
+                        onclick="calculerEmissionHebdomadaire(event)">Commencer</button>
+                </div>
+
                 <p class="form-footer">En utilisant cette calculatrice d’émission de carbone, vous acceptez que les
                     informations soient inscrites et stockées dans notre base de données publique.</p>
             </form>
+
         </section>
 
         <!-- Arrière-plan semi-transparent pour superposition -->

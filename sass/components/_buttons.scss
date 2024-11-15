@@ -8,26 +8,31 @@
     border-radius: 24px;
     cursor: pointer;
     font-weight: 600;
-    transition: background 0.1s ease-out;
+    transition: background 0.3s ease-in-out, transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0px 6px 12px 1px rgba(61, 173, 92, 0.6);
 }
 
 .button:hover {
-    background: $greendark;
+    background: $greendark; // Variable utilisée pour garder la consistance
+    box-shadow: 0px 8px 16px 1px rgba(61, 173, 92, 0.8);
+}
+
+.button:active {
+    transform: scale(0.97);
+    box-shadow: 0px 4px 8px 1px rgba(61, 173, 92, 0.5);
 }
 
 .form-button {
-    width: 15%;
-    padding: 12px;
-    font-size: 18px;
-    color: #ffffff;
-    background: linear-gradient(150deg, #B5D653, #3DAD5C 50%);
-    border: none;
-    border-radius: 24px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: background 0.1s ease-out;
+    @extend .button; // Hérite des styles génériques
+    background: linear-gradient(150deg, $lightergreen, $green 50%);
+    transition: background 0.3s ease-in-out, transform 1.5s ease, box-shadow 0.2s ease;
+
+    &:hover {
+        background: linear-gradient(150deg, $green, $greendark 50%);
+    }
 }
 
-.form-button:hover {
-    background: $greendark;
+.form-button:active {
+    transform: scale(0.97); // Réduction pour l'effet de pression
+    box-shadow: 0px 4px 8px 1px rgba(61, 173, 92, 0.5); // Réduction de l'ombre pour simuler l'enfoncement
 }
