@@ -1,7 +1,7 @@
 .title-instructions {
     padding-left: 13rem;
     padding-top: 3rem;
-    padding-bottom: 5rem;
+    padding-bottom: 2rem;
 
     h1 {
         display: flex;
@@ -40,11 +40,15 @@
         align-items: center;
         flex-direction: column;
         margin: 0 auto;
-        padding: 30px;
         border-radius: 15px;
         box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.1);
-        width: 850px;
         margin-bottom: 4rem;
+        padding: 7rem 2rem;
+
+        .img-instruction {
+            width: 30%;
+
+        }
     }
 
     .cards-instructions-2 {
@@ -52,10 +56,9 @@
         align-items: center;
         flex-direction: column;
         margin: 0 auto;
-        padding: 30px;
+        padding: 7rem 2rem;
         border-radius: 15px;
         box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.1);
-        width: 850px;
         margin-bottom: 4rem;
         z-index: 3;
 
@@ -66,10 +69,9 @@
         align-items: center;
         flex-direction: column;
         margin: 0 auto;
-        padding: 30px;
+        padding: 7rem 2rem;
         border-radius: 15px;
         box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.1);
-        width: 850px;
         margin-bottom: 4rem;
     }
 }
