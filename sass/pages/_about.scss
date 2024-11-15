@@ -16,27 +16,14 @@
         z-index: 2;
         top: 115px; // Pour placer l'image devant le fond vert
         width: 30%;
-        position: relative;
         left: 8%;
 
-
-
-
         img {
-
             height: auto;
         }
 
         &--background {
             width: 85%;
-
-
-
-
-
-
-
-
         }
 
         &--overlay {
@@ -44,17 +31,10 @@
             top: -73%;
             left: -7%;
             width: 96%;
-
-
-
-
-
         }
     }
 
     &__content {
-
-
         padding: 2rem;
         width: 30%;
         font-style: inherit;
@@ -62,22 +42,6 @@
         position: absolute;
         left: 50%;
         top: -17%;
-
-
-
-
-
-
-    }
-
-    .about__description {
-        color: #030303;
-        line-height: 1.5;
-        margin-top: 1rem;
-        font-family: "Montserrat", sans-serif;
-        position: absolute;
-        top: 438%;
-        font-size: 20px font-weight:bold;
     }
 
     .about__text {
@@ -86,6 +50,30 @@
         font-family: $font-montserrat;
         top: 150%;
         position: absolute;
+    }
+
+    // Ligne séparatrice
+    .about__separator {
+        border: none;
+        height: 3px;
+        width: 314px;
+        background-color: #4CAF50;
+        margin: 20px 0;
+        position: absolute;
+        top: 401%;
+        left: 30%;
+        transform: translateX(-50%);
+    }
+
+    .about__description {
+        color: #030303;
+        line-height: 1.5;
+        margin-top: 1rem;
+        font-family: $font-montserrat;
+        position: absolute;
+        top: 438%; // Ajustez cette valeur en fonction de l'emplacement souhaité
+        font-size: 20px;
+        font-weight: 500;
     }
 
     .circle-about-img1 {
@@ -98,23 +86,14 @@
         top: 18%;
         right: 96%;
         z-index: 4;
-
     }
 
     .about__title {
-
         position: absolute;
         color: $black;
         font-size: 38px;
         font-weight: bold;
         top: -63%;
-
-
-
-
-
-
-
     }
 
     .backgroud-about {
