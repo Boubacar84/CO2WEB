@@ -19,11 +19,13 @@
     width: 850px;
     gap: 20px;
     margin-bottom: 4rem;
+    font-family: "Roboto", sans-serif;
 }
 
 form {
     display: flex;
     flex-direction: column;
+    font-family: "Roboto", sans-serif;
 }
 
 
@@ -46,6 +48,7 @@ form {
     flex-direction: column;
     gap: 1rem;
     padding-bottom: 1rem;
+    font-family: "Roboto", sans-serif;
 }
 
 .bouton {
@@ -130,7 +133,7 @@ form {
 
 .side-image-right {
     position: absolute;
-    top: 35%;
+    top: 33%;
     width: 320px;
     height: auto;
     right: 19.5rem;
