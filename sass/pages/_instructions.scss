@@ -1,60 +1,87 @@
-$title-padding-left: 13rem;
-$card-padding: 8rem 2rem;
-$card-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-$card-margin: 1.5rem;
-$image-size: 100px;
+// Variables pour la couleur et autres éléments
+$card-bg-color: $white; // Utilisation de la couleur blanche comme fond
+$card-border-color: #b3d9a6;
+$white: #ffffff;
+$black: #333333;
 
-.title-instructions {
-    padding-left: $title-padding-left;
-    padding-top: 3rem;
-    padding-bottom: 2rem;
+// Section des cartes d'instructions
+.cards-instructions {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: center;
+    padding: 0 2rem 2rem; // Réduction de l'espace en bas
+    position: relative;
+    flex-wrap: nowrap; // Assurez-vous que les cartes restent sur une seule ligne
+    gap: 1.5rem; // Espacement entre les cartes réduit
+    width: 100%;
+    max-width: 100%; // Laisse la section occuper toute la largeur possible
+    margin: 0 auto;
+    box-sizing: border-box;
+}
 
-    h1 {
-        text-align: start;
-        font-size: 50px;
-        font-weight: 550;
-        line-height: 1rem;
+// Carte individuelle
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 30%; // Augmenter légèrement la largeur
+    min-width: 280px; // Largeur min légèrement réduite pour mieux s'adapter
+    height: 380px; // Ajustement de la hauteur pour mieux contenir le contenu
+    padding: 1.5rem; // Padding réduit
+    padding-top: 2rem; // Ajout du padding pour aligner le titre
+    border-radius: 15px;
+    background-color: $white; // Utilisation de la couleur blanche pour le fond
+    box-shadow: none;
+    border: 2px solid transparent;
+    transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 1rem; // Réduction de l'espace en bas
+
+    &:hover {
+        transform: scale(1.05);
+        background-color: $white;
+        border: 2px solid $card-border-color;
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+    }
+
+    // Image dans les cartes
+    .img-instruction {
+        width: 130px; // Image légèrement réduite pour s'adapter à la taille des cartes
+        height: auto;
+        margin-bottom: 1.5rem;
+    }
+
+    // Titres dans les cartes
+    h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 1.2rem; // Réduction légère pour l'adaptation
+        line-height: 1.4;
+        margin-bottom: 1rem; // Un peu plus d'espace sous le titre
+        color: $black;
+        text-align: center;
+        word-wrap: break-word;
+        max-width: 100%;
+    }
+
+    // Texte dans les cartes
+    .card-text {
+        font-size: 1rem; // Taille de texte bien proportionnée
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        color: $black;
+        line-height: 1.5;
     }
 }
 
-.cards-instructions {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    text-align: center;
-    padding: 0 50px 50px;
-    gap: $card-margin;
-
-    .card {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        flex: 1;
-        padding: $card-padding;
-        border-radius: 15px;
-        box-shadow: $card-shadow;
-        background-color: $white;
-
-        .img-instruction {
-            width: $image-size;
-            height: auto;
-            margin-bottom: 2rem;
-        }
-
-        h2 {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 600;
-            font-size: 24px;
-            margin-bottom: 1rem;
-            color: $black;
-        }
-
-        p {
-            font-size: 16px;
-            font-family: 'Roboto', sans-serif;
-            font-weight: 400;
-            color: $black;
-            line-height: 1.5;
-        }
-    }
+// Titres principaux
+.title-instructions {
+    text-align: left; // Aligner à gauche
+    padding-top: 2rem;
+    padding-bottom: 2rem; // Réduction du padding en bas
+    padding-left: 13rem; // Espacement à gauche
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 1rem;
 }
