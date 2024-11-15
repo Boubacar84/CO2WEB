@@ -34,7 +34,7 @@
     padding: 30px;
     border: none;
     border-radius: 15px;
-    box-shadow: 1px 4px 50px $black;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     background-color: $white;
     z-index: 3;
     width: 850px;
@@ -157,9 +157,9 @@
 }
 
 .side-image-calc-left-top {
-    top: 15%;
+    top: 16%;
     left: 15%;
-    width: 300px;
+    width: 350px;
 }
 
 .side-image-calc-left-bot {
@@ -169,7 +169,8 @@
 }
 
 .side-image-calc-right {
-    top: 45%;
-    right: 16%;
-    width: 300px;
+    top: 42%;
+    right: 13%;
+    width: 350px;
+    transform: rotate(20deg);
 }
