@@ -28,8 +28,9 @@
         }
 
         &--background {
-            width: 100%;
-            height: auto;
+            width: 85%;
+
+
 
 
 
@@ -40,10 +41,10 @@
 
         &--overlay {
             position: absolute;
-            top: -80%;
-            left: -10%;
-            width: 125%;
-            height: auto;
+            top: -73%;
+            left: -7%;
+            width: 96%;
+
 
 
 
@@ -53,19 +54,67 @@
 
     &__content {
 
-        color: $black;
+
         padding: 2rem;
+        width: 30%;
+        font-style: inherit;
+        text-align: left;
+        position: absolute;
+        left: 50%;
+        top: -17%;
 
-        &__title {
-            font-size: 2rem;
-            color: $black;
-        }
 
-        &__description {
-            color: $black;
-            line-height: 1.5;
-            margin-top: 1rem;
-        }
+
+
+
+
+    }
+
+    .about__description {
+        color: #030303;
+        line-height: 1.5;
+        margin-top: 1rem;
+        font-family: "Montserrat", sans-serif;
+        position: absolute;
+        top: 438%;
+        font-size: 20px font-weight:bold;
+    }
+
+    .about__text {
+        font-size: 17px;
+        line-height: 2;
+        font-family: $font-montserrat;
+        top: 150%;
+        position: absolute;
+    }
+
+    .circle-about-img1 {
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        background-color: #79C258;
+        border-radius: 78%;
+        margin: 10px;
+        top: 18%;
+        right: 96%;
+        z-index: 4;
+
+    }
+
+    .about__title {
+
+        position: absolute;
+        color: $black;
+        font-size: 38px;
+        font-weight: bold;
+        top: -63%;
+
+
+
+
+
+
+
     }
 
     .backgroud-about {
@@ -73,9 +122,9 @@
         top: 0;
         left: 0;
         width: 40%; // Occupe la moitié gauche
-        height: 120%;
+        height: 100%;
         background: linear-gradient(135deg, #7ed957, #3cb371);
-        border-radius: 0 170px 170px 0;
+        border-radius: 0 190px 190px 0;
         z-index: 1;
     }
 }
