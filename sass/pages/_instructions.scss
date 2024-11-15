@@ -1,8 +1,8 @@
 $title-padding-left: 13rem;
-$card-padding: 10rem 2rem;
+$card-padding: 8rem 2rem;
 $card-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-$card-margin: 2rem;
-$image-size: 110px; // Réajuste la taille selon les besoins
+$card-margin: 1.5rem;
+$image-size: 100px;
 
 .title-instructions {
     padding-left: $title-padding-left;
@@ -22,7 +22,7 @@ $image-size: 110px; // Réajuste la taille selon les besoins
     flex-direction: row;
     justify-content: space-between;
     text-align: center;
-    padding: 0 100px 100px;
+    padding: 0 50px 50px;
     gap: $card-margin;
 
     .card {
