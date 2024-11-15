@@ -1,11 +1,15 @@
+$title-padding-left: 13rem;
+$card-padding: 10rem 2rem;
+$card-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+$card-margin: 2rem;
+$image-size: 110px; // Réajuste la taille selon les besoins
+
 .title-instructions {
-    padding-left: 13rem;
+    padding-left: $title-padding-left;
     padding-top: 3rem;
     padding-bottom: 2rem;
 
     h1 {
-        display: flex;
-        align-items: start;
         text-align: start;
         font-size: 50px;
         font-weight: 550;
@@ -16,62 +20,41 @@
 .cards-instructions {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     text-align: center;
-    padding-right: 135px;
-    padding-left: 135px;
-    padding-bottom: 100px;
-    gap: 4rem;
+    padding: 0 100px 100px;
+    gap: $card-margin;
 
-    h2 {
-        font-family: $font-montserrat;
-        font-weight: 500;
-        color: $black;
-    }
-
-    p {
-        font-size: large;
-        font-family: $font-roboto;
-        font-weight: 400;
-        color: $black;
-    }
-
-    .cards-instructions-1 {
+    .card {
         display: flex;
-        align-items: center;
         flex-direction: column;
-        margin: 0 auto;
+        align-items: center;
+        flex: 1;
+        padding: $card-padding;
         border-radius: 15px;
-        box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.1);
-        margin-bottom: 4rem;
-        padding: 7rem 2rem;
+        box-shadow: $card-shadow;
+        background-color: $white;
 
         .img-instruction {
-            width: 30%;
-
+            width: $image-size;
+            height: auto;
+            margin-bottom: 2rem;
         }
-    }
 
-    .cards-instructions-2 {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        margin: 0 auto;
-        padding: 7rem 2rem;
-        border-radius: 15px;
-        box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.1);
-        margin-bottom: 4rem;
-        z-index: 3;
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 24px;
+            margin-bottom: 1rem;
+            color: $black;
+        }
 
-    }
-
-    .cards-instructions-3 {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        margin: 0 auto;
-        padding: 7rem 2rem;
-        border-radius: 15px;
-        box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.1);
-        margin-bottom: 4rem;
+        p {
+            font-size: 16px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+            color: $black;
+            line-height: 1.5;
+        }
     }
 }
