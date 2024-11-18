@@ -46,10 +46,10 @@
 
             <form class="form-content" onsubmit="return false;">
                 <label for="distanceParJour">Votre Distance parcourue par jour (en kilomètres) :</label>
-                <input type="number" id="distanceParJour" placeholder="Distance" min="1" required>
+                <input type="number" id="distanceParJour" placeholder="Distance" min="1" pattern="[0-9]" required>
 
                 <label for="joursParSemaine">Nombre de jours travaillés par semaine :</label>
-                <input type="number" id="joursParSemaine" placeholder="Nombre" min="1" max="7" required>
+                <input type="number" id="joursParSemaine" placeholder="Nombre" min="1" max="7" pattern="[0-9]" required>
 
                 <!-- Conteneur pour le bouton pour faciliter l'alignement en bas -->
                 <div class="button-container">
