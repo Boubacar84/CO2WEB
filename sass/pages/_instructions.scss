@@ -1,23 +1,22 @@
 // Variables pour la couleur et autres éléments
 $card-bg-color: $white; // Utilisation de la couleur blanche comme fond
-$card-border-color: #b3d9a6;
-$white: #ffffff;
-$black: #333333;
+$card-border-color: $white;
 
 // Section des cartes d'instructions
 .cards-instructions {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-start;
     text-align: center;
-    padding: 0 2rem 2rem; // Réduction de l'espace en bas
+    padding: 0 2rem 3rem;
     position: relative;
     flex-wrap: nowrap; // Assurez-vous que les cartes restent sur une seule ligne
-    gap: 1.5rem; // Espacement entre les cartes réduit
+    gap: 1rem; // Réduction de l'espace entre les cartes
     width: 100%;
     max-width: 100%; // Laisse la section occuper toute la largeur possible
     margin: 0 auto;
     box-sizing: border-box;
+    gap: 5rem;
 }
 
 // Carte individuelle
@@ -26,28 +25,31 @@ $black: #333333;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    width: 30%; // Augmenter légèrement la largeur
-    min-width: 280px; // Largeur min légèrement réduite pour mieux s'adapter
-    height: 380px; // Ajustement de la hauteur pour mieux contenir le contenu
-    padding: 1.5rem; // Padding réduit
-    padding-top: 2rem; // Ajout du padding pour aligner le titre
+    width: 350px; // Largeur de 350px
+    height: 400px; // Hauteur de 400px
+    padding: 1rem 1.5rem; // Ajustement du padding pour mieux s'adapter
     border-radius: 15px;
     background-color: $white; // Utilisation de la couleur blanche pour le fond
     box-shadow: none;
     border: 2px solid transparent;
     transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
-    margin-bottom: 1rem; // Réduction de l'espace en bas
+    margin-bottom: 2rem;
+
+    // Padding spécifique pour la première carte
+    &:first-child {
+        padding-left: 2rem; // Ajout de padding uniquement à la première carte pour l'aligner
+    }
 
     &:hover {
         transform: scale(1.05);
         background-color: $white;
-        border: 2px solid $card-border-color;
+        border: 2px solid $white;
         box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
     }
 
     // Image dans les cartes
     .img-instruction {
-        width: 130px; // Image légèrement réduite pour s'adapter à la taille des cartes
+        width: 110px; // Image légèrement réduite pour s'adapter à la taille des cartes
         height: auto;
         margin-bottom: 1.5rem;
     }
@@ -56,9 +58,9 @@ $black: #333333;
     h2 {
         font-family: 'Montserrat', sans-serif;
         font-weight: 600;
-        font-size: 1.2rem; // Réduction légère pour l'adaptation
+        font-size: 1.2rem; // Réduction légère de la taille du titre
         line-height: 1.4;
-        margin-bottom: 1rem; // Un peu plus d'espace sous le titre
+        margin-bottom: 1rem; // Moins d'espace sous le titre
         color: $black;
         text-align: center;
         word-wrap: break-word;
@@ -67,7 +69,7 @@ $black: #333333;
 
     // Texte dans les cartes
     .card-text {
-        font-size: 1rem; // Taille de texte bien proportionnée
+        font-size: 0.9rem; // Réduction de la taille du texte pour bien tenir
         font-family: 'Roboto', sans-serif;
         font-weight: 400;
         color: $black;
@@ -79,9 +81,14 @@ $black: #333333;
 .title-instructions {
     text-align: left; // Aligner à gauche
     padding-top: 2rem;
-    padding-bottom: 2rem; // Réduction du padding en bas
+    padding-bottom: 3rem;
     padding-left: 13rem; // Espacement à gauche
     font-size: 25px;
     font-weight: 600;
     line-height: 1rem;
+
+    h1 {
+        font-family: $font-montserrat;
+        font-weight: 600;
+    }
 }
