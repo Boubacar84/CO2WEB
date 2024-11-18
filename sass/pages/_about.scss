@@ -106,4 +106,29 @@
         border-radius: 0 190px 190px 0;
         z-index: 1;
     }
+
+
+
+    .slide-active {
+
+        &img-slide. {
+            position: relative;
+            display: inline-block;
+            z-index: 2;
+
+            width: 800px;
+            height: 500px;
+        }
+
+        .slide__title {
+            position: absolute;
+            color: $black;
+            font-size: 38px;
+            font-weight: bold;
+            top: -63%;
+        }
+    }
+
+
+
 }
