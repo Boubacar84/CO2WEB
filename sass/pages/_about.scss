@@ -2,19 +2,70 @@
     padding: 15rem 0;
     position: relative;
 
+    // Styles pour les pages multiples
+    &__page {
+        display: none; // Par défaut, les pages sont masquées
+        animation: fadeIn 0.5s ease-in-out;
+
+        &.active {
+            display: block; // Affiche uniquement la page active
+        }
+    }
+
+    // Boutons de navigation
+    &__next,
+    &__prev {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #3DAD5C;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 18px;
+
+        &:hover {
+            background-color: #019961;
+        }
+    }
+
+    &__next {
+        right: 5%;
+    }
+
+    &__prev {
+        left: 5%;
+    }
+
+    // Animation
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    // Autres styles (inchangés)
     &__intro {
         display: flex;
         align-items: center;
         gap: 2rem;
         position: relative;
-        padding-left: 2rem; // Espace supplémentaire pour le contenu par rapport au fond
+        padding-left: 2rem;
     }
 
     &__image {
         position: relative;
         display: inline-block;
         z-index: 2;
-        top: 115px; // Pour placer l'image devant le fond vert
+        top: 115px;
         width: 30%;
         left: 8%;
 
@@ -52,7 +103,6 @@
         position: absolute;
     }
 
-    // Ligne séparatrice
     .about__separator {
         border: none;
         height: 3px;
@@ -71,7 +121,7 @@
         margin-top: 1rem;
         font-family: $font-montserrat;
         position: absolute;
-        top: 438%; // Ajustez cette valeur en fonction de l'emplacement souhaité
+        top: 438%;
         font-size: 20px;
         font-weight: 500;
     }
@@ -100,7 +150,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        width: 40%; // Occupe la moitié gauche
+        width: 40%;
         height: 100%;
         background: linear-gradient(135deg, #7ed957, #3cb371);
         border-radius: 0 190px 190px 0;
