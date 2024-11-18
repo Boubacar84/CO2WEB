@@ -40,12 +40,13 @@
     width: 850px;
     gap: 20px;
     margin-bottom: 4rem;
-    font-family: $font-roboto;
+    font-family: $font-montserrat;
     min-height: 100px; // Ajustez la hauteur selon votre mise en page pour un positionnement optimal
 }
 
 .form-content label {
     font-weight: 500;
+    font-size: 20px;
     display: block;
     text-align: left;
     margin-top: 15px;
@@ -145,7 +146,7 @@
     width: 40px;
     height: 40px;
     top: 30%;
-    right: 15%;
+    right: 13%;
     border: 20px solid $lightergreen;
 }
 
