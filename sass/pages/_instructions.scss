@@ -29,6 +29,7 @@
     max-width: 100%;
     margin: 0 auto;
     box-sizing: border-box;
+    z-index: 1;
 }
 
 // Carte individuelle
@@ -47,7 +48,7 @@
     border: 2px solid transparent;
     transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
     margin-bottom: 2rem;
-    overflow: hidden; // Empêche le contenu de bouger au hover
+    overflow: hidden;
 
     // Taille des images
     .img-instruction {
@@ -89,10 +90,24 @@
 
 // Carte du milieu avec effet de hover permanent
 .middle-card {
-    transform: scale(1.10);
+    position: relative;
+    z-index: 4;
+    transform: scale(1.05);
     background-color: $white;
     border: 2px solid $white;
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+
+    .circle-inside {
+        position: absolute;
+        width: 125px;
+        height: 125px;
+        background-color: white;
+        border-radius: 50%;
+        top: -14%;
+        right: -13%;
+        z-index: 4;
+        border: 25px solid $greendark;
+    }
 }
 
 // Effet hover pour la première et la dernière card
@@ -101,6 +116,8 @@
     background-color: $white;
     border: 2px solid $white;
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 4;
 }
 
 .last-card:hover {
@@ -108,4 +125,76 @@
     background-color: $white;
     border: 2px solid $white;
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 4;
+}
+
+
+
+// Cercles de la card du milieu
+
+.circle-top-1 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    top: 25%;
+    right: 36%;
+    z-index: 1;
+    background-color: $greendark;
+}
+
+.circle-top-2 {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    top: 34%;
+    right: 33.5%;
+    z-index: 2;
+    background-color: $lightergreen;
+}
+
+.circle-top-3 {
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    top: 39%;
+    right: 37%;
+    z-index: 2;
+    background-color: $greenlight;
+}
+
+.circle-bot-1 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    top: 67.5%;
+    right: 58.5%;
+    z-index: 1;
+    background-color: $lightergreen;
+}
+
+.circle-bot-2 {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    top: 75%;
+    right: 56%;
+    z-index: 1;
+    background-color: $green;
+}
+
+.circle-bot-3 {
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    top: 79%;
+    right: 59%;
+    z-index: 2;
+    background-color: $greendark;
 }
