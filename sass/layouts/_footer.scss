@@ -1,9 +1,9 @@
 footer {
     background-color: $white;
     display: flex;
-    justify-content: flex-end;
     flex-direction: column;
     width: 100vw;
+    margin-top: auto;
 
     .footer-container {
         width: 100vw;
