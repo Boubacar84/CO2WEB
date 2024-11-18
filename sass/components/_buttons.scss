@@ -34,29 +34,30 @@
 }
 
 .form-button:active {
-    transform: scale(0.97); // Réduction pour l'effet de pression
-    box-shadow: 0px 4px 8px 1px rgba(61, 173, 92, 0.5); // Réduction de l'ombre pour simuler l'enfoncement
-}
+    transform: scale(0.97);
+    box-shadow: 0px 4px 8px 1px rgba(61, 173, 92, 0.5);
 
-.outlined-button {
-    padding: 12px 24px;
-    font-size: 18px;
-    color: $green; // Utilisation de ta variable `$green` pour le texte
-    background: transparent;
-    border: 2px solid $green; // Ajout d'une bordure verte
-    border-radius: 24px;
-    cursor: pointer;
-    font-family: $font-montserrat;
-    font-weight: 500;
-    transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out, transform 0.2s ease;
+    .outlined-button {
+        padding: 12px 24px;
+        font-size: 18px;
+        color: $green;
+        background: transparent;
+        border: 2px solid $green;
+        border-radius: 24px;
+        cursor: pointer;
+        font-family: $font-montserrat;
+        font-weight: 500;
+        transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out, transform 0.2s ease;
 
-    &:hover {
-        background: linear-gradient(150deg, $green, $greendark 50%);
-        color: $white;
-    }
+        &:hover {
+            background: linear-gradient(150deg, $green, $greendark 50%);
+            color: $white;
+            box-shadow: 0px 4px 8px 1px rgba(61, 173, 92, 0.5);
+        }
 
-    &:active {
-        transform: scale(0.97); // Réduction pour l'effet de pression
-        box-shadow: 0px 4px 8px 1px rgba(61, 173, 92, 0.5); // Réduction de l'ombre pour simuler l'enfoncement
+        &:active {
+            transform: scale(0.97);
+            box-shadow: 0px 4px 8px 1px rgba(61, 173, 92, 0.5);
+        }
     }
 }
