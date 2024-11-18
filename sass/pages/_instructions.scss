@@ -1,3 +1,20 @@
+// Titres principaux
+.title-instructions {
+    text-align: left;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    padding-left: 13rem;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 1rem;
+
+    h1 {
+        font-family: $font-montserrat;
+        font-weight: 600;
+        font-size: 50px;
+    }
+}
+
 // Section des cartes d'instructions
 .cards-instructions {
     display: flex;
@@ -30,14 +47,16 @@
     border: 2px solid transparent;
     transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
     margin-bottom: 2rem;
+    overflow: hidden;
 
     // Taille des images
     .img-instruction {
-        width: 140px;
-        height: 140px;
+        width: 135px;
+        height: 135px;
         margin-bottom: 1rem;
     }
 
+    // Effet hover par défaut sur toutes les cartes
     &:hover {
         transform: scale(1.05);
         background-color: $white;
@@ -68,19 +87,10 @@
     }
 }
 
-// Titres principaux
-.title-instructions {
-    text-align: left;
-    padding-top: 2rem;
-    padding-bottom: 3rem;
-    padding-left: 13rem;
-    font-size: 25px;
-    font-weight: 600;
-    line-height: 1rem;
-
-    h1 {
-        font-family: $font-montserrat;
-        font-weight: 600;
-        font-size: 50px;
-    }
+// Carte du milieu avec effet de hover permanent
+.middle-card {
+    transform: scale(1.10);
+    background-color: $white;
+    border: 2px solid $white;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
 }
