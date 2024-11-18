@@ -14,35 +14,35 @@
 </head>
 
 <body>
+    <!-- Header -->
     <header>
-        <a href="index.html" class="link-img-home"><img src="img/logo-CO2.svg" alt=""></a>
+        <a href="index.html" class="link-img-home"><img src="img/logo-CO2.svg" alt="Logo CO2WEB"></a>
         <nav>
             <ul class="ul-nav-header">
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="instructions.html">Mode d'emploi</a></li>
                 <li><a href="velib.html">Trouver un velib</a></li>
                 <li><a href="calculator.html">Calculateur</a></li>
-                <li><a href="about.html" class="active">A propos</a></li>
+                <li><a href="about.html" class="active">À propos</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
+    <!-- Main - Multi-pages -->
     <main class="about">
-        <section class="about__intro">
-            <div class="about__image">
-                <img src="img/a-propos-pc.svg" alt="Illustration du projet sur ordinateur"
-                    class="about__image--background">
-                <img src="img/a-propos-feuille.svg" alt="Feuille superposée" class="about__image--overlay">
-            </div>
-            <div class="backgroud-about"></div>
-
-            <div class="about__content">
-                <div class="circle-about-img1"></div>
-                <section class="about__title">
-                    <h1>À propos du projet</h1>
-                </section>
-                <section>
+        <!-- Page 1 -->
+        <section class="about__page active" id="page1" aria-hidden="false">
+            <div class="about__intro">
+                <div class="about__image">
+                    <img src="img/a-propos-pc.svg" alt="Illustration du projet sur ordinateur"
+                        class="about__image--background">
+                    <img src="img/a-propos-feuille.svg" alt="Feuille superposée" class="about__image--overlay">
+                </div>
+                <div class="backgroud-about"></div>
+                <div class="about__content">
+                    <div class="circle-about-img1"></div>
+                    <h1 class="about__title">À propos du projet</h1>
                     <p class="about__text">
                         Arcu, ultrices amet, ac rhoncus eget egestas diam a malesuada tristique blandit elementum
                         dapibus
@@ -50,20 +50,40 @@
                         sit
                         vestibulum nibh eget ultrices magna facilisis potenti.
                     </p>
-
-                </section>
-
-                <hr class="about__separator">
-
-
-                <section>
+                    <hr class="about__separator">
                     <p class="about__description">
                         Aenean egestas fermentum, at elementum ut ut eu, feugiat sit feugiat morbi id ipsum tincidunt.
                     </p>
-                </section>
-
+                    <button class="about__next" data-target="#page2" aria-label="Page suivante">❯</button>
+                </div>
             </div>
+        </section>
 
+        <!-- Page 2 -->
+        <section class="about__page hidden" id="page2" aria-hidden="true">
+            <div class="about__intro">
+                <div class="about__image">
+                    <img src="img/tente.svg" alt="Illustration d'une tente en pleine nature"
+                        class="about__image--background">
+                    <img src="img/arbres.svg" alt="Illustration d'arbres superposés" class="about__image--overlay">
+                </div>
+                <div class="backgroud-about"></div>
+                <div class="about__content">
+                    <div class="circle-about-img1"></div>
+                    <h1 class="about__title">Notre mission</h1>
+                    <p class="about__text">
+                        Proin vehicula, libero id suscipit tempus, nunc augue blandit turpis, vel convallis justo nisl
+                        vitae lectus. Suspendisse potenti. Integer non elit vel tortor tincidunt tristique. Integer
+                        ultricies est euismod.
+                    </p>
+                    <hr class="about__separator">
+                    <p class="about__description">
+                        Cras facilisis lacus vel risus faucibus, sed dictum orci feugiat. Vivamus eu urna at libero
+                        tincidunt gravida.
+                    </p>
+                    <button class="about__prev" data-target="#page1" aria-label="Page précédente">❮</button>
+                </div>
+            </div>
         </section>
         <section class="about_page hidden" id="page2" aria-hidden="true">
             <div class="slide-active">
@@ -93,6 +113,7 @@
 
     </main>
 
+    <!-- Footer -->
     <footer>
         <div class="footer-line"></div>
         <div class="footer-container">
@@ -102,16 +123,75 @@
                     <li><a href="instructions.html">Mode d'emploi</a></li>
                     <li><a href="velib.html">Trouver un velib</a></li>
                     <li><a href="calculator.html">Calculateur</a></li>
-                    <li><a href="about.html">A propos</a></li>
+                    <li><a href="about.html">À propos</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </footer>
+<<<<<<< HEAD
+||||||| parent of 9f340d8 (Docs: add slide architecture)
+    <main>
+
+        <div class="slide-active">
+            <img src="img/tente.svg" alt="Slide 1">
+        </div>
+        <div>
+            <h1>À propos du projet</h1>
+            <p class="about__text">
+                Arcu, ultrices amet, ac rhoncus eget egestas diam a malesuada tristique blandit elementum
+                dapibus
+                proin pretium rhoncus, viverra sagittis libero, libero varius accumsan ridiculus amet nam duis
+                sit
+                vestibulum nibh eget ultrices magna facilisis potenti.
+            </p>
+        </div>
+=======
+
+    <!-- JavaScript pour navigation multi-pages -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const buttons = document.querySelectorAll('.about__next, .about__prev');
+>>>>>>> 9f340d8 (Docs: add slide architecture)
+
+            buttons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const currentPage = document.querySelector('.about__page.active');
+                    const targetPage = document.querySelector(button.dataset.target);
+
+                    if (currentPage) {
+                        currentPage.classList.remove('active');
+                        currentPage.classList.add('hidden');
+                        currentPage.setAttribute('aria-hidden', 'true');
+                    }
+
+                    if (targetPage) {
+                        targetPage.classList.remove('hidden');
+                        targetPage.classList.add('active');
+                        targetPage.setAttribute('aria-hidden', 'false');
+                    }
+                });
+            });
+
+<<<<<<< HEAD
+||||||| parent of 9f340d8 (Docs: add slide architecture)
+        <!-- Boutons de navigation -->
+
+        <button class="next">❯</button>
+        </section>
+    </main>
 
 
-
-
+=======
+            // Initialisation : première page visible
+            const firstPage = document.querySelector('.about__page');
+            if (firstPage) {
+                firstPage.classList.add('active');
+                firstPage.setAttribute('aria-hidden', 'false');
+            }
+        });
+    </script>
+>>>>>>> 9f340d8 (Docs: add slide architecture)
 </body>
 
 </html>
