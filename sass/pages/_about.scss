@@ -14,7 +14,6 @@
 
     // Boutons de navigation
     &__next,
-    &__back,
     &__prev {
         position: absolute;
         top: 50%;
@@ -158,16 +157,38 @@
         z-index: 1;
     }
 
-    .slide__image {
-        position: relative;
-        display: inline-block;
-        z-index: 2;
-        top: 115px;
-        width: 30%;
-        left: 8%;
+
+
+    .slide__intro {
+
+        &__image {
+            position: relative;
+            display: inline-block;
+            z-index: 2;
+            top: 115px;
+            width: 30%;
+            left: 8%;
+        }
+
+        img {
+            height: auto;
+
+            width: 62%;
+            left: 49%;
+            position: absolute;
+            top: 22%;
+        }
+
+        &--overlay {
+            position: absolute;
+            top: -73%;
+            left: -7%;
+            width: 96%;
+        }
     }
 
-    .slide__content {
+
+    &__content {
         padding: 2rem;
         width: 30%;
         font-style: inherit;
@@ -179,13 +200,14 @@
 
     .slide__title {
         position: absolute;
-        color: $black;
+        color: #030303;
         font-size: 38px;
         font-weight: bold;
-        top: -63%;
+        top: 15%;
+        left: 17%;
     }
 
-    .slide__bouton {
+    .about__back {
         font-style: inherit;
         text-align: left;
         right: 50%;
@@ -201,5 +223,17 @@
         top: -39%;
         right: 96%;
         z-index: 4;
+    }
+
+    .slide__text {
+        font-size: 17px;
+        line-height: 2;
+        font-family: "Montserrat", sans-serif;
+        top: -117%;
+        position: absolute;
+        padding: -271px;
+        margin: 791px;
+        left: -24%;
+
     }
 }
