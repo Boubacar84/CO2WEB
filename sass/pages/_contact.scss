@@ -16,14 +16,13 @@
     box-shadow: 1px 4px 50px rgba(0, 0, 0, 0.1);
     background-color: $white;
     z-index: 3;
-    width: 850px;
-    gap: 20px;
+    width: 760px;
     margin-bottom: 4rem;
     max-width: 850px;
     font-family: $font-roboto;
 
     #bouton-contact {
-        width: 27%;
+        width: 23%;
         text-align: right;
 
     }
@@ -71,6 +70,7 @@ form {
     gap: 3rem;
     text-align: justify;
     font-family: $font-roboto;
+    gap: 100px;
 }
 
 
@@ -113,24 +113,24 @@ form {
     top: 11%;
     width: 320px;
     height: auto;
-    left: 19rem;
+    left: 22rem;
     z-index: 1;
 }
 
 .side-image-left-bot {
     position: absolute;
-    top: 38%;
-    left: 18.5rem;
+    top: 37%;
+    left: 21.5rem;
     z-index: 1;
     width: 255px;
 }
 
 .side-image-right {
     position: absolute;
-    top: 32.5%;
+    top: 32%;
     width: 320px;
     height: auto;
-    right: 19.5rem;
+    right: 22rem;
     z-index: 1;
 }
 
