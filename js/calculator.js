@@ -10,8 +10,8 @@ function calculerEmissionHebdomadaire(event) {
         const emissionHebdomadaire = distanceParJour * joursParSemaine * FACTEUR_EMISSION;
         const emissionMensuelle = emissionHebdomadaire * 4;
 
-        document.getElementById("resultat").textContent =
-            `Les émissions de CO2 pour les trajets domicile / travail en voiture sont de ${emissionMensuelle.toFixed(2)} kg par mois.`;
+        document.getElementById("resultat").innerHTML =
+            `Les émissions de CO2 pour les trajets domicile / travail en voiture sont de <span class="highlight-green">${emissionMensuelle.toFixed(2)} kg</span> par mois.`;
 
         document.getElementById("resultat-container").style.display = "flex";
         document.getElementById("overlay").style.display = "block";
