@@ -1,7 +1,6 @@
 .main-contact {
     h1 {
         text-align: center;
-        padding-top: 50px;
     }
 }
 
@@ -31,18 +30,13 @@
         text-align: right;
     }
 
-    .Inside-form {
-        margin: 8px 0;
-    }
+
 }
 
 form {
     display: flex;
     flex-direction: column;
 }
-
-
-
 
 .contact-column {
     display: flex;
@@ -71,10 +65,16 @@ form {
 .carre1 {
     display: flex;
     flex-direction: row;
-    gap: 3rem;
+    gap: 2rem;
     text-align: justify;
     font-family: $font-roboto;
-    gap: 100px;
+
+    :hover {
+        transform: scale(1.05);
+        background-color: $white;
+        border: 2px solid $white;
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+    }
 }
 
 
@@ -115,7 +115,7 @@ form {
 .side-image-left-top {
     position: absolute;
     top: 11%;
-    width: 320px;
+    width: 310px;
     height: auto;
     left: 22rem;
     z-index: 1;
@@ -126,7 +126,7 @@ form {
     top: 37%;
     left: 21.5rem;
     z-index: 1;
-    width: 255px;
+    width: 240px;
 }
 
 .side-image-right {
