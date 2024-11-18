@@ -1,6 +1,9 @@
 .main-contact {
     h1 {
         text-align: center;
+        padding-top: 7%;
+        font-size: 45px;
+        font-weight: 600;
     }
 }
 
@@ -21,7 +24,7 @@
     font-family: $font-roboto;
 
     #bouton-contact {
-        width: 23%;
+        width: 25%;
         text-align: right;
 
     }
@@ -65,16 +68,9 @@ form {
 .carre1 {
     display: flex;
     flex-direction: row;
-    gap: 2rem;
+    gap: 3rem;
     text-align: justify;
     font-family: $font-roboto;
-
-    :hover {
-        transform: scale(1.05);
-        background-color: $white;
-        border: 2px solid $white;
-        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
-    }
 }
 
 
@@ -114,28 +110,30 @@ form {
 
 .side-image-left-top {
     position: absolute;
-    top: 11%;
+    top: 23%;
     width: 310px;
     height: auto;
-    left: 22rem;
+    left: 22.5rem;
     z-index: 1;
 }
 
 .side-image-left-bot {
     position: absolute;
-    top: 37%;
-    left: 21.5rem;
+    top: 52%;
+    left: 21.8rem;
     z-index: 1;
     width: 240px;
+    transform: rotate(-13deg);
 }
 
 .side-image-right {
     position: absolute;
-    top: 32%;
+    top: 46%;
     width: 320px;
     height: auto;
-    right: 22rem;
+    right: 21.5rem;
     z-index: 1;
+    transform: rotate(13deg);
 }
 
 .circle-img1 {
@@ -145,8 +143,8 @@ form {
     background-color: white;
     border-radius: 50%;
     margin: 10px;
-    top: 13%;
-    right: 23%;
+    top: 25%;
+    right: 24%;
     z-index: 4;
     border: 25px solid $greendark;
 }
@@ -158,7 +156,7 @@ form {
     background-color: white;
     border-radius: 50%;
     margin: 10px;
-    top: 9%;
+    top: 21%;
     right: 18%;
     border-width: 15px;
     border-style: 10px;
@@ -172,8 +170,8 @@ form {
     background-color: white;
     border-radius: 50%;
     margin: 10px;
-    top: 21%;
-    right: 18%;
+    top: 34%;
+    right: 18.3%;
     border-width: 25px;
     border-style: 10px;
     border: 25px solid $lightergreen;
