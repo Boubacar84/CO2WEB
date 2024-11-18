@@ -14,6 +14,7 @@
 
     // Boutons de navigation
     &__next,
+    &__back,
     &__prev {
         position: absolute;
         top: 50%;
@@ -157,6 +158,48 @@
         z-index: 1;
     }
 
+    .slide__image {
+        position: relative;
+        display: inline-block;
+        z-index: 2;
+        top: 115px;
+        width: 30%;
+        left: 8%;
+    }
 
+    .slide__content {
+        padding: 2rem;
+        width: 30%;
+        font-style: inherit;
+        text-align: left;
+        position: absolute;
+        left: 50%;
+        top: -17%;
+    }
 
+    .slide__title {
+        position: absolute;
+        color: $black;
+        font-size: 38px;
+        font-weight: bold;
+        top: -63%;
+    }
+
+    .slide__bouton {
+        font-style: inherit;
+        text-align: left;
+        right: 50%;
+    }
+
+    .circle-about-img1 {
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        background-color: #79C258;
+        border-radius: 78%;
+        margin: 10px;
+        top: -39%;
+        right: 96%;
+        z-index: 4;
+    }
 }
