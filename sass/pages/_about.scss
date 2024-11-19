@@ -4,7 +4,6 @@
     min-width: 100%;
     width: 100%;
 
-
     // Styles pour les pages multiples
     &__page {
         display: none; // Par défaut, les pages sont masquées
@@ -167,8 +166,6 @@
         z-index: 1;
     }
 
-
-
     .slide__intro {
 
         &__image {
@@ -182,7 +179,6 @@
         }
 
         img {
-            height: max-content;
             width: 71%;
             left: 44%;
             position: absolute;
@@ -190,27 +186,24 @@
         }
 
     }
-}
 
-&--overlay {
-    position: absolute;
-    top: -73%;
-    left: -7%;
-    width: 96%;
-}
+    &--overlay {
+        position: absolute;
+        top: -73%;
+        left: -7%;
+        width: 96%;
+    }
 
-&__content {
-    padding: 2rem;
-    width: 30%;
-    font-style: inherit;
-    text-align: left;
-    position: absolute;
-    left: 50%;
-    top: -17%;
+    &__content {
+        padding: 2rem;
+        width: 30%;
+        font-style: inherit;
+        text-align: left;
+        position: absolute;
+        left: 50%;
+        top: -17%;
+    }
 }
-}
-
-
 
 .slide__title {
     position: absolute;
@@ -220,8 +213,6 @@
     top: 24%;
     left: 21%;
 }
-
-
 
 .circle-about-img2 {
     position: absolute;
