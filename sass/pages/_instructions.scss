@@ -92,14 +92,12 @@
 
     .circle-inside {
         position: absolute;
-        width: 125px;
-        height: 125px;
-        background-color: $white;
+        width: 175px;
+        height: 175px;
+        background: linear-gradient(to bottom right, $lightergreen, $greendark);
         border-radius: 50%;
-        top: -14%;
-        right: -13%;
-        z-index: 4;
-        border: 25px solid $green;
+        top: -13%;
+        right: -11%;
         transition: transform 0.3s ease;
     }
 
@@ -109,6 +107,18 @@
         .circle-inside {
             transform: scale(1.05);
         }
+    }
+
+    .white-circle {
+        position: absolute;
+        width: 130px;
+        height: 130px;
+        background: $white;
+        border-radius: 50%;
+        top: -8.5%;
+        right: -6.5%;
+        transition: transform 0.3s ease;
+        z-index: 1;
     }
 }
 
