@@ -9,7 +9,7 @@
     line-height: 1rem;
 
     h1 {
-        font-family: 'Montserrat', sans-serif;
+        font-family: $font-montserrat;
         font-weight: 600;
         font-size: 50px;
     }
@@ -29,7 +29,10 @@
     max-width: 100%;
     margin: 0 auto;
     box-sizing: border-box;
-    z-index: 1;
+
+    .card-link {
+        text-decoration: none;
+    }
 }
 
 // Carte individuelle
@@ -42,6 +45,7 @@
     height: 400px;
     padding: 1rem 1.5rem;
     padding-bottom: 2rem;
+    padding-top: 2rem;
     border-radius: 15px;
     background-color: $white;
     box-shadow: none;
@@ -50,24 +54,14 @@
     margin-bottom: 2rem;
     overflow: hidden;
 
-    // Taille des images
     .img-instruction {
         width: 135px;
         height: 135px;
         margin-bottom: 1rem;
     }
 
-    // Effet hover par défaut sur toutes les cartes
-    &:hover {
-        transform: scale(1.05);
-        background-color: $white;
-        border: 2px solid $white;
-        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
-    }
-
-    // Titres dans les cartes
     h2 {
-        font-family: 'Montserrat', sans-serif;
+        font-family: $font-montserrat;
         font-weight: 600;
         font-size: 1.3rem;
         line-height: 1.4;
@@ -78,10 +72,9 @@
         max-width: 100%;
     }
 
-    // Texte dans les cartes
     .card-text {
         font-size: large;
-        font-family: 'Roboto', sans-serif;
+        font-family: $font-roboto;
         font-weight: 400;
         color: $black;
         line-height: 1.5;
@@ -92,109 +85,105 @@
 .middle-card {
     position: relative;
     z-index: 4;
-    transform: scale(1.05);
     background-color: $white;
     border: 2px solid $white;
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+
 
     .circle-inside {
         position: absolute;
         width: 125px;
         height: 125px;
-        background-color: white;
+        background-color: $white;
         border-radius: 50%;
         top: -14%;
         right: -13%;
         z-index: 4;
-        border: 25px solid $greendark;
+        border: 25px solid $green;
+        transition: transform 0.3s ease;
+    }
+
+    &:hover {
+        transform: scale(1.05);
+
+        .circle-inside {
+            transform: scale(1.05);
+        }
     }
 }
 
-// Effet hover pour la première et la dernière card
-.first-card:hover {
-    transform: scale(1.05);
-    background-color: $white;
-    border: 2px solid $white;
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+// Effet hover pour la première et la dernière card - supprimé
+.first-card {
     position: relative;
-    z-index: 4;
+    z-index: 0;
 }
 
-.last-card:hover {
-    transform: scale(1.05);
-    background-color: $white;
-    border: 2px solid $white;
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+.last-card {
     position: relative;
-    z-index: 4;
+    z-index: 0;
 }
-
-
 
 // Cercles de la card du milieu
+.circle-top-1,
+.circle-top-2,
+.circle-top-3,
+.circle-bot-1,
+.circle-bot-2,
+.circle-bot-3 {
+    position: absolute;
+    border-radius: 50%;
+}
 
 .circle-top-1 {
-    position: absolute;
     width: 100px;
     height: 100px;
-    border-radius: 50%;
-    top: 25%;
-    right: 36%;
-    z-index: 1;
+    top: 26.5%;
+    right: 36.5%;
     background-color: $greendark;
+    z-index: 1;
 }
 
 .circle-top-2 {
-    position: absolute;
     width: 45px;
     height: 45px;
-    border-radius: 50%;
-    top: 34%;
-    right: 33.5%;
-    z-index: 2;
+    top: 35%;
+    right: 34.3%;
     background-color: $lightergreen;
+    z-index: 2;
 }
 
 .circle-top-3 {
-    position: absolute;
     width: 17px;
     height: 17px;
-    border-radius: 50%;
-    top: 39%;
-    right: 37%;
-    z-index: 2;
+    top: 40%;
+    right: 37.6%;
     background-color: $greenlight;
+    z-index: 2;
 }
 
 .circle-bot-1 {
-    position: absolute;
     width: 100px;
     height: 100px;
-    border-radius: 50%;
-    top: 67.5%;
-    right: 58.5%;
-    z-index: 1;
+    top: 68%;
+    right: 58%;
     background-color: $lightergreen;
+    z-index: 1;
 }
 
 .circle-bot-2 {
-    position: absolute;
     width: 45px;
     height: 45px;
-    border-radius: 50%;
-    top: 75%;
-    right: 56%;
-    z-index: 1;
+    top: 75.5%;
+    right: 55.5%;
     background-color: $green;
+    z-index: 1;
 }
 
 .circle-bot-3 {
-    position: absolute;
     width: 17px;
     height: 17px;
-    border-radius: 50%;
     top: 79%;
-    right: 59%;
-    z-index: 2;
+    right: 58.7%;
     background-color: $greendark;
+    z-index: 2;
 }
