@@ -9,6 +9,7 @@ footer {
         width: 100vw;
         display: flex;
         justify-content: flex-end;
+        z-index: 999;
     }
 
     .footer-line {
@@ -16,6 +17,7 @@ footer {
         background: linear-gradient(to right, $lightergreen, $greendark);
         margin: 0 auto;
         width: 98%;
+        z-index: 999;
     }
 }
 
@@ -30,10 +32,12 @@ footer {
     font-weight: 400;
     font-style: large;
 
+
     a {
         text-decoration: none;
         color: $greendark;
         font-size: large;
+
 
         &:hover {
             text-decoration: underline;
