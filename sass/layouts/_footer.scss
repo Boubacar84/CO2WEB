@@ -4,6 +4,7 @@ footer {
     flex-direction: column;
     width: 100vw;
     margin-top: auto;
+    z-index: 1;
 
 
 
@@ -11,7 +12,6 @@ footer {
         width: 100vw;
         display: flex;
         justify-content: flex-end;
-        z-index: 999;
 
     }
 

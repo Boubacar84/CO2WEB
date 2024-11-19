@@ -1,9 +1,18 @@
 .about {
     padding: 15rem 0;
     position: relative;
+<<<<<<< HEAD
     min-width: 100%;
     width: 100%;
 
+||||||| parent of f572131 (docs: page about finis)
+    min-width: 100%;
+    width: 100%;
+
+
+=======
+
+>>>>>>> f572131 (docs: page about finis)
     // Styles pour les pages multiples
     &__page {
         display: none; // Par défaut, les pages sont masquées
@@ -76,7 +85,6 @@
         top: 115px;
         width: 30%;
         left: 8%;
-
 
         img {
             height: auto;
@@ -175,16 +183,26 @@
             top: 115px;
             width: 30%;
             left: 8%;
-
         }
 
         img {
+<<<<<<< HEAD
             width: 71%;
             left: 44%;
+||||||| parent of f572131 (docs: page about finis)
+            height: max-content;
+            width: 71%;
+            left: 44%;
+=======
+            height: auto;
+            width: 66%;
+            left: 48%;
+>>>>>>> f572131 (docs: page about finis)
             position: absolute;
-            top: 5%;
-        }
+            top: 1%;
+            z-index: 1;
 
+        }
     }
 
     &--overlay {
@@ -203,8 +221,49 @@
         left: 50%;
         top: -17%;
     }
+
+<<<<<<< HEAD
+    &--overlay {
+        position: absolute;
+        top: -73%;
+        left: -7%;
+        width: 96%;
+    }
+
+    &__content {
+        padding: 2rem;
+        width: 30%;
+        font-style: inherit;
+        text-align: left;
+        position: absolute;
+        left: 50%;
+        top: -17%;
+    }
 }
 
+||||||| parent of f572131 (docs: page about finis)
+&--overlay {
+    position: absolute;
+    top: -73%;
+    left: -7%;
+    width: 96%;
+}
+
+&__content {
+    padding: 2rem;
+    width: 30%;
+    font-style: inherit;
+    text-align: left;
+    position: absolute;
+    left: 50%;
+    top: -17%;
+}
+}
+
+
+
+=======
+>>>>>>> f572131 (docs: page about finis)
 .slide__title {
     position: absolute;
     color: #030303;
