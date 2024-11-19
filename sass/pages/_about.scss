@@ -14,25 +14,31 @@
 
     // Boutons de navigation
     &__next,
+    &__back,
     &__prev {
         position: absolute;
-        top: 50%;
+
         transform: translateY(-50%);
-        background-color: #3DAD5C;
-        color: #fff;
+        background-color: white;
+        color: $greenlight;
         border: none;
         padding: 10px 20px;
-        border-radius: 50%;
+        border-radius: 303%;
         cursor: pointer;
-        font-size: 18px;
+        font-size: 31px;
+        left: 118%;
 
-        &:hover {
-            background-color: #019961;
-        }
+
+    }
+
+    &__back {
+        top: 90%;
+        left: 4%;
     }
 
     &__next {
         right: 5%;
+        top: 376%;
     }
 
     &__prev {
@@ -142,7 +148,7 @@
         position: absolute;
         color: $black;
         font-size: 38px;
-        font-weight: bold;
+        font-weight: 600;
         top: -63%;
     }
 
@@ -172,21 +178,19 @@
 
         img {
             height: auto;
-
-            width: 62%;
-            left: 49%;
+            width: 73%;
+            left: 42%;
             position: absolute;
-            top: 22%;
-        }
-
-        &--overlay {
-            position: absolute;
-            top: -73%;
-            left: -7%;
-            width: 96%;
+            top: -3%;
         }
     }
 
+    &--overlay {
+        position: absolute;
+        top: -73%;
+        left: -7%;
+        width: 96%;
+    }
 
     &__content {
         padding: 2rem;
@@ -197,43 +201,40 @@
         left: 50%;
         top: -17%;
     }
+}
 
-    .slide__title {
-        position: absolute;
-        color: #030303;
-        font-size: 38px;
-        font-weight: bold;
-        top: 15%;
-        left: 17%;
-    }
 
-    .about__back {
-        font-style: inherit;
-        text-align: left;
-        right: 50%;
-    }
 
-    .circle-about-img1 {
-        position: absolute;
-        width: 18px;
-        height: 18px;
-        background-color: #79C258;
-        border-radius: 78%;
-        margin: 10px;
-        top: -39%;
-        right: 96%;
-        z-index: 4;
-    }
+.slide__title {
+    position: absolute;
+    color: #030303;
+    font-size: 40px;
+    font-weight: 600;
+    top: 24%;
+    left: 21%;
+}
 
-    .slide__text {
-        font-size: 17px;
-        line-height: 2;
-        font-family: "Montserrat", sans-serif;
-        top: -117%;
-        position: absolute;
-        padding: -271px;
-        margin: 791px;
-        left: -24%;
 
-    }
+
+.circle-about-img2 {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-color: #79C258;
+    border-radius: 78%;
+    margin: 10px;
+    top: 31%;
+    left: 18%;
+}
+
+.slide__text {
+    font-size: 19px;
+    line-height: 2;
+    font-family: "Montserrat", sans-serif;
+    top: -120%;
+    position: absolute;
+    padding: -271px;
+    margin: 877px;
+    left: -28%;
+
 }
