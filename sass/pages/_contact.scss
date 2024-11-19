@@ -11,6 +11,7 @@
     display: flex;
     margin-left: auto;
 
+
     .side-image-left-top {
         position: absolute;
         top: 23%;
@@ -88,9 +89,11 @@
     max-width: 850px;
     font-family: $font-roboto;
 
+
     form {
         display: flex;
         flex-direction: column;
+
 
 
         #bouton-contact {
