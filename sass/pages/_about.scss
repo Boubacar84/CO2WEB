@@ -1,6 +1,8 @@
 .about {
     padding: 15rem 0;
     position: relative;
+    min-width: 100%;
+    width: 100%;
 
 
     // Styles pour les pages multiples
@@ -75,6 +77,7 @@
         top: 115px;
         width: 30%;
         left: 8%;
+
 
         img {
             height: auto;
@@ -175,33 +178,36 @@
             top: 115px;
             width: 30%;
             left: 8%;
+
         }
 
         img {
-            height: auto;
-            width: 73%;
-            left: 42%;
+            height: max-content;
+            width: 71%;
+            left: 44%;
             position: absolute;
-            top: -3%;
+            top: 5%;
         }
-    }
 
-    &--overlay {
-        position: absolute;
-        top: -73%;
-        left: -7%;
-        width: 96%;
     }
+}
 
-    &__content {
-        padding: 2rem;
-        width: 30%;
-        font-style: inherit;
-        text-align: left;
-        position: absolute;
-        left: 50%;
-        top: -17%;
-    }
+&--overlay {
+    position: absolute;
+    top: -73%;
+    left: -7%;
+    width: 96%;
+}
+
+&__content {
+    padding: 2rem;
+    width: 30%;
+    font-style: inherit;
+    text-align: left;
+    position: absolute;
+    left: 50%;
+    top: -17%;
+}
 }
 
 
