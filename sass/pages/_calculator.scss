@@ -17,6 +17,10 @@
         line-height: 0rem;
         z-index: 3;
     }
+
+    .clc-emission3 {
+        display: none;
+    }
 }
 
 /* Container principal pour centrer le formulaire */
@@ -195,4 +199,76 @@
     right: 9%;
     width: 350px;
     transform: rotate(20deg);
+}
+
+@media only screen and (max-width: 768px) {
+    .title-clc {
+        font-size: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        .clc-emission1,
+        .clc-emission2 {
+            display: none;
+            /* Masquer sur mobile */
+        }
+
+        .clc-emission3 {
+            display: block;
+            /* Afficher uniquement sur mobile */
+            font-size: 28px;
+            line-height: 1.2rem;
+        }
+    }
+
+    .form-container {
+        padding: 0 10px;
+    }
+
+    .form-content {
+        padding: 20px;
+        width: 100%;
+        /* Pour occuper toute la largeur disponible */
+        gap: 15px;
+        box-shadow: none;
+        /* Réduire les effets visuels pour les écrans petits */
+    }
+
+    .form-content label {
+        font-size: 16px;
+    }
+
+    .form-content input[type="number"] {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .button-container {
+        margin-top: 20px;
+        /* Ajuster l'espacement pour les petits écrans */
+    }
+
+    .resultat-popup {
+        width: 50%;
+        /* Adapter la largeur pour les mobiles */
+        font-size: 1em;
+        padding: 15px;
+    }
+
+    .highlight-green {
+        font-size: 16px;
+        /* Ajuster la taille de la police */
+    }
+
+    .circle-calc-img1,
+    .circle-calc-img2,
+    .circle-calc-img3 {
+        display: none;
+    }
+
+    .side-image-calc-left-top,
+    .side-image-calc-left-bot,
+    .side-image-calc-right {
+        display: none;
+    }
 }

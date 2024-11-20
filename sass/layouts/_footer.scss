@@ -6,8 +6,6 @@ footer {
     margin-top: auto;
     z-index: 1;
 
-
-
     .footer-container {
         width: 100vw;
         display: flex;
@@ -35,12 +33,10 @@ footer {
     font-weight: 400;
     font-style: large;
 
-
     a {
         text-decoration: none;
         color: $greendark;
         font-size: large;
-
 
         &:hover {
             text-decoration: underline;
