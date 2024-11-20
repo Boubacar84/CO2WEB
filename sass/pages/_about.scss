@@ -81,7 +81,7 @@
             height: auto;
         }
 
-        &--background {
+        &--pc {
             width: 85%;
         }
 
@@ -250,5 +250,45 @@
     padding: -271px;
     margin: 877px;
     left: -28%;
+
+}
+
+@media screen and (max-width:762px) {
+    .about {
+        width: 90%;
+
+        .about__title {
+            font-size: 30px;
+            top: -368%;
+            left: -87%;
+        }
+
+        .backgroud-about {
+            top: -121%;
+            width: 79%;
+            height: 120%;
+
+        }
+
+
+
+        .about__image--overlay {
+            position: absolute;
+            top: -251%;
+            left: -34%;
+            width: 224%;
+
+
+
+        }
+
+        .about__image--pc {
+            top: -179%;
+            left: -14%;
+            width: 184%;
+            position: relative;
+        }
+    }
+
 
 }
