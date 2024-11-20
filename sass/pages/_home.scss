@@ -45,10 +45,7 @@
 }
 
 // Responsive pour les écrans de 360px
-@media screen and (max-width: 360px) {
-    body {
-        overflow-y: auto;
-    }
+@media screen and (max-width: 762px) {
 
     .hero-right-home {
         .home-img {

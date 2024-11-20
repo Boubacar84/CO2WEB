@@ -21,3 +21,9 @@ body {
         font-style: large;
     }
 }
+
+@media screen and (max-width: 762px) {
+    body {
+        overflow-y: auto;
+    }
+}
