@@ -201,7 +201,7 @@
     transform: rotate(20deg);
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 762px) {
     .title-clc {
         font-size: 20px;
         padding-top: 20px;
@@ -227,10 +227,9 @@
 
     .form-content {
         padding: 20px;
-        width: 100%;
+        width: 80%;
         /* Pour occuper toute la largeur disponible */
         gap: 15px;
-        box-shadow: none;
         /* Réduire les effets visuels pour les écrans petits */
     }
 
