@@ -40,6 +40,10 @@
         flex-direction: row;
         align-items: center;
         gap: 1rem;
+
+        a {
+            text-decoration: none;
+        }
     }
 
 }
@@ -89,6 +93,25 @@
             align-items: center;
             gap: 0rem;
             padding-right: 3rem;
+            line-height: 0.5rem;
+            padding-top: 0.5rem;
+
+            a {
+                width: 100%;
+
+
+                .form-button {
+                    width: 100%;
+                    font-size: 22px;
+                }
+
+
+                .outlined-button {
+                    width: 100%;
+                    font-size: 22px;
+                }
+
+            }
         }
     }
 
