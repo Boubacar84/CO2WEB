@@ -1,4 +1,5 @@
 .main-contact {
+
     .title-contact {
         text-align: center;
         padding-top: 7%;
@@ -172,20 +173,27 @@
     .main-contact {
         text-align: center;
 
-
-
         .title-contact {
-            font-size: 15px;
+            font-size: 30px;
+            justify-content: flex-start;
+            text-align: left;
+            padding-left: 1rem;
         }
+
+
+
 
         .contact-form {
             margin: 15px;
+            flex-direction: column;
 
             .carre2 {
                 display: flex;
                 flex-direction: column;
                 gap: 0rem;
                 align-items: start;
+
+
             }
 
             .form-message {
@@ -195,8 +203,6 @@
             .form-button {
                 width: 100%;
             }
-
-
 
         }
 
