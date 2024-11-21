@@ -6,7 +6,6 @@ footer {
     margin-top: auto;
     z-index: 1;
 
-
     .footer-line {
         height: 1.6px;
         background: linear-gradient(to right, $lightergreen, $greendark);
@@ -57,8 +56,6 @@ footer {
 
 }
 
-
-
 // Responsive pour les écrans de 360px
 @media screen and (max-width: 360px) {
     footer {
@@ -76,8 +73,9 @@ footer {
 
                 p {
                     margin: 0;
-                    font-size: 20px;
-                    font-family: $font-roboto;
+                    font-size: 18px;
+                    font-family: $font-montserrat;
+                    font-weight: 500;
                 }
             }
 
@@ -97,6 +95,5 @@ footer {
             }
         }
     }
-
 
 }
