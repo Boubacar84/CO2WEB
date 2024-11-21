@@ -105,7 +105,6 @@
                 text-align: right;
 
                 .bouton {
-                    background-color: $greendark;
                     color: white;
                     border: none;
                     border-radius: 15px;
@@ -176,7 +175,7 @@
 
 
         .title-contact {
-            font-size: 20px;
+            font-size: 15px;
         }
 
         .contact-form {
@@ -192,6 +191,11 @@
             .form-message {
                 text-align: left;
             }
+
+            .form-button {
+                width: 100%;
+            }
+
 
 
         }
