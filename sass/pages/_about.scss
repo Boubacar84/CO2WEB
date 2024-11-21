@@ -304,5 +304,13 @@
             top: -1%;
             left: 4%;
         }
+
+        .slide__image {
+            width: 100%;
+            left: 22%;
+            position: absolute;
+            top: 4%;
+            z-index: 1;
+        }
     }
 }
