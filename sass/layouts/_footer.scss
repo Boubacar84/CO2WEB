@@ -6,12 +6,6 @@ footer {
     margin-top: auto;
     z-index: 1;
 
-    .footer-container {
-        width: 100vw;
-        display: flex;
-        justify-content: flex-end;
-
-    }
 
     .footer-line {
         height: 1.6px;
@@ -20,26 +14,89 @@ footer {
         width: 98%;
         z-index: 999;
     }
+
+    .footer-container {
+        width: 100vw;
+        display: flex;
+        justify-content: flex-end;
+
+        .copyright {
+            display: none;
+        }
+
+        .ul-nav-footer {
+            display: flex;
+            gap: 1.5rem;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            padding: 2rem 2rem;
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            font-style: large;
+
+            .nav-responsive {
+                display: flex;
+                flex-direction: row;
+                gap: 1.5rem;
+            }
+
+            a {
+                text-decoration: none;
+                color: $greendark;
+                font-size: large;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+    }
+
+
 }
 
-.ul-nav-footer {
-    display: flex;
-    gap: 1.5rem;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    padding: 2rem 2rem;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: large;
 
-    a {
-        text-decoration: none;
-        color: $greendark;
-        font-size: large;
 
-        &:hover {
-            text-decoration: underline;
+// Responsive pour les écrans de 360px
+@media screen and (max-width: 360px) {
+    footer {
+
+        .footer-container {
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+
+            .copyright {
+                display: flex;
+                flex-direction: column;
+                padding-left: 1rem;
+                padding-top: 1rem;
+
+                p {
+                    margin: 0;
+                    font-size: 20px;
+                    font-family: $font-roboto;
+                }
+            }
+
+
+            .ul-nav-footer {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                justify-content: flex-start;
+                padding: 1rem 1rem;
+
+                .nav-responsive {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 1.5rem;
+                }
+            }
         }
     }
+
+
 }
