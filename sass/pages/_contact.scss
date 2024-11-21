@@ -187,6 +187,14 @@
             margin: 15px;
             flex-direction: column;
 
+            input[type="email"] {
+                width: 125%;
+            }
+
+            input[type="number"] {
+                width: 125%;
+            }
+
             .carre2 {
                 display: flex;
                 flex-direction: column;
