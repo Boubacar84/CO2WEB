@@ -121,6 +121,22 @@
             flex-direction: column;
             gap: 1rem;
             padding-bottom: 1rem;
+
+            input,
+            textarea {
+                width: 100%;
+                padding: 10px;
+                padding-left: 0;
+                margin-top: 5px;
+                margin-bottom: 15px;
+                font-size: 16px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+                border-right: none;
+                border-left: none;
+                border-top: none;
+            }
         }
 
         .carre1 {
@@ -208,6 +224,10 @@
 
             input[type="number"] {
                 width: 125%;
+            }
+
+            #prenom {
+                width: 135%;
             }
 
             .carre2 {
