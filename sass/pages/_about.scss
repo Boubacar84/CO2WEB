@@ -264,31 +264,45 @@
         }
 
         .backgroud-about {
-            top: -121%;
-            width: 79%;
-            height: 120%;
+            top: -110%;
+            width: 66%;
+            height: 114%;
 
         }
 
 
 
+
         .about__image--overlay {
             position: absolute;
-            top: -251%;
-            left: -34%;
-            width: 224%;
+            top: -245%;
+            left: -55%;
+            width: 228%;
 
 
 
         }
 
         .about__image--pc {
-            top: -179%;
-            left: -14%;
-            width: 184%;
+            width: 192%;
+            top: -171%;
             position: relative;
+            left: -42%;
         }
     }
 
 
+}
+
+@media screen and (max-width:762px) {
+    .slide__intro {
+        .slide__title {
+            position: absolute;
+            color: #030303;
+            font-size: 24px;
+            font-weight: 600;
+            top: -1%;
+            left: 4%;
+        }
+    }
 }
