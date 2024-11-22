@@ -53,6 +53,7 @@
     transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
     margin-bottom: 2rem;
     overflow: hidden;
+    z-index: 10;
 
     .img-instruction {
         width: 135px;
@@ -142,6 +143,7 @@
 .circle-bot-3 {
     position: absolute;
     border-radius: 50%;
+    z-index: 1;
 }
 
 .circle-top-1 {
@@ -201,9 +203,6 @@
 // Responsive pour les écrans de 360px
 @media screen and (max-width: 360px) {
 
-    .card {
-        margin-bottom: 0;
-    }
 
     .title-instructions {
         line-height: 1rem;
@@ -215,7 +214,6 @@
             font-size: 30px;
             line-height: 1rem;
         }
-
     }
 
     .circle-top-1,
@@ -228,5 +226,47 @@
         display: none;
     }
 
+    .cards-instructions {
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        height: 400px;
+    }
 
+    .card {
+        flex: 0 0 100%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease;
+        opacity: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .carousel-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        border: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 10;
+    }
+
+    .prev-btn {
+        left: 10px;
+    }
+
+    .next-btn {
+        right: 10px;
+    }
 }
