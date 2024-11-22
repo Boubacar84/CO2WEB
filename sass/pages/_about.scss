@@ -7,7 +7,6 @@
     // Styles pour les pages multiples
     &__page {
         display: none; // Par défaut, les pages sont masquées
-        animation: fadeIn 0.5s ease-in-out;
 
         &.active {
             display: block; // Affiche uniquement la page active
@@ -124,6 +123,19 @@
     }
 
     .about__description {
+        color: #030303;
+        line-height: 1.5;
+        margin-top: 1rem;
+        font-family: $font-montserrat;
+        position: absolute;
+        top: 438%;
+        font-size: 20px;
+        font-weight: 500;
+
+    }
+
+    .about__description2 {
+        display: none;
         color: #030303;
         line-height: 1.5;
         margin-top: 1rem;
@@ -268,6 +280,9 @@
     display: none;
 }
 
+
+
+
 @media screen and (max-width:762px) {
     .about {
         width: 90%;
@@ -277,6 +292,42 @@
             top: -368%;
             left: -87%;
         }
+
+        .about__text {
+            font-size: 13px;
+            line-height: 2;
+            font-family: "Montserrat", sans-serif;
+            top: 104%;
+            position: absolute;
+            margin-left: -1%;
+            left: -93%;
+        }
+
+        .about__separator {
+            height: 2px;
+            width: 126px;
+            top: 366%;
+            left: -57%;
+        }
+
+        .about__description {
+            display: none;
+        }
+
+        .about__description2 {
+            color: #030303;
+            line-height: 1.5;
+            margin-top: 1rem;
+            font-family: "Montserrat", sans-serif;
+            position: absolute;
+            top: 421%;
+            font-size: 13px;
+            font-weight: 400;
+            left: -91%;
+            display: flex;
+        }
+
+
 
         .backgroud-about {
             top: -110%;
@@ -290,7 +341,7 @@
 
         .about__image--overlay {
             position: absolute;
-            top: -245%;
+            top: -70%;
             left: -55%;
             width: 228%;
 
@@ -300,9 +351,25 @@
 
         .about__image--pc {
             width: 192%;
-            top: -171%;
+            top: -172%;
             position: relative;
             left: -42%;
+        }
+
+        .about__image {
+            top: -79px;
+        }
+
+        .circle-about-img1 {
+            display: none;
+        }
+
+        .about__next {
+
+            font-size: 12px;
+            left: 23%;
+            right: -34%;
+            top: -51%;
         }
     }
 
@@ -321,8 +388,8 @@
         }
 
         .slide__image {
-            width: 108%;
-            left: -25%;
+            width: 92%;
+            left: -8%;
             position: absolute;
             top: 20%;
             z-index: 1;
@@ -331,8 +398,8 @@
         .about__back {
 
 
-            font-size: 15px;
-            top: 47%;
+            font-size: 12px;
+            top: 41%;
             left: -2%;
         }
 
@@ -343,7 +410,7 @@
         .slide__text {
             font-size: 13px;
             line-height: 1.5;
-            top: 71%;
+            top: 64%;
             margin: 10px;
             left: 6%;
             font-weight: 400;
@@ -351,14 +418,15 @@
 
         .slide__separator {
             border: none;
-            height: 3px;
-            width: 314px;
+            height: 2px;
+            width: 132px;
             background-color: #4CAF50;
             margin: 20px 0;
             position: absolute;
-            top: 401%;
-            left: 30%;
+            top: 94%;
+            left: 26%;
             transform: translateX(-50%);
+            display: flex;
 
         }
     }
