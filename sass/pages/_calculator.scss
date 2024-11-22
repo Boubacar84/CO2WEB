@@ -223,28 +223,30 @@
 
     .form-container {
         padding: 0 10px;
-    }
 
-    .form-content {
-        padding: 20px;
-        width: 80%;
-        /* Pour occuper toute la largeur disponible */
-        gap: 15px;
-        /* Réduire les effets visuels pour les écrans petits */
-    }
+        .form-content {
+            padding: 20px;
+            width: 80%;
+            /* Pour occuper toute la largeur disponible */
+            gap: 15px;
+            /* Réduire les effets visuels pour les écrans petits */
+        }
 
-    .form-content label {
-        font-size: 16px;
-    }
+        .form-content label {
+            font-size: 16px;
+        }
 
-    .form-content input[type="number"] {
-        font-size: 14px;
-        padding: 8px;
-    }
+        .form-content input[type="number"] {
+            font-size: 14px;
+            padding: 8px;
+        }
 
-    .button-container {
-        margin-top: 20px;
-        /* Ajuster l'espacement pour les petits écrans */
+        .button-container {
+            margin-top: 20px;
+            width: 100%;
+            /* Ajuster l'espacement pour les petits écrans */
+        }
+
     }
 
     .resultat-popup {
