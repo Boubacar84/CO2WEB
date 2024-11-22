@@ -197,3 +197,36 @@
     background-color: $greendark;
     z-index: 2;
 }
+
+// Responsive pour les écrans de 360px
+@media screen and (max-width: 360px) {
+
+    .card {
+        margin-bottom: 0;
+    }
+
+    .title-instructions {
+        line-height: 1rem;
+        padding-left: 1.5rem;
+        padding-bottom: 0rem;
+        padding-top: 1rem;
+
+        h1 {
+            font-size: 30px;
+            line-height: 1rem;
+        }
+
+    }
+
+    .circle-top-1,
+    .circle-top-2,
+    .circle-top-3,
+    .circle-bot-1,
+    .circle-bot-2,
+    .circle-bot-3,
+    .circle-inside {
+        display: none;
+    }
+
+
+}
