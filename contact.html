@@ -13,21 +13,26 @@
 
 <body>
     <header>
-        <a href="index.html" class="link-img-home"><img src="img/logo-CO2.svg" alt=""></a>
-        <nav>
-            <ul class="ul-nav-header">
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="instructions.html">Mode d'emploi</a></li>
-                <li><a href="velib.html">Trouver un velib</a></li>
-                <li><a href="calculator.html">Calculateur</a></li>
-                <li><a href="about.html">A propos</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
+
+        <nav class="navbar" role="navigation">
+            <a href="index.html" class="link-img-home"><img src="img/logo-CO2.svg" alt=""></a>
+
+            <ul class="navbar__links">
+                <li class="navbar__link"><a href="index.html">Accueil</a></li>
+                <li class="navbar__link"><a href=" instructions.html">Mode d'emploi</a></li>
+                <li class="navbar__link"><a href=" velib.html">Trouver un velib</a></li>
+                <li class="navbar__link"><a href=" calculator.html">Calculateur</a></li>
+                <li class="navbar__link"><a href=" about.html">A propos</a></li>
+                <li class="navbar__link"><a href=" contact.html" class="active">Contact</a></li>
             </ul>
+            <button class="burger">
+                <span class="bar"></span>
+            </button>
         </nav>
+
     </header>
 
     <main class="main-contact">
-
 
         <h1 class="title-contact">Contactez-nous</h1>
 
@@ -110,6 +115,7 @@
             </nav>
         </div>
     </footer>
+    <script src="js/burger.js"></script>
 </body>
 
 </html>
