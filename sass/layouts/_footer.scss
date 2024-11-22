@@ -56,8 +56,90 @@ footer {
 
 }
 
-// Responsive pour les écrans de 360px
-@media screen and (max-width: 360px) {
+// Responsive pour les écrans
+@media screen and (min-width: 360px) {
+    footer {
+
+        .footer-container {
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+
+            .copyright {
+                display: flex;
+                flex-direction: column;
+                padding-left: 1rem;
+                padding-top: 1rem;
+
+                p {
+                    margin: 0;
+                    font-size: 18px;
+                    font-family: $font-montserrat;
+                    font-weight: 500;
+                }
+            }
+
+
+            .ul-nav-footer {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                justify-content: flex-start;
+                padding: 1rem 1rem;
+
+                .nav-responsive {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 1.5rem;
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+    footer {
+
+        .footer-container {
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+
+            .copyright {
+                display: flex;
+                flex-direction: column;
+                padding-left: 1rem;
+                padding-top: 1rem;
+
+                p {
+                    margin: 0;
+                    font-size: 18px;
+                    font-family: $font-montserrat;
+                    font-weight: 500;
+                }
+            }
+
+
+            .ul-nav-footer {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                justify-content: flex-start;
+                padding: 1rem 1rem;
+
+                .nav-responsive {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 1.5rem;
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 1366px) {
     footer {
 
         .footer-container {

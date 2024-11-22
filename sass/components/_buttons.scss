@@ -68,4 +68,9 @@
         width: 100%;
     }
 
+    .form-button:active {
+        transform: scale(0.97);
+        box-shadow: 0px 4px 8px 1px rgba(61, 173, 92, 0.5);
+
+    }
 }
