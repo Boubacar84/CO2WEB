@@ -1,14 +1,14 @@
 #home-img {
     z-index: 1;
-    height: 900px;
+    height: 800px;
     position: absolute;
-    top: -6.3%;
-    right: -5%;
+    top: -4.5%;
+    right: -6%;
 }
 
 .hero-left-home {
     width: 50%;
-    padding-top: 200px;
+    padding-top: 160px;
     padding-bottom: 165px;
     padding-left: 5rem;
     display: flex;
@@ -29,8 +29,8 @@
             margin-right: 260px;
             font-size: 25px;
             line-height: 3rem;
-            font-family: $font-roboto;
-            font-weight: 400;
+            font-weight: 500;
+            font-family: $font-montserrat;
             color: $black;
         }
     }
@@ -81,8 +81,8 @@
                 margin-right: 5rem;
                 font-size: 15px;
                 line-height: 1rem;
-                font-family: $font-roboto;
-                font-weight: 400;
+                font-weight: 500;
+                font-family: $font-montserrat;
                 color: $black;
             }
         }
@@ -115,6 +115,109 @@
         }
     }
 
+}
+
+@media screen and (min-width: 361px) and (max-width: 768px) {
+
+    .hero-right-home {
+        #home-img {
+            position: relative;
+            height: 400px;
+            top: 0%;
+            right: -32%;
+            padding-left: 5.2rem;
+        }
+    }
+
+    .hero-left-home {
+        width: 100%;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 1.5rem;
+        display: flex;
+        flex-direction: column;
+
+        .hero-text-home {
+            margin-right: 0px;
+
+            h1 {
+                font-size: 30px;
+                text-align: center;
+            }
+
+            p {
+                margin-right: 5rem;
+                font-size: 18px;
+                line-height: 2rem;
+                font-weight: 500;
+                font-family: $font-montserrat;
+                color: $black;
+            }
+        }
+
+        .hero-button-home {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0rem;
+            padding-right: 3rem;
+            line-height: 0.5rem;
+            padding-top: 0.5rem;
+
+            a {
+                width: 100%;
+
+
+                .form-button {
+                    width: 100%;
+                    font-size: 20px;
+                }
+
+
+                .outlined-button {
+                    width: 100%;
+                    font-size: 20px;
+                }
+
+            }
+        }
+    }
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 1366px) {
+
+    .hero-right-home {
+        #home-img {
+            height: 650px;
+            position: absolute;
+            top: -2.5%;
+            right: -6.5%;
+        }
+    }
+
+    .hero-left-home {
+        padding-top: 110px;
+        padding-bottom: 90px;
+
+        .hero-text-home {
+
+            h1 {
+                font-size: 40px;
+                text-align: center;
+            }
+
+            p {
+                margin-right: 5rem;
+                font-size: 20px;
+                line-height: 2.5rem;
+                font-weight: 500;
+                font-family: $font-montserrat;
+                color: $black;
+            }
+        }
+
+    }
 
 
 
