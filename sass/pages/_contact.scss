@@ -79,7 +79,10 @@
         display: flex;
         flex-direction: column;
         margin: 0 auto;
+<<<<<<< HEAD
         padding: 2rem 1rem;
+=======
+>>>>>>> 55a45d0 (doc: add sass/pages/_contact.scss)
         border: none;
         border-radius: 15px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
@@ -87,6 +90,12 @@
         z-index: 3;
         width: 100%;
         font-family: $font-montserrat;
+<<<<<<< HEAD
+=======
+        padding: 100px;
+
+
+>>>>>>> 55a45d0 (doc: add sass/pages/_contact.scss)
 
         .bouton-right {
             text-align: center;
@@ -212,14 +221,18 @@
 
 @media screen and (min-width: 768px) {
 
+    .title-contact {
+        font-size: 45px;
+    }
+
+
+
     .contact-form {
         margin: 15px;
         flex-direction: column;
         width: 100%;
         max-width: 600px;
-        /* Augmentation de la largeur pour les écrans >= 768px */
         padding: 30px;
-
     }
 }
 
