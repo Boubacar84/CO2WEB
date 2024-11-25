@@ -75,14 +75,11 @@
         }
     }
 
-    .contact-form {
+    git .contact-form {
         display: flex;
         flex-direction: column;
         margin: 0 auto;
-<<<<<<< HEAD
         padding: 2rem 1rem;
-=======
->>>>>>> 55a45d0 (doc: add sass/pages/_contact.scss)
         border: none;
         border-radius: 15px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
@@ -90,12 +87,6 @@
         z-index: 3;
         width: 100%;
         font-family: $font-montserrat;
-<<<<<<< HEAD
-=======
-        padding: 100px;
-
-
->>>>>>> 55a45d0 (doc: add sass/pages/_contact.scss)
 
         .bouton-right {
             text-align: center;
