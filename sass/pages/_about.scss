@@ -288,9 +288,11 @@
         width: 90%;
 
         .about__title {
-            font-size: 30px;
-            top: -368%;
-            left: -87%;
+            font-size: 27px;
+            font-weight: 600;
+            top: -353%;
+            left: -92%;
+            color: #030303;
         }
 
         .about__text {
@@ -369,10 +371,6 @@
         }
     }
 
-
-}
-
-@media screen and (min-width:360px) {
     .slide__intro {
         .slide__title {
             position: absolute;
@@ -426,9 +424,11 @@
 
         }
     }
+
 }
 
-@media screen and (min-width:1366px) {
+
+@media screen and (min-width:768px) and (max-width:1366px) {
     .slide__intro {
         .slide__title {
             font-size: 40px;
@@ -451,8 +451,8 @@
         }
 
         .circle-about-img2 {
-            width: 1.5%;
-            height: 4%;
+            width: 18px;
+            height: 18px;
             top: 27%;
             left: 9%;
             z-index: 4;
@@ -471,7 +471,7 @@
             height: 2px;
             width: 182px;
             margin: 20px 0;
-            top: 86%;
+            top: 100%;
             left: 16%;
             display: flex;
         }
@@ -480,38 +480,48 @@
     }
 }
 
-@media screen and (min-width:1366px) {
+@media screen and (min-width:768px) and (max-width:1366px) {
     .about {
         padding: 12rem 0;
 
         .about__title {
-            font-size: 30px;
-            top: -140%;
-            left: 20%;
+            top: -130%;
+            left: 15%;
+
+            font-size: 40px;
+            font-weight: 600;
         }
 
         .about__text {
-            font-size: 16px;
-            top: -22%;
-            left: 17%;
+            font-size: 15px;
+            top: 4%;
+            margin-left: -8%;
+            left: 22%;
         }
 
         .about__separator {
             height: 3px;
-            width: 232px;
-            top: 328%;
-            left: 40%;
+            width: 283px;
+            top: 307%;
+            left: 43%;
         }
 
 
 
         .about__description2 {
 
-            top: 394%;
+            top: 382%;
             font-size: 15px;
-            font-weight: 500;
-            left: 16%;
-            display: flex;
+            font-weight: 450;
+            left: 13%;
+            display: none;
+        }
+
+        .about__description {
+            top: 382%;
+            font-size: 15px;
+            font-weight: 450;
+            left: 13%;
         }
 
 
@@ -528,23 +538,23 @@
 
         .about__image--overlay {
             position: absolute;
-            top: -61%;
-            left: 7%;
-            width: 109%;
+            top: -73%;
+            left: 0%;
+            width: 107%;
 
 
 
         }
 
         .about__image--pc {
-            width: 99%;
-            top: 40%;
+            width: 96%;
+            top: -12%;
             position: relative;
-            left: 13%;
+            left: 7%;
         }
 
         .about__image {
-            top: -2px;
+            top: 27px;
         }
 
         .circle-about-img1 {
@@ -552,8 +562,8 @@
             height: 22%;
             border-radius: 78%;
             margin: 10px;
-            top: -102%;
-            right: 82%;
+            top: -70%;
+            right: 85%;
             z-index: 4;
             display: flex;
         }
@@ -568,87 +578,4 @@
     }
 
 
-}
-
-@media screen and (min-width:768px) {
-    .about {
-        padding: 12rem 0;
-
-        .about__title {
-            top: -72%;
-            left: 15%;
-            font-size: 26px;
-        }
-
-        .about__text {
-            font-size: 14px;
-
-            top: 25%;
-            position: absolute;
-            margin-left: -8%;
-            left: 22%;
-        }
-
-        .about__separator {
-            height: 2px;
-            width: 126px;
-            top: 396%;
-            left: 35%;
-        }
-
-
-
-        .about__description2 {
-
-            top: 442%;
-            font-size: 14px;
-            font-weight: 400;
-            left: 13%;
-            display: flex;
-        }
-
-
-
-        .backgroud-about {
-            top: -27%;
-            width: 48%;
-            height: 100%;
-
-        }
-
-
-
-
-        .about__image--overlay {
-            position: absolute;
-            top: -78%;
-            left: -35%;
-            width: 150%;
-
-
-
-        }
-
-        .about__image--pc {
-            width: 128%;
-            top: 69%;
-            position: relative;
-            left: -27%;
-        }
-
-        .about__image {
-            top: 36px;
-        }
-
-        .circle-about-img1 {
-            display: none;
-        }
-
-        .about__next {
-            font-size: 21px;
-            left: 94%;
-            right: -34%;
-            top: 267%;
-        }
-    }
 }
