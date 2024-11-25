@@ -48,7 +48,7 @@
 
 }
 
-// Responsive pour les écrans de 360px
+// Responsive pour mobile
 @media screen and (max-width: 360px) {
 
     .hero-right-home {
@@ -118,6 +118,7 @@
 
 }
 
+// Responsive pour tablette
 @media screen and (min-width: 361px) and (max-width: 768px) {
 
     .hero-right-home {
@@ -185,6 +186,7 @@
 
 }
 
+// Responsive pour Notebook
 @media screen and (min-width: 769px) and (max-width: 1366px) {
 
     .hero-right-home {
