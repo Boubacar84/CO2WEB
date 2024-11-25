@@ -208,6 +208,7 @@
         font-size: 20px;
         padding-top: 20px;
         padding-bottom: 20px;
+        top: 10%;
 
         .clc-emission1,
         .clc-emission2 {
@@ -217,21 +218,19 @@
 
         .clc-emission3 {
             display: block;
-            /* Afficher uniquement sur mobile */
-            font-size: 28px;
+            font-size: 45px;
             line-height: 1.2rem;
         }
     }
 
     .form-container {
         padding: 0 10px;
+        height: 120%;
 
         .form-content {
             padding: 20px;
             width: 80%;
-            /* Pour occuper toute la largeur disponible */
             gap: 15px;
-            /* Réduire les effets visuels pour les écrans petits */
 
             .form-footer {
                 font-size: 12px;
@@ -255,21 +254,19 @@
         .button-container {
             margin-top: 20px;
             width: 100%;
-            /* Ajuster l'espacement pour les petits écrans */
         }
 
     }
 
     .resultat-popup {
         width: 50%;
-        /* Adapter la largeur pour les mobiles */
         font-size: 1em;
         padding: 15px;
     }
 
+    /* Surlignage */
     .highlight-green {
         font-size: 16px;
-        /* Ajuster la taille de la police */
     }
 
     .circle-calc-img1,
