@@ -79,21 +79,17 @@
         display: flex;
         flex-direction: column;
         margin: 0 auto;
-        padding: 30px 100px;
+        padding: 2rem 1rem;
         border: none;
         border-radius: 15px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
         background-color: $white;
         z-index: 3;
-        width: 850px;
-        margin-bottom: 4rem;
+        width: 100%;
         font-family: $font-montserrat;
-        min-height: 100px; // Ajustez la hauteur selon votre mise en page pour un positionnement optimal
-
-
 
         .bouton-right {
-            text-align: right;
+            text-align: center;
         }
 
 
@@ -119,7 +115,6 @@
                 outline: none;
             }
         }
-
 
         input,
         textarea {
@@ -175,23 +170,20 @@
             padding-left: 1rem;
         }
 
-
-
-
         .contact-form {
             margin: 15px;
             flex-direction: column;
 
             input[type="email"] {
-                width: 125%;
+                width: 100%;
             }
 
             input[type="number"] {
-                width: 125%;
+                width: 100%;
             }
 
             #prenom {
-                width: 135%;
+                width: 100%;
             }
 
             .carre2 {
@@ -251,7 +243,7 @@
         left: 20%;
     }
 
-    .circle-img1 {
+    .circle-img2 {
         width: 3%;
         height: 22%;
         border-radius: 78%;
@@ -259,6 +251,17 @@
         top: -102%;
         right: 82%;
         z-index: 4;
-        display: flex;
+        display: block;
+    }
+
+    .side-image-left-bot {
+        width: 3%;
+        height: 22%;
+        border-radius: 78%;
+        margin: 10px;
+        top: 10%;
+        right: 10%;
+        z-index: 4;
+        display: block;
     }
 }
