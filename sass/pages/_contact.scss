@@ -220,15 +220,60 @@
 
 @media screen and (min-width: 768px) {
 
+    .title-contact {
+        font-size: 30px;
+        justify-content: flex-start;
+        text-align: left;
+        padding-left: 1rem;
+    }
+
+
+
+    .form-wrapper {
+        width: 90%;
+        /* La largeur occupe 80% de l'écran */
+        max-width: 768px;
+        /* Largeur maximale étendue */
+        padding: 30px;
+        min-width: 768px;
+    }
+
     .contact-form {
         margin: 15px;
         flex-direction: column;
-        width: 100%;
-        max-width: 600px;
-        /* Augmentation de la largeur pour les écrans >= 768px */
-        padding: 30px;
 
+        input[type="email"] {
+            width: 125%;
+        }
+
+        input[type="number"] {
+            width: 125%;
+        }
+
+        #prenom {
+            width: 135%;
+        }
+
+        .carre2 {
+            display: flex;
+            flex-direction: column;
+            gap: 0rem;
+            align-items: start;
+
+
+        }
+
+        .form-message {
+            text-align: left;
+        }
+
+        .form-button {
+            width: 100%;
+        }
     }
+
+
+
 }
 
 @media screen and (max-width: 960px) {
