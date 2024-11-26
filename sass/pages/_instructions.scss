@@ -16,24 +16,31 @@
 }
 
 // Section des cartes d'instructions
-.cards-instructions {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0 2rem 3rem;
-    position: relative;
-    flex-wrap: nowrap;
-    gap: 4rem;
-    width: 100%;
-    max-width: 100%;
-    margin: 0 auto;
-    box-sizing: border-box;
+.carousel {
+    .cards-instructions {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0 2rem 3rem;
+        position: relative;
+        flex-wrap: nowrap;
+        gap: 4rem;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        box-sizing: border-box;
 
-    .card-link {
-        text-decoration: none;
+        .card-link {
+            text-decoration: none;
+        }
+    }
+
+    .carousel-control {
+        display: none;
     }
 }
+
 
 // Carte individuelle
 .card {
@@ -200,10 +207,59 @@
 
 // Responsive pour mobile
 @media screen and (max-width: 360px) {
+    .carousel {
+        position: relative;
+        width: 100%;
+        max-width: 800px;
+        margin: auto;
+        overflow: hidden;
 
-    .card {
-        margin-bottom: 0;
+        .cards-instructions {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+
+            .card {
+                min-width: 100%;
+                /* Chaque carte occupe 100% de la largeur du conteneur */
+                box-sizing: border-box;
+                padding: 20px;
+                text-align: center;
+                background: $white;
+                border-radius: 10px;
+                margin-bottom: 0;
+            }
+
+            .carousel-control {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: rgba(0, 0, 0, 0.6);
+                color: $white;
+                border: none;
+                font-size: 24px;
+                padding: 10px;
+                cursor: pointer;
+                z-index: 10;
+                border-radius: 50%;
+                display: block;
+
+                .carousel-control.prev {
+                    left: 10px;
+                }
+
+                .carousel-control.next {
+                    right: 10px;
+                }
+
+                .carousel-control:hover {
+                    background-color: rgba(0, 0, 0, 0.8);
+                }
+            }
+
+
+        }
     }
+
 
     .title-instructions {
         line-height: 1rem;
