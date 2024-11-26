@@ -214,10 +214,10 @@
         .cards-instructions {
             display: flex;
             transition: transform 0.5s ease-in-out;
+            will-change: transform;
 
             .card {
                 min-width: 100%;
-                /* Chaque carte occupe 100% de la largeur du conteneur */
                 box-sizing: border-box;
                 padding: 20px;
                 text-align: center;
