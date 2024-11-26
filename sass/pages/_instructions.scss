@@ -229,6 +229,12 @@
                 margin-bottom: 0;
             }
 
+            .card-link {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+            }
+
             .carousel-control {
                 position: absolute;
                 top: 50%;
