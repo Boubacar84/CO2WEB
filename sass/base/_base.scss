@@ -20,10 +20,3 @@ body {
         font-style: large;
     }
 }
-
-// Responsive pour les écrans de 360px
-@media screen and (max-width: 762px) {
-    body {
-        overflow-y: auto;
-    }
-}
