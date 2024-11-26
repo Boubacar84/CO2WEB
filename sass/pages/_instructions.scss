@@ -233,18 +233,41 @@
 
 // Responsive pour tablette
 @media screen and (min-width: 361px) and (max-width: 768px) {
-    .card {
-        margin-bottom: 0;
+
+    .cards-instructions {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding-bottom: 0;
+
+        .card {
+            margin-bottom: 0;
+            width: 220px;
+            height: 275px;
+        }
+
+        .img-instruction {
+            width: 75px;
+            height: 75px;
+            margin-bottom: 0;
+        }
+
+        h2 {
+            font-size: 1.1rem;
+        }
+
+        .card-text {
+            font-size: 16px;
+        }
     }
 
     .title-instructions {
         line-height: 1rem;
-        padding-left: 1.5rem;
+        padding-left: 7rem;
         padding-bottom: 0rem;
         padding-top: 1rem;
 
         h1 {
-            font-size: 30px;
+            font-size: 35px;
             line-height: 1rem;
         }
 
