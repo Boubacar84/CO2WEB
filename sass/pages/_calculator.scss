@@ -206,9 +206,8 @@
 @media screen and (max-width: 360px) {
     .title-clc {
         font-size: 20px;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        top: 10%;
+        padding-top: 50px;
+        padding-bottom: 50px;
 
         .clc-emission1,
         .clc-emission2 {
@@ -304,7 +303,7 @@
 
     .form-container {
         padding: 0 10px;
-        height: 80%;
+        height: 90%;
 
         .form-content {
             padding: 20px;
@@ -382,12 +381,13 @@
     }
 
     .form-container {
-        padding: 0 10px;
+        padding: 50px 10px;
 
         .form-content {
             padding: 1rem 7rem;
             width: 50%;
             gap: 7px;
+            height: 26rem;
 
             .form-footer {
                 font-size: 12px;
