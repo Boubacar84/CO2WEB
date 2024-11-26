@@ -36,9 +36,6 @@
         }
     }
 
-    .carousel-control {
-        display: none;
-    }
 }
 
 
@@ -229,7 +226,7 @@
                 margin-bottom: 0;
             }
 
-            .card-link {
+            .middle-card {
                 display: flex;
                 justify-content: center;
                 width: 100%;
@@ -247,7 +244,6 @@
                 cursor: pointer;
                 z-index: 10;
                 border-radius: 50%;
-                display: block;
 
                 .carousel-control.prev {
                     left: 10px;
@@ -303,7 +299,7 @@
 
         .card {
             margin-bottom: 0;
-            width: 220px;
+            width: 375px;
             height: 275px;
         }
 
