@@ -19,7 +19,6 @@
 
 
 
-
         .side-image-left-top {
             position: absolute;
             top: 18%;
@@ -31,7 +30,7 @@
 
         .side-image-left-bot {
             position: absolute;
-            top: 42%;
+            top: 41%;
             left: 19%;
             z-index: 1;
             width: 240px;
@@ -116,12 +115,19 @@
         }
 
 
-        .contact-group {
+
+        .contact-group,
+        .contact-group2 {
             display: flex;
             flex-direction: row;
             gap: 3rem;
             padding-bottom: 1rem;
             justify-content: flex-start;
+
+
+
+
+
 
             input,
             textarea {
@@ -211,6 +217,11 @@
             text-align: left;
             padding-left: 1rem;
             border-radius: 20px;
+            flex-direction: row;
+            padding-bottom: 0.5rem;
+            padding-top: 1rem;
+            margin-top: 0;
+            margin-bottom: 0;
         }
 
         .form-wrapper {
@@ -223,8 +234,9 @@
             flex-direction: column;
             padding: 25px;
 
+
             input[type="email"] {
-                width: 125%;
+                width: 97%;
 
             }
 
@@ -236,23 +248,57 @@
                 width: 100%;
             }
 
+            .disposition {
+                display: flex;
+                flex-direction: column-reverse;
+            }
 
+            .contact-group {
+                flex-direction: row-reverse;
+                gap: 0.5rem;
+            }
+
+            .contact-group2 {
+                display: block;
+            }
 
             .carre2 {
                 display: flex;
                 flex-direction: column;
                 gap: 0rem;
                 align-items: start;
+                font-size: 1rem;
+
+                label {
+                    font-weight: 500;
+                }
 
 
             }
 
             .form-message {
                 text-align: left;
+
+
+                label {
+                    font-weight: 500;
+
+                }
+
+                textarea {
+                    font-family: $font-roboto;
+                }
+
             }
 
             .form-button {
                 width: 100%;
+                font-size: 22px;
+
+            }
+
+            #message {
+                height: 85px;
             }
 
 
@@ -267,49 +313,136 @@
 
 @media screen and (min-width: 768px) {
 
+
     .title-contact {
         font-size: 45px;
+        justify-content: flex-start;
+        text-align: left;
+        padding-left: 1rem;
+        border-radius: 20px;
+        flex-direction: row;
+        padding-bottom: 0.5rem;
+        padding-top: 1rem;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .form-wrapper {
+        padding-bottom: 20px;
+        padding-top: 20px;
+
+
+
+        .contact-form {
+            margin: 40px;
+            flex-direction: column;
+
+        }
+
+        .form {
+            width: 50%;
+        }
+
+        input[type="email"] {
+            width: 97%;
+
+        }
+
+        input[type="number"] {
+            width: 97%;
+        }
+
+        input[type="text"] {
+            width: 100%;
+        }
+
+        .disposition {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        .contact-group {
+            flex-direction: row-reverse;
+            gap: 0.5rem;
+        }
+
+        .contact-group2 {
+            display: block;
+        }
+
+        .carre2 {
+            display: flex;
+            flex-direction: column;
+            gap: 0rem;
+            align-items: start;
+            font-size: 1rem;
+
+            label {
+                font-weight: 500;
+            }
+
+
+        }
+
+        .form-message {
+            text-align: left;
+
+
+            label {
+                font-weight: 500;
+
+            }
+
+            textarea {
+                font-family: $font-roboto;
+            }
+
+        }
+
+        .form-button {
+            width: 25%;
+            font-size: 22px;
+
+        }
+
+        #message {
+            height: 85px;
+        }
+
+
     }
 
 
 
-    .contact-form {
-        margin: 15px;
-        flex-direction: column;
-        width: 100%;
-        max-width: 600px;
-        padding: 30px;
-    }
-}
+    @media screen and (max-width: 960px) {
 
-@media screen and (max-width: 960px) {
+        .side-image-left-top,
+        .side-image-left-bot,
+        .side-image-right,
+        .circle-img1,
+        .circle-img2,
+        .circle-img3 {
+            display: none;
+        }
 
-    .side-image-left-top,
-    .side-image-left-bot,
-    .side-image-right,
-    .circle-img1,
-    .circle-img2,
-    .circle-img3 {
-        display: none;
     }
 
-}
+    @media screen and (min-width:1366px) {
+        .title-contact {
+            font-size: 30px;
+            top: -140%;
+            left: 20%;
+        }
 
-@media screen and (min-width:1366px) {
-    .title-contact {
-        font-size: 30px;
-        top: -140%;
-        left: 20%;
-    }
-
-    .circle-img1 {
-        width: 3%;
-        height: 22%;
-        border-radius: 78%;
-        margin: 10px;
-        top: -102%;
-        right: 82%;
-        z-index: 4;
-        display: flex;
+        .circle-img1 {
+            width: 3%;
+            height: 22%;
+            border-radius: 78%;
+            margin: 10px;
+            top: -102%;
+            right: 82%;
+            z-index: 4;
+            display: flex;
+        }
     }
 }
