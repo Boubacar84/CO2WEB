@@ -17,25 +17,48 @@
 
 // Section des cartes d'instructions
 .carousel {
-    .cards-instructions {
-        display: flex;
+    .carousel-indicators {
+        display: none; // Masque par défaut
         justify-content: center;
         align-items: center;
-        text-align: center;
-        padding: 0 2rem 3rem;
-        position: relative;
-        flex-wrap: nowrap;
-        gap: 4rem;
-        width: 100%;
-        max-width: 100%;
-        margin: 0 auto;
-        box-sizing: border-box;
+        gap: 0.5rem;
+        margin-top: 1rem;
 
-        .card-link {
-            text-decoration: none;
+        button {
+            width: 10px;
+            height: 10px;
+            background-color: $lightgrey;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            &.active {
+                background-color: $greenlight; // Couleur active
+            }
         }
-    }
 
+
+        .cards-instructions {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 2rem 3rem;
+            position: relative;
+            flex-wrap: nowrap;
+            gap: 4rem;
+            width: 100%;
+            max-width: 100%;
+            margin: 0 auto;
+            box-sizing: border-box;
+
+            .card-link {
+                text-decoration: none;
+            }
+        }
+
+    }
 }
 
 
@@ -83,12 +106,17 @@
         color: $black;
         line-height: 1.5;
     }
+
+    .card:not(.middle-card) {
+        position: relative;
+        z-index: 0; // En dessous des cercles
+    }
 }
 
 // Carte du milieu avec effet de hover permanent
 .middle-card {
     position: relative;
-    z-index: 4;
+    z-index: 2;
     background-color: $white;
     border: 2px solid $white;
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
@@ -135,6 +163,7 @@
 .circle-bot-3 {
     position: absolute;
     border-radius: 50%;
+    z-index: 1;
 }
 
 .circle-top-1 {
@@ -199,6 +228,28 @@
         max-width: 800px;
         margin: auto;
         overflow: hidden;
+
+        .carousel-indicators {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+
+            button {
+                width: 10px;
+                height: 10px;
+                background-color: $lightgrey;
+                border: none;
+                border-radius: 50%;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+
+                &.active {
+                    background-color: $greenlight; // Couleur active
+                }
+            }
+        }
 
         .cards-instructions {
             display: flex;
@@ -309,6 +360,10 @@
 // Responsive pour tablette
 @media screen and (min-width: 361px) and (max-width: 768px) {
     .carousel {
+        .carousel-indicators {
+            display: none;
+        }
+
         .cards-instructions {
             flex-direction: column;
             gap: 2rem;

@@ -86,3 +86,81 @@ document.addEventListener("DOMContentLoaded", () => {
     applyCarousel();
     window.addEventListener("resize", applyCarousel);
 });
+
+// Ajoute les indicateurs en dessous du carousel
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const track = document.querySelector(".cards-instructions");
+    const indicatorsContainer = document.querySelector(".carousel-indicators");
+    const indicators = document.querySelectorAll(".carousel-indicators .indicator");
+    const middleCard = document.querySelector(".middle-card");
+    const circles = document.querySelectorAll(
+        ".circle-top-1, .circle-top-2, .circle-top-3, .circle-bot-1, .circle-bot-2, .circle-bot-3"
+    );
+    const cardWidth = 360;
+    let currentIndex = 0;
+
+    // Fonction pour mettre à jour la position des slides
+    const updateCarousel = (index) => {
+        track.style.transform = `translateX(${-index * cardWidth}px)`;
+        track.style.transition = "transform 0.5s ease-in-out";
+        currentIndex = index;
+
+        // Met à jour les indicateurs actifs uniquement en mobile
+        if (window.innerWidth <= 360) {
+            indicators.forEach((indicator, i) => {
+                indicator.classList.toggle("active", i === index); // Active uniquement l'indicateur correspondant
+            });
+        }
+    };
+
+    // Fonction pour gérer les cercles au chargement et au resize
+    const manageCircleZIndex = () => {
+        if (window.innerWidth >= 769) {
+            // Desktop: Les cercles passent derrière la middle card mais restent au-dessus des autres cartes
+            middleCard.style.zIndex = "2"; // Middle card reste au-dessus
+            circles.forEach((circle) => {
+                circle.style.zIndex = "1"; // Les cercles sont entre la middle card et les autres cartes
+            });
+
+            // Les autres cartes restent en dessous des cercles
+            const cards = document.querySelectorAll(".card:not(.middle-card)");
+            cards.forEach((card) => {
+                card.style.zIndex = "0"; // Les autres cartes restent en-dessous des cercles
+            });
+        } else {
+            // Mobile: Réinitialise les z-index
+            circles.forEach((circle) => {
+                circle.style.zIndex = ""; // Réinitialise les cercles pour le responsive
+            });
+        }
+    };
+
+    // Fonction pour afficher ou masquer les indicateurs en fonction de la taille d'écran
+    const toggleIndicators = () => {
+        if (window.innerWidth <= 360) {
+            indicatorsContainer.style.display = "flex"; // Affiche les indicateurs en mobile
+        } else {
+            indicatorsContainer.style.display = "none"; // Masque les indicateurs en desktop
+        }
+    };
+
+    // Ajoute les événements de clic sur les indicateurs
+    indicators.forEach((indicator, i) => {
+        indicator.addEventListener("click", () => {
+            updateCarousel(i - 1); // Utilise directement l'index `i` sans ajustement
+        });
+    });
+
+    // Applique les ajustements lors du redimensionnement
+    window.addEventListener("resize", () => {
+        toggleIndicators();
+        manageCircleZIndex();
+    });
+
+    // Initialisation
+    toggleIndicators();
+    manageCircleZIndex();
+    updateCarousel(0); // Positionner sur la première slide
+});
