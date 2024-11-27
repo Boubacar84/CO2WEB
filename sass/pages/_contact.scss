@@ -100,15 +100,13 @@
         font-family: $font-montserrat;
         min-height: 100px; // Ajustez la hauteur selon votre mise en page pour un positionnement optimal
 
+
+
         label {
             display: flex;
-            width: 100px;
+            width: 100%;
             text-align: left;
             justify-content: flex-start;
-        }
-
-        input {
-            display: inline-block;
         }
 
 
@@ -138,7 +136,24 @@
                 border: none;
                 border-bottom: 1px solid #ccc;
                 outline: none;
+                text-align: left;
             }
+
+            input {
+                width: 270px;
+                /* Définit une largeur fixe */
+                margin-bottom: 10px;
+                /* Espacement entre les inputs */
+            }
+
+            label {
+                margin-right: 15px;
+                /* Espace entre le label et l'input */
+                text-align: left;
+                /* Aligne le texte du label à gauche */
+            }
+
+
         }
 
 
@@ -195,26 +210,33 @@
             justify-content: flex-start;
             text-align: left;
             padding-left: 1rem;
+            border-radius: 20px;
         }
 
-
+        .form-wrapper {
+            padding-bottom: 20px;
+        }
 
 
         .contact-form {
             margin: 15px;
             flex-direction: column;
+            padding: 25px;
 
             input[type="email"] {
                 width: 125%;
+
             }
 
             input[type="number"] {
-                width: 125%;
+                width: 97%;
             }
 
-            #prenom {
-                width: 135%;
+            input[type="text"] {
+                width: 100%;
             }
+
+
 
             .carre2 {
                 display: flex;
@@ -233,12 +255,15 @@
                 width: 100%;
             }
 
+
         }
 
     }
 
 
 }
+
+
 
 @media screen and (min-width: 768px) {
 
