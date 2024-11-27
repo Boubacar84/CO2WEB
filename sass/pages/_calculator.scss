@@ -15,7 +15,6 @@
         font-size: 45px;
         font-weight: 550;
         line-height: 0rem;
-        z-index: 3;
     }
 
     .clc-emission3 {
@@ -42,7 +41,6 @@
     border-radius: 15px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     background-color: $white;
-    z-index: 3;
     width: 850px;
     gap: 5px;
     margin-bottom: 4rem;
@@ -57,7 +55,7 @@
         text-align: left;
         margin-top: 15px;
         color: #333;
-        }
+    }
 }
 
 .form-content input[type="number"] {
@@ -151,7 +149,7 @@
     position: absolute;
     border-radius: 50%;
     background-color: $white;
-    z-index: 4;
+    z-index: -1;
 }
 
 .circle-calc-img1 {
@@ -182,7 +180,7 @@
 .side-image-calc-left-bot,
 .side-image-calc-right {
     position: absolute;
-    z-index: 2;
+    z-index: -1;
 }
 
 .side-image-calc-left-top {
@@ -435,7 +433,7 @@
         position: absolute;
         border-radius: 50%;
         background-color: $white;
-        z-index: 4;
+        z-index: -1;
     }
 
     .circle-calc-img1 {
@@ -466,7 +464,7 @@
     .side-image-calc-left-bot,
     .side-image-calc-right {
         position: absolute;
-        z-index: 2;
+        z-index: -1;
     }
 
     .side-image-calc-left-top {
