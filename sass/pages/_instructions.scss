@@ -285,6 +285,11 @@
         gap: 1.5rem;
         padding-bottom: 0;
 
+        .card:last-child {
+            display: none;
+            /* Masquer le clone de la première carte en desktop */
+        }
+
         .card {
             margin-bottom: 0;
             width: 375px;
@@ -425,4 +430,11 @@
     }
 
 
+}
+
+@media screen and (min-width: 361px) {
+    .carousel-control {
+        display: none;
+        /* Masquer les boutons */
+    }
 }

@@ -4,34 +4,38 @@ document.addEventListener("DOMContentLoaded", () => {
     const prevButton = document.querySelector(".carousel-control.prev");
     const nextButton = document.querySelector(".carousel-control.next");
 
-    const totalCards = cards.length;
     const cardWidth = 360; // Largeur fixe pour mobile
+    const offsetFix = 180; // Décalage pour centrer la carte
     let currentIndex = 0; // Index initial
 
     // Ajouter un clone explicite de la première carte à la fin
     const firstClone = cards[0].cloneNode(true);
+    firstClone.classList.add("clone");
     track.appendChild(firstClone);
+
+    // Total des cartes (sans ajouter 1 pour éviter une slide en trop)
+    const totalCards = cards.length;
 
     // Fonction pour mettre à jour la position du slider
     const updateCarousel = () => {
-        const offset = currentIndex * -cardWidth + 180; // Translation ajustée avec un décalage à gauche
+        const offset = currentIndex * -cardWidth + offsetFix;
         track.style.transform = `translateX(${offset}px)`;
+        track.style.transition = "transform 0.5s ease-in-out";
     };
 
     // Passer à la carte suivante
     const showNextCard = () => {
-        if (currentIndex >= totalCards) {
-            // Si on dépasse la dernière carte, revenir à la première carte sans transition
-            currentIndex = 0;
+        currentIndex++;
+        if (currentIndex === totalCards) {
+            // Si on atteint le clone (dernière slide)
             track.style.transition = "none"; // Désactiver temporairement la transition
+            currentIndex = 0; // Revenir à la première carte réelle
             updateCarousel();
             setTimeout(() => {
                 track.style.transition = "transform 0.5s ease-in-out"; // Réactiver la transition
-                currentIndex++;
                 updateCarousel();
             }, 50);
         } else {
-            currentIndex++;
             updateCarousel();
         }
     };
@@ -39,13 +43,12 @@ document.addEventListener("DOMContentLoaded", () => {
     // Passer à la carte précédente
     const showPrevCard = () => {
         if (currentIndex <= 0) {
-            // Si on dépasse la première carte, revenir à la dernière carte sans transition
-            currentIndex = totalCards;
-            track.style.transition = "none"; // Désactiver temporairement la transition
+            // Si on est sur la première carte, revenir à la dernière carte réelle
+            currentIndex = totalCards - 1; // Aller à la dernière carte
+            track.style.transition = "none";
             updateCarousel();
             setTimeout(() => {
-                track.style.transition = "transform 0.5s ease-in-out"; // Réactiver la transition
-                currentIndex--;
+                track.style.transition = "transform 0.5s ease-in-out";
                 updateCarousel();
             }, 50);
         } else {
@@ -58,6 +61,29 @@ document.addEventListener("DOMContentLoaded", () => {
     nextButton.addEventListener("click", showNextCard);
     prevButton.addEventListener("click", showPrevCard);
 
-    // Positionnement initial avec un léger décalage à gauche
-    updateCarousel();
+    // Désactiver le carousel en desktop
+    const applyCarousel = () => {
+        if (window.innerWidth <= 360) {
+            prevButton.style.display = "block";
+            nextButton.style.display = "block";
+            updateCarousel();
+        } else {
+            prevButton.style.display = "none";
+            nextButton.style.display = "none";
+
+            // Supprimer le clone si présent
+            const clone = track.querySelector(".card.clone");
+            if (clone) {
+                clone.remove();
+            }
+
+            // Réinitialiser le conteneur
+            track.style.transform = "none";
+            track.style.transition = "none";
+        }
+    };
+
+    // Appliquer le carousel au chargement et lors du redimensionnement
+    applyCarousel();
+    window.addEventListener("resize", applyCarousel);
 });
