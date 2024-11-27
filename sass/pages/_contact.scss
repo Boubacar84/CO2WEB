@@ -17,9 +17,12 @@
         align-items: center;
         padding-bottom: 50px;
 
+
+
+
         .side-image-left-top {
             position: absolute;
-            top: 15%;
+            top: 18%;
             width: 310px;
             height: auto;
             left: 23rem;
@@ -28,7 +31,7 @@
 
         .side-image-left-bot {
             position: absolute;
-            top: 47%;
+            top: 42%;
             left: 19%;
             z-index: 1;
             width: 240px;
@@ -37,10 +40,10 @@
 
         .side-image-right {
             position: absolute;
-            top: 40%;
+            top: 38%;
             width: 300px;
             height: auto;
-            right: 17%;
+            right: 19%;
             z-index: 1;
             transform: rotate(20deg);
         }
@@ -65,15 +68,15 @@
         .circle-img2 {
             width: 60px;
             height: 60px;
-            top: 18%;
-            right: 16%;
+            top: 17%;
+            right: 19%;
             border: 20px solid #79c258;
         }
 
         .circle-img3 {
             width: 40px;
             height: 40px;
-            top: 32%;
+            top: 30%;
             right: 19%;
             border: 20px solid $lightergreen;
         }
@@ -96,6 +99,19 @@
         margin-bottom: 4rem;
         font-family: $font-montserrat;
         min-height: 100px; // Ajustez la hauteur selon votre mise en page pour un positionnement optimal
+
+        label {
+            display: flex;
+            width: 100px;
+            text-align: left;
+            justify-content: flex-start;
+        }
+
+        input {
+            display: inline-block;
+        }
+
+
 
         .bouton-right {
             text-align: right;
@@ -124,6 +140,7 @@
                 outline: none;
             }
         }
+
 
 
         input,
