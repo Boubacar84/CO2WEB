@@ -1,21 +1,25 @@
 .main-contact {
 
     .title-contact {
-        text-align: center;
-        padding-top: 7%;
+        display: flex;
+        align-items: center;
+        text-align: start;
+        flex-direction: column;
         font-size: 45px;
         font-weight: 600;
+        padding-bottom: 30px;
+        padding-top: 50px;
     }
-
 
     .form-wrapper {
         display: flex;
-        margin-left: auto;
-
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 50px;
 
         .side-image-left-top {
             position: absolute;
-            top: 23%;
+            top: 15%;
             width: 310px;
             height: auto;
             left: 23rem;
@@ -24,21 +28,21 @@
 
         .side-image-left-bot {
             position: absolute;
-            top: 49%;
-            left: 22.5rem;
+            top: 47%;
+            left: 19%;
             z-index: 1;
             width: 240px;
-            transform: rotate(-19deg);
+            transform: rotate(-15deg);
         }
 
         .side-image-right {
             position: absolute;
-            top: 41%;
-            width: 320px;
+            top: 40%;
+            width: 300px;
             height: auto;
-            right: 21.5rem;
+            right: 17%;
             z-index: 1;
-            transform: rotate(13deg);
+            transform: rotate(20deg);
         }
 
         .circle-img1,
@@ -51,42 +55,47 @@
         }
 
         .circle-img1 {
-            width: 100px;
-            height: 100px;
-            top: 25%;
+            width: 120px;
+            height: 120px;
+            top: 20%;
             right: 24%;
             border: 25px solid $greendark;
         }
 
         .circle-img2 {
-            width: 55px;
-            height: 55px;
-            top: 21%;
-            right: 18%;
-            border: 25px solid $greenlight;
+            width: 60px;
+            height: 60px;
+            top: 18%;
+            right: 16%;
+            border: 20px solid #79c258;
         }
 
         .circle-img3 {
-            width: 35px;
-            height: 35px;
-            top: 34%;
-            right: 18.3%;
-            border: 25px solid $lightergreen;
+            width: 40px;
+            height: 40px;
+            top: 32%;
+            right: 19%;
+            border: 20px solid $lightergreen;
         }
     }
 
     .contact-form {
         display: flex;
+        justify-content: center;
+        text-align: center;
         flex-direction: column;
         margin: 0 auto;
-        padding: 2rem 1rem;
+        padding: 30px 100px;
         border: none;
         border-radius: 15px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
         background-color: $white;
         z-index: 3;
-        width: 100%;
+        width: 850px;
+        gap: 5px;
+        margin-bottom: 4rem;
         font-family: $font-montserrat;
+        min-height: 100px; // Ajustez la hauteur selon votre mise en page pour un positionnement optimal
 
         .bouton-right {
             text-align: center;

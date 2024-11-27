@@ -48,15 +48,16 @@
     margin-bottom: 4rem;
     font-family: $font-montserrat;
     min-height: 100px; // Ajustez la hauteur selon votre mise en page pour un positionnement optimal
-}
 
-.form-content label {
-    font-weight: 500;
-    font-size: 20px;
-    display: block;
-    text-align: left;
-    margin-top: 15px;
-    color: #333;
+
+    &--label {
+        font-weight: 500;
+        font-size: 20px;
+        display: block;
+        text-align: left;
+        margin-top: 15px;
+        color: #333;
+        }
 }
 
 .form-content input[type="number"] {
