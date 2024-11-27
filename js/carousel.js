@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const nextButton = document.querySelector(".carousel-control.next");
 
     const cardWidth = 360; // Largeur fixe pour mobile
-    const offsetFix = 180; // Décalage pour centrer la carte
     let currentIndex = 0; // Index initial
 
     // Ajouter un clone explicite de la première carte à la fin
@@ -14,11 +13,11 @@ document.addEventListener("DOMContentLoaded", () => {
     track.appendChild(firstClone);
 
     // Total des cartes (sans ajouter 1 pour éviter une slide en trop)
-    const totalCards = cards.length;
+    const totalCards = cards.length - 1;
 
     // Fonction pour mettre à jour la position du slider
     const updateCarousel = () => {
-        const offset = currentIndex * -cardWidth + offsetFix;
+        const offset = currentIndex * -cardWidth; // Suppression du décalage
         track.style.transform = `translateX(${offset}px)`;
         track.style.transition = "transform 0.5s ease-in-out";
     };
@@ -29,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (currentIndex === totalCards) {
             // Si on atteint le clone (dernière slide)
             track.style.transition = "none"; // Désactiver temporairement la transition
-            currentIndex = 0; // Revenir à la première carte réelle
+            currentIndex = -1; // Revenir à la première carte réelle
             updateCarousel();
             setTimeout(() => {
                 track.style.transition = "transform 0.5s ease-in-out"; // Réactiver la transition
@@ -42,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Passer à la carte précédente
     const showPrevCard = () => {
-        if (currentIndex <= 0) {
+        if (currentIndex <= -1) {
             // Si on est sur la première carte, revenir à la dernière carte réelle
             currentIndex = totalCards - 1; // Aller à la dernière carte
             track.style.transition = "none";
