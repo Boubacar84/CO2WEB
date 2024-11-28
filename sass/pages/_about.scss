@@ -18,7 +18,6 @@
     &__back,
     &__prev {
         position: absolute;
-
         transform: translateY(-50%);
         background-color: white;
         color: $greenlight;
@@ -28,8 +27,6 @@
         cursor: pointer;
         font-size: 31px;
         left: 118%;
-
-
     }
 
     &__back {
@@ -305,7 +302,7 @@
         .about__separator {
             height: 2px;
             width: 126px;
-            top: 366%;
+            top: 314%;
             left: -57%;
         }
 
@@ -315,9 +312,9 @@
 
         .about__description2 {
 
-            top: 421%;
+            top: 363%;
             font-size: 13px;
-            font-weight: 400;
+            font-weight: 450;
             left: -91%;
             display: flex;
         }
@@ -325,9 +322,7 @@
 
 
         .background-about {
-
             top: -100%;
-
             width: 64%;
             height: 100%;
 
