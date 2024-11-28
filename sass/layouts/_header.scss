@@ -18,7 +18,7 @@ header {
         align-items: center;
         transition: transform 0.4s ease;
         /* Animation fluide */
-        z-index: 1;
+        z-index: 3;
         transform: translateX(0);
         font-family: $font-roboto;
 
@@ -53,57 +53,54 @@ header {
     .burger-toggle {
         position: fixed;
         /* Bouton fixe en haut à droite */
-        top: 29px;
-        right: 14px;
-        z-index: 3;
+        top: 1rem;
+        right: 1rem;
+        z-index: 4;
         /* Toujours au-dessus du menu */
         background: none;
         border: none;
         cursor: pointer;
+        width: 30px;
+        height: 30px;
 
-        .burger-icon {
-            display: block;
-            width: 30px;
-            height: 3px;
-            background-color: $greendark;
-            border-radius: 2px;
-            position: relative;
-            transition: all 0.3s ease;
-
-            &::before,
-            &::after {
-                content: "";
-                display: block;
-                width: 30px;
-                height: 3px;
-                background-color: $greendark;
-                border-radius: 2px;
-                position: absolute;
-                transition: all 0.3s ease;
-            }
-
-            &::before {
-                top: -8px;
-                /* Ligne supérieure */
-            }
-
-            &::after {
-                top: 8px;
-                /* Ligne inférieure */
-            }
+        img {
+            width: 100%;
+            height: 100%;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            /* Animation fluide pour affichage/rotation */
         }
 
-        &.active .burger-icon {
-            background-color: transparent;
+        .burger-icon {
+            opacity: 1;
+            /* Visible par défaut */
+            position: absolute;
+            /* Superposé à l'icône de fermeture */
+            top: 0;
+            left: 0;
+        }
 
-            &::before {
-                transform: rotate(45deg);
-                top: 0;
+        .burger-close {
+            opacity: 0;
+            /* Masqué par défaut */
+            position: absolute;
+            /* Superposé à l'icône burger */
+            top: 0;
+            left: 0;
+        }
+
+        &.active {
+            .burger-icon {
+                opacity: 0;
+                /* Masquer l'icône burger */
+                transform: rotate(-90deg);
+                /* Animation de rotation */
             }
 
-            &::after {
-                transform: rotate(-45deg);
-                top: 0;
+            .burger-close {
+                opacity: 1;
+                /* Afficher l'icône close */
+                transform: rotate(0deg);
+                /* Réinitialisation de l'angle */
             }
         }
     }
@@ -118,7 +115,6 @@ header {
         transition: all 0.3s ease;
         /* Animation fluide pour les changements */
     }
-
 }
 
 /* Styles Desktop */
