@@ -1,11 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const menuToggle = document.querySelector(".menu-toggle");
-    const menu = document.querySelector(".menu");
-    const content = document.querySelector(".content"); // Contenu principal
+    const burgerToggle = document.querySelector(".burger-toggle");
+    const burgerMenu = document.querySelector(".burger-menu");
 
-    menuToggle.addEventListener("click", () => {
-        menu.classList.toggle("active");
-        menuToggle.classList.toggle("active");
-        content.classList.toggle("blurred"); // Ajout d’un flou au contenu
+    burgerToggle.addEventListener("click", () => {
+        burgerMenu.classList.toggle("active");
+        burgerToggle.classList.toggle("active");
+    });
+
+    // Optionnel : Fermer si on clique ailleurs
+    document.addEventListener("click", (event) => {
+        if (
+            !burgerMenu.contains(event.target) &&
+            !burgerToggle.contains(event.target) &&
+            burgerMenu.classList.contains("active")
+        ) {
+            burgerMenu.classList.remove("active");
+            burgerToggle.classList.remove("active");
+        }
     });
 });

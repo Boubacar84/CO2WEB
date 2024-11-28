@@ -1,52 +1,150 @@
 header {
-    z-index: 2;
-    position: relative;
-    display: flex;
-    align-items: center;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    z-index: 11;
+}
+
+.burger-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    /* Hors de l'écran par défaut */
+    width: 100%;
+    height: 100%;
     background-color: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.4s ease;
+    /* Animation fluide */
+    z-index: 1;
+    transform: translateX(0);
+    font-family: $font-roboto;
 
-    .active {
-        font-weight: bold;
-    }
+    .burger-nav {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-align: center;
 
-    img {
-        width: 80%;
-        height: 48.733px;
-    }
+        li {
+            margin: 1rem 0;
 
-    .link-img-home {
-        width: 10%;
-        padding-left: 5rem;
-        display: flex;
-        align-items: center;
-    }
+            a {
+                text-decoration: none;
+                color: $greendark;
+                font-size: 1.5rem;
+                font-weight: bold;
 
-    nav {
-        font-family: "Roboto", sans-serif;
-        font-weight: 400;
-        font-style: large;
-
-        .ul-nav-header {
-            display: flex;
-            gap: 2rem;
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-
-            li {
-                a {
-                    text-decoration: none;
-                    color: $greendark;
-                    font-size: large;
-
-                    &:hover {
-                        text-decoration: underline;
-                    }
+                &:hover {
+                    text-decoration: underline;
                 }
             }
         }
+    }
+
+    &.active {
+        transform: translateX(-100%);
+        /* Le menu revient à sa position normale */
+    }
+}
+
+.burger-toggle {
+    position: fixed;
+    /* Bouton fixe en haut à droite */
+    top: 29px;
+    right: 14px;
+    z-index: 3;
+    /* Toujours au-dessus du menu */
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    .burger-icon {
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: $greendark;
+        border-radius: 2px;
+        position: relative;
+        transition: all 0.3s ease;
+
+        &::before,
+        &::after {
+            content: "";
+            display: block;
+            width: 30px;
+            height: 3px;
+            background-color: $greendark;
+            border-radius: 2px;
+            position: absolute;
+            transition: all 0.3s ease;
+        }
+
+        &::before {
+            top: -8px;
+            /* Ligne supérieure */
+        }
+
+        &::after {
+            top: 8px;
+            /* Ligne inférieure */
+        }
+    }
+
+    &.active .burger-icon {
+        background-color: transparent;
+
+        &::before {
+            transform: rotate(45deg);
+            top: 0;
+        }
+
+        &::after {
+            transform: rotate(-45deg);
+            top: 0;
+        }
+    }
+}
+
+/* Style du logo */
+.link-img-home img {
+    width: 120px;
+    /* Taille par défaut du logo */
+    height: auto;
+    /* Garde les proportions du logo */
+    transition: all 0.3s ease;
+    /* Animation fluide pour les changements */
+}
+
+/* Styles Desktop */
+@media (min-width: 769px) {
+    .burger-menu {
+        display: none;
+        /* Cache le menu burger sur desktop */
+    }
+
+    .burger-toggle {
+        display: none;
+        /* Cache le bouton burger sur desktop */
+    }
+
+    .link-img-home img {
+        width: 100px;
+        /* Taille réduite pour les écrans larges */
+    }
+}
+
+/* Styles Mobile */
+@media (max-width: 768px) {
+    .link-img-home img {
+        width: 30%;
+        padding: 1rem 0 0 1rem;
+        text-decoration: none;
+        /* Taille plus petite pour mobile */
+    }
+
+    a {
+        text-decoration: none;
     }
 }
