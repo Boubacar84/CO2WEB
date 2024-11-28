@@ -115,36 +115,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
-    // Fonction pour gérer les cercles au chargement et au resize
-    const manageCircleZIndex = () => {
-        if (window.innerWidth >= 769) {
-            // Desktop: Les cercles passent derrière la middle card mais restent au-dessus des autres cartes
-            middleCard.style.zIndex = "2"; // Middle card reste au-dessus
-            circles.forEach((circle) => {
-                circle.style.zIndex = "1"; // Les cercles sont entre la middle card et les autres cartes
-            });
-
-            // Les autres cartes restent en dessous des cercles
-            const cards = document.querySelectorAll(".card:not(.middle-card)");
-            cards.forEach((card) => {
-                card.style.zIndex = "0"; // Les autres cartes restent en-dessous des cercles
-            });
-        } else {
-            // Mobile: Réinitialise les z-index
-            circles.forEach((circle) => {
-                circle.style.zIndex = ""; // Réinitialise les cercles pour le responsive
-            });
-        }
-    };
-
-    // Fonction pour afficher ou masquer les indicateurs en fonction de la taille d'écran
-    const toggleIndicators = () => {
-        if (window.innerWidth <= 360) {
-            indicatorsContainer.style.display = "flex"; // Affiche les indicateurs en mobile
-        } else {
-            indicatorsContainer.style.display = "none"; // Masque les indicateurs en desktop
-        }
-    };
 
     // Ajoute les événements de clic sur les indicateurs
     indicators.forEach((indicator, i) => {
