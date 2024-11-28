@@ -19,21 +19,19 @@
 .carousel {
     .carousel-indicators {
         display: none;
-        justify-content: center;
-        align-items: center;
-        gap: 0.5rem;
+        gap: 0.8rem;
 
         button {
             width: 10px;
             height: 10px;
-            background-color: $green;
+            background-color: rgb(194, 211, 226);
             border: none;
             border-radius: 50%;
             cursor: pointer;
             transition: background-color 0.3s ease;
 
             &.active {
-                background-color: $greenlight;
+                background-color: $green;
             }
         }
     }
@@ -227,11 +225,13 @@
         max-width: 800px;
         margin: auto;
         overflow: hidden;
+        gap: 1rem;
 
         .carousel-indicators {
             display: flex;
-            position: relative;
-            top: -10%;
+            position: absolute;
+            top: 87%;
+            right: 42%;
         }
 
         .cards-instructions {
@@ -241,7 +241,6 @@
 
             .card {
                 min-width: 100%;
-                /* Chaque carte occupe 100% de la largeur du conteneur */
                 box-sizing: border-box;
                 padding: 20px;
                 text-align: center;
