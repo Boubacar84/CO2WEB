@@ -432,3 +432,91 @@
 
 
 }
+
+@media screen and (min-width: 769px) and (max-width: 1366px) {
+    .main-contact {
+        position: relative;
+
+        .title-contact {
+            font-size: 20px;
+            padding-top: 50px;
+            padding-bottom: 24px;
+        }
+
+        .form-wrapper {
+            position: relative;
+            padding: 50px 10px;
+
+
+
+            .side-image-right,
+            .side-image-left-bot,
+            .side-image-left-top,
+            .circle-img1,
+            .circle-img2,
+            .circle-img3 {
+                display: block;
+                position: absolute;
+
+                z-index: 1;
+
+            }
+
+
+            .side-image-left-top {
+                top: 0.3%;
+                left: 8%;
+                width: 240px;
+            }
+
+            .side-image-left-bot {
+                top: 40%;
+                left: 6.5%;
+                width: 210px;
+            }
+
+            .side-image-right {
+                top: 25%;
+                right: 3%;
+                width: 330px;
+                transform: rotate(20deg);
+                transform-origin: center;
+            }
+
+
+            .circle-calc-img1,
+            .circle-calc-img2,
+            .circle-calc-img3 {
+                position: absolute;
+                border-radius: 50%;
+                background-color: $white;
+                z-index: 1;
+            }
+
+            .circle-img1 {
+                width: 70px;
+                height: 70px;
+                top: 2%;
+                right: 14%;
+                border: 20px solid #019961;
+                z-index: 3;
+            }
+
+            .circle-img2 {
+                width: 50px;
+                height: 50px;
+                top: 0.5%;
+                right: 7%;
+                border: 14px solid #79c258;
+            }
+
+            .circle-img3 {
+                width: 30px;
+                height: 30px;
+                top: 17%;
+                right: 7.5%;
+                border: 12px solid $lightergreen;
+            }
+        }
+    }
+}
