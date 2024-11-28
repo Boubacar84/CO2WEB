@@ -97,7 +97,7 @@
         gap: 5px;
         margin-bottom: 4rem;
         font-family: $font-montserrat;
-        min-height: 100px; // Ajustez la hauteur selon votre mise en page pour un positionnement optimal
+        min-height: 100px;
         max-width: 650px;
 
 
@@ -148,16 +148,12 @@
 
             input {
                 width: 250px;
-                /* Définit une largeur fixe */
                 margin-bottom: 15px;
-                /* Espacement entre les inputs */
             }
 
             label {
                 margin-right: 15px;
-                /* Espace entre le label et l'input */
                 text-align: left;
-                /* Aligne le texte du label à gauche */
             }
 
 
@@ -325,8 +321,7 @@
 
 
 
-@media screen and (min-width: 768px) {
-
+@media screen and (min-width: 361px) and (max-width: 768px) {
 
     .title-contact {
         font-size: 45px;
@@ -345,11 +340,20 @@
         padding-bottom: 20px;
         padding-top: 20px;
 
+        .side-image-right,
+        .side-image-left-bot,
+        .side-image-left-top,
+        .circle-img1,
+        .circle-img2,
+        .circle-img3 {
+            display: none;
+        }
 
 
         .contact-form {
             margin: 40px;
             flex-direction: column;
+            width: 65%;
 
         }
 
@@ -367,7 +371,7 @@
         }
 
         input[type="text"] {
-            width: 100%;
+            width: 120%;
         }
 
         .disposition {
@@ -427,36 +431,4 @@
     }
 
 
-
-    @media screen and (max-width: 960px) {
-
-        .side-image-left-top,
-        .side-image-left-bot,
-        .side-image-right,
-        .circle-img1,
-        .circle-img2,
-        .circle-img3 {
-            display: none;
-        }
-
-    }
-
-    @media screen and (min-width:1366px) {
-        .title-contact {
-            font-size: 30px;
-            top: -140%;
-            left: 20%;
-        }
-
-        .circle-img1 {
-            width: 3%;
-            height: 22%;
-            border-radius: 78%;
-            margin: 10px;
-            top: -102%;
-            right: 82%;
-            z-index: 4;
-            display: flex;
-        }
-    }
 }
