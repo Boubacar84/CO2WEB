@@ -20,13 +20,28 @@ header {
         /* Animation fluide */
         z-index: 3;
         transform: translateX(0);
-        font-family: $font-roboto;
+        font-family: $font-montserrat;
 
         .burger-nav {
             list-style: none;
             padding: 0;
             margin: 0;
             text-align: center;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            padding-top: 6rem;
+            width: 360px;
+            height: 800px;
+
+            .nav__separator {
+                border: none;
+                height: 1px;
+                width: 314px;
+                background-color: #4CAF50;
+                top: -15px;
+                position: relative;
+            }
 
             li {
                 margin: 1rem 0;
@@ -34,8 +49,8 @@ header {
                 a {
                     text-decoration: none;
                     color: $greendark;
-                    font-size: 1.5rem;
-                    font-weight: bold;
+                    font-size: 1.3rem;
+                    font-weight: 500;
 
                     &:hover {
                         text-decoration: underline;
