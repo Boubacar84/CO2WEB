@@ -13,7 +13,7 @@
         align-items: start;
         text-align: start;
         font-size: 45px;
-        font-weight: 550;
+        font-weight: 600;
         line-height: 0rem;
     }
 
@@ -205,8 +205,13 @@
 @media screen and (max-width: 360px) {
     .title-clc {
         font-size: 20px;
-        padding-top: 50px;
-        padding-bottom: 50px;
+        padding-top: 0;
+        padding-bottom: 0;
+
+        h1 {
+
+            font-size: 20px;
+        }
 
         .clc-emission1,
         .clc-emission2 {
@@ -216,8 +221,10 @@
 
         .clc-emission3 {
             display: block;
-            font-size: 28px;
-            line-height: 1.2rem;
+            font-size: 32px;
+            line-height: 1.9rem;
+            margin-right: 5rem;
+            padding-left: 1.5rem;
         }
     }
 
