@@ -1,120 +1,124 @@
 header {
     position: fixed;
-    z-index: 11;
-}
-
-.burger-menu {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    /* Hors de l'écran par défaut */
-    width: 100%;
-    height: 100%;
+    z-index: 1001;
     background-color: $white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.4s ease;
-    /* Animation fluide */
-    z-index: 1;
-    transform: translateX(0);
-    font-family: $font-roboto;
+    width: 100%;
 
-    .burger-nav {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        text-align: center;
+    .burger-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        /* Hors de l'écran par défaut */
+        width: 100%;
+        height: 100%;
+        background-color: $white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.4s ease;
+        /* Animation fluide */
+        z-index: 1;
+        transform: translateX(0);
+        font-family: $font-roboto;
 
-        li {
-            margin: 1rem 0;
+        .burger-nav {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
 
-            a {
-                text-decoration: none;
-                color: $greendark;
-                font-size: 1.5rem;
-                font-weight: bold;
+            li {
+                margin: 1rem 0;
 
-                &:hover {
-                    text-decoration: underline;
+                a {
+                    text-decoration: none;
+                    color: $greendark;
+                    font-size: 1.5rem;
+                    font-weight: bold;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
                 }
             }
         }
+
+        &.active {
+            transform: translateX(-100%);
+            /* Le menu revient à sa position normale */
+        }
     }
 
-    &.active {
-        transform: translateX(-100%);
-        /* Le menu revient à sa position normale */
-    }
-}
+    .burger-toggle {
+        position: fixed;
+        /* Bouton fixe en haut à droite */
+        top: 29px;
+        right: 14px;
+        z-index: 3;
+        /* Toujours au-dessus du menu */
+        background: none;
+        border: none;
+        cursor: pointer;
 
-.burger-toggle {
-    position: fixed;
-    /* Bouton fixe en haut à droite */
-    top: 29px;
-    right: 14px;
-    z-index: 3;
-    /* Toujours au-dessus du menu */
-    background: none;
-    border: none;
-    cursor: pointer;
-
-    .burger-icon {
-        display: block;
-        width: 30px;
-        height: 3px;
-        background-color: $greendark;
-        border-radius: 2px;
-        position: relative;
-        transition: all 0.3s ease;
-
-        &::before,
-        &::after {
-            content: "";
+        .burger-icon {
             display: block;
             width: 30px;
             height: 3px;
             background-color: $greendark;
             border-radius: 2px;
-            position: absolute;
+            position: relative;
             transition: all 0.3s ease;
+
+            &::before,
+            &::after {
+                content: "";
+                display: block;
+                width: 30px;
+                height: 3px;
+                background-color: $greendark;
+                border-radius: 2px;
+                position: absolute;
+                transition: all 0.3s ease;
+            }
+
+            &::before {
+                top: -8px;
+                /* Ligne supérieure */
+            }
+
+            &::after {
+                top: 8px;
+                /* Ligne inférieure */
+            }
         }
 
-        &::before {
-            top: -8px;
-            /* Ligne supérieure */
-        }
+        &.active .burger-icon {
+            background-color: transparent;
 
-        &::after {
-            top: 8px;
-            /* Ligne inférieure */
+            &::before {
+                transform: rotate(45deg);
+                top: 0;
+            }
+
+            &::after {
+                transform: rotate(-45deg);
+                top: 0;
+            }
         }
     }
 
-    &.active .burger-icon {
-        background-color: transparent;
-
-        &::before {
-            transform: rotate(45deg);
-            top: 0;
-        }
-
-        &::after {
-            transform: rotate(-45deg);
-            top: 0;
-        }
+    /* Style du logo */
+    .link-img-home img {
+        z-index: 4;
+        width: 120px;
+        /* Taille par défaut du logo */
+        height: auto;
+        /* Garde les proportions du logo */
+        transition: all 0.3s ease;
+        /* Animation fluide pour les changements */
     }
-}
 
-/* Style du logo */
-.link-img-home img {
-    width: 120px;
-    /* Taille par défaut du logo */
-    height: auto;
-    /* Garde les proportions du logo */
-    transition: all 0.3s ease;
-    /* Animation fluide pour les changements */
 }
 
 /* Styles Desktop */
