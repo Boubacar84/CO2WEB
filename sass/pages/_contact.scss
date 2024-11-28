@@ -447,7 +447,9 @@
             position: relative;
             padding: 50px 10px;
 
-
+            .contact-form {
+                z-index: 3;
+            }
 
             .side-image-right,
             .side-image-left-bot,
@@ -457,7 +459,6 @@
             .circle-img3 {
                 display: block;
                 position: absolute;
-
                 z-index: 1;
 
             }
@@ -499,7 +500,7 @@
                 top: 2%;
                 right: 14%;
                 border: 20px solid #019961;
-                z-index: 3;
+                z-index: 4;
             }
 
             .circle-img2 {
