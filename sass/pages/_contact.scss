@@ -24,14 +24,14 @@
             top: 18%;
             width: 310px;
             height: auto;
-            left: 23rem;
+            left: 21.5rem;
             z-index: 1;
         }
 
         .side-image-left-bot {
             position: absolute;
             top: 41%;
-            left: 19%;
+            left: 18%;
             z-index: 1;
             width: 240px;
             transform: rotate(-15deg);
@@ -42,7 +42,7 @@
             top: 38%;
             width: 300px;
             height: auto;
-            right: 19%;
+            right: 17.5%;
             z-index: 1;
             transform: rotate(20deg);
         }
@@ -98,6 +98,7 @@
         margin-bottom: 4rem;
         font-family: $font-montserrat;
         min-height: 100px; // Ajustez la hauteur selon votre mise en page pour un positionnement optimal
+        max-width: 650px;
 
 
 
@@ -146,9 +147,9 @@
             }
 
             input {
-                width: 270px;
+                width: 250px;
                 /* Définit une largeur fixe */
-                margin-bottom: 10px;
+                margin-bottom: 15px;
                 /* Espacement entre les inputs */
             }
 
@@ -226,6 +227,15 @@
 
         .form-wrapper {
             padding-bottom: 20px;
+
+            .side-image-right,
+            .side-image-left-bot,
+            .side-image-left-top,
+            .circle-img1,
+            .circle-img2,
+            .circle-img3 {
+                display: none;
+            }
         }
 
 
@@ -233,6 +243,8 @@
             margin: 15px;
             flex-direction: column;
             padding: 25px;
+
+
 
 
             input[type="email"] {
@@ -261,6 +273,8 @@
             .contact-group2 {
                 display: block;
             }
+
+
 
             .carre2 {
                 display: flex;
