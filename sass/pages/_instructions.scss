@@ -169,7 +169,7 @@
     top: 26.5%;
     right: 36.5%;
     background-color: $greendark;
-    z-index: 1;
+    z-index: 0;
 }
 
 .circle-top-2 {
@@ -178,7 +178,7 @@
     top: 35%;
     right: 34.3%;
     background-color: $lightergreen;
-    z-index: 2;
+    z-index: 1;
 }
 
 .circle-top-3 {
@@ -187,7 +187,7 @@
     top: 40%;
     right: 37.6%;
     background-color: $greenlight;
-    z-index: 2;
+    z-index: 0;
 }
 
 .circle-bot-1 {
@@ -196,7 +196,7 @@
     top: 68%;
     right: 58%;
     background-color: $lightergreen;
-    z-index: 1;
+    z-index: 0;
 }
 
 .circle-bot-2 {
@@ -205,7 +205,7 @@
     top: 75.5%;
     right: 55.5%;
     background-color: $green;
-    z-index: 1;
+    z-index: 0;
 }
 
 .circle-bot-3 {
@@ -214,7 +214,7 @@
     top: 79%;
     right: 58.7%;
     background-color: $greendark;
-    z-index: 2;
+    z-index: 0;
 }
 
 // Responsive pour mobile

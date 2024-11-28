@@ -1,136 +1,93 @@
 document.addEventListener("DOMContentLoaded", () => {
     const track = document.querySelector(".cards-instructions"); // Conteneur des cartes
     const cards = document.querySelectorAll(".card"); // Toutes les cartes
+    const indicatorsContainer = document.querySelector(".carousel-indicators"); // Conteneur des indicateurs
+    const indicators = indicatorsContainer.querySelectorAll(".indicator"); // Boutons indicateurs
     const prevButton = document.querySelector(".carousel-control.prev");
     const nextButton = document.querySelector(".carousel-control.next");
 
     const cardWidth = 360; // Largeur fixe pour mobile
     let currentIndex = 0; // Index initial
-
-    // Ajouter un clone explicite de la première carte à la fin
-    const firstClone = cards[0].cloneNode(true);
-    firstClone.classList.add("clone");
-    track.appendChild(firstClone);
-
-    // Total des cartes (sans ajouter 1 pour éviter une slide en trop)
-    const totalCards = cards.length - 1;
+    let isMobileActive = false; // Flag pour savoir si le carousel est actif en mobile
 
     // Fonction pour mettre à jour la position du slider
     const updateCarousel = () => {
-        const offset = currentIndex * -cardWidth; // Suppression du décalage
+        const offset = (currentIndex - 1) * -cardWidth;
         track.style.transform = `translateX(${offset}px)`;
         track.style.transition = "transform 0.5s ease-in-out";
+
+        // Mettre à jour les indicateurs
+        indicators.forEach((indicator, index) => {
+            indicator.classList.toggle("active", index === currentIndex);
+        });
     };
 
     // Passer à la carte suivante
     const showNextCard = () => {
-        currentIndex++;
-        if (currentIndex === totalCards) {
-            // Si on atteint le clone (dernière slide)
-            track.style.transition = "none"; // Désactiver temporairement la transition
-            currentIndex = -1; // Revenir à la première carte réelle
-            updateCarousel();
-            setTimeout(() => {
-                track.style.transition = "transform 0.5s ease-in-out"; // Réactiver la transition
-                updateCarousel();
-            }, 50);
+        if (currentIndex < cards.length - 1) {
+            currentIndex++;
         } else {
-            updateCarousel();
+            currentIndex = 0;
         }
+        updateCarousel();
     };
 
     // Passer à la carte précédente
     const showPrevCard = () => {
-        if (currentIndex <= -1) {
-            // Si on est sur la première carte, revenir à la dernière carte réelle
-            currentIndex = totalCards - 1; // Aller à la dernière carte
-            track.style.transition = "none";
-            updateCarousel();
-            setTimeout(() => {
-                track.style.transition = "transform 0.5s ease-in-out";
-                updateCarousel();
-            }, 50);
-        } else {
+        if (currentIndex > 0) {
             currentIndex--;
-            updateCarousel();
-        }
-    };
-
-    // Gestionnaire d'événements pour les boutons
-    nextButton.addEventListener("click", showNextCard);
-    prevButton.addEventListener("click", showPrevCard);
-
-    // Désactiver le carousel en desktop
-    const applyCarousel = () => {
-        if (window.innerWidth <= 360) {
-            prevButton.style.display = "block";
-            nextButton.style.display = "block";
-            updateCarousel();
         } else {
-            prevButton.style.display = "none";
-            nextButton.style.display = "none";
+            currentIndex = cards.length - 1;
+        }
+        updateCarousel();
+    };
 
-            // Supprimer le clone si présent
-            const clone = track.querySelector(".card.clone");
-            if (clone) {
-                clone.remove();
-            }
+    // Gestion des clics sur les indicateurs
+    const activateIndicatorClicks = () => {
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener("click", () => {
+                currentIndex = index;
+                updateCarousel();
+            });
+        });
+    };
 
-            // Réinitialiser le conteneur
-            track.style.transform = "none";
-            track.style.transition = "none";
+    // Fonction pour activer le carousel en mobile
+    const activateCarouselForMobile = () => {
+        if (window.innerWidth <= 361 && !isMobileActive) {
+            isMobileActive = true; // Active le flag
+            updateCarousel(); // Initialisation pour mobile
+            nextButton.addEventListener("click", showNextCard);
+            prevButton.addEventListener("click", showPrevCard);
+            activateIndicatorClicks();
         }
     };
 
-    // Appliquer le carousel au chargement et lors du redimensionnement
-    applyCarousel();
-    window.addEventListener("resize", applyCarousel);
-});
+    // Fonction pour réinitialiser le carousel en desktop
+    const resetCarouselForDesktop = () => {
+        if (window.innerWidth > 361 && isMobileActive) {
+            isMobileActive = false; // Désactive le flag
+            track.style.transform = "none"; // Réinitialise la transformation
+            track.style.transition = "none"; // Désactive les transitions en desktop
+            nextButton.removeEventListener("click", showNextCard);
+            prevButton.removeEventListener("click", showPrevCard);
 
-// Ajoute les indicateurs en dessous du carousel
-
-
-document.addEventListener("DOMContentLoaded", () => {
-    const track = document.querySelector(".cards-instructions");
-    const indicatorsContainer = document.querySelector(".carousel-indicators");
-    const indicators = document.querySelectorAll(".carousel-indicators .indicator");
-    const middleCard = document.querySelector(".middle-card");
-    const circles = document.querySelectorAll(
-        ".circle-top-1, .circle-top-2, .circle-top-3, .circle-bot-1, .circle-bot-2, .circle-bot-3"
-    );
-    const cardWidth = 360;
-    let currentIndex = 0;
-
-    // Fonction pour mettre à jour la position des slides
-    const updateCarousel = (index) => {
-        track.style.transform = `translateX(${-index * cardWidth}px)`;
-        track.style.transition = "transform 0.5s ease-in-out";
-        currentIndex = index;
-
-        // Met à jour les indicateurs actifs uniquement en mobile
-        if (window.innerWidth <= 360) {
-            indicators.forEach((indicator, i) => {
-                indicator.classList.toggle("active", i === index); // Active uniquement l'indicateur correspondant
+            // Réinitialisation des indicateurs
+            indicators.forEach((indicator) => {
+                indicator.classList.remove("active");
             });
         }
     };
 
+    // Gestion de l'activation/désactivation selon la taille de l'écran
+    const handleResize = () => {
+        activateCarouselForMobile();
+        resetCarouselForDesktop();
+    };
 
-    // Ajoute les événements de clic sur les indicateurs
-    indicators.forEach((indicator, i) => {
-        indicator.addEventListener("click", () => {
-            updateCarousel(i - 1); // Utilise directement l'index `i` sans ajustement
-        });
-    });
+    // Initialisation au chargement
+    handleResize();
 
-    // Applique les ajustements lors du redimensionnement
-    window.addEventListener("resize", () => {
-        toggleIndicators();
-        manageCircleZIndex();
-    });
-
-    // Initialisation
-    toggleIndicators();
-    manageCircleZIndex();
-    updateCarousel(0); // Positionner sur la première slide
+    // Ajout du listener pour le redimensionnement
+    window.addEventListener("resize", handleResize);
 });
