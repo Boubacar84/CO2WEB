@@ -18,7 +18,7 @@
 // Section des cartes d'instructions
 .carousel {
     .carousel-indicators {
-        display: none; // Masque par défaut
+        display: none;
         justify-content: center;
         align-items: center;
         gap: 0.5rem;
@@ -27,7 +27,7 @@
         button {
             width: 10px;
             height: 10px;
-            background-color: $lightgrey;
+            background-color: $green;
             border: none;
             border-radius: 50%;
             cursor: pointer;
@@ -37,28 +37,28 @@
                 background-color: $greenlight; // Couleur active
             }
         }
-
-
-        .cards-instructions {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 0 2rem 3rem;
-            position: relative;
-            flex-wrap: nowrap;
-            gap: 4rem;
-            width: 100%;
-            max-width: 100%;
-            margin: 0 auto;
-            box-sizing: border-box;
-
-            .card-link {
-                text-decoration: none;
-            }
-        }
-
     }
+
+
+    .cards-instructions {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0 2rem 3rem;
+        position: relative;
+        flex-wrap: nowrap;
+        gap: 4rem;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        box-sizing: border-box;
+
+        .card-link {
+            text-decoration: none;
+        }
+    }
+
 }
 
 
@@ -230,25 +230,7 @@
         overflow: hidden;
 
         .carousel-indicators {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 0.5rem;
-            margin-top: 1rem;
-
-            button {
-                width: 10px;
-                height: 10px;
-                background-color: $lightgrey;
-                border: none;
-                border-radius: 50%;
-                cursor: pointer;
-                transition: background-color 0.3s ease;
-
-                &.active {
-                    background-color: $greenlight; // Couleur active
-                }
-            }
+            display: block;
         }
 
         .cards-instructions {
