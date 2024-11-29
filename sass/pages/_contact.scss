@@ -18,13 +18,24 @@
         padding-bottom: 50px;
 
         .contact-form {
-            input[type="nom"] {
-                width: 150%;
+            .contact-group {
+                .carre2 {
+                    input[type="text"] {
+                        width: 150%;
+                    }
+                }
             }
 
-            input[type="number"] {
-                width: 150%;
+            .contact-group2 {
+
+                .carre2 {
+                    input[type="number"] {
+                        width: 150%;
+                    }
+                }
+
             }
+
         }
 
 
