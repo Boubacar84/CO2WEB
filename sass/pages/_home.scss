@@ -122,8 +122,9 @@
 
 // Responsive pour tablette
 @media screen and (min-width: 361px) and (max-width: 768px) {
-
     .hero-right-home {
+        padding-top: 4rem;
+
         #home-img {
             position: relative;
             height: 400px;
@@ -136,7 +137,7 @@
     .hero-left-home {
         width: 100%;
         padding-top: 1rem;
-        padding-bottom: 3rem;
+        padding-bottom: 0.5rem;
         padding-left: 1.5rem;
         display: flex;
         flex-direction: column;
