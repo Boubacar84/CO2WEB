@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="sass/main.css">
+    <script src="js/burger.js" defer></script>
+    <title>CO2WEB - À propos</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <a href="index.html" class="link-img-home">
+            <img src="img/logo-CO2.svg" alt="CO2WEB Logo">
+        </a>
+            <!-- Burger Menu -->
+        <button class="burger-toggle" aria-label="Toggle menu">
+            <img src="img/burger.svg" alt="icone burger" class="burger-icon">
+            <img src="img/close.svg" alt="icone burger close" class="burger-close">
+        </button>
+        <nav class="burger-menu">
+            <ul class="burger-nav">
+                <li><a href="index.html" >Accueil</a></li>
+                <hr class="nav__separator">
+                <li><a href="instructions.html">Mode d'emploi</a></li>
+                <hr class="nav__separator">
+                <li><a href="velib.html">Trouver un velib</a></li>
+                <hr class="nav__separator">
+                <li><a href="calculator.html">Calculateur</a></li>
+                <hr class="nav__separator">
+                <li><a href="about.html"   class="active">À propos</a></li>
+                <hr class="nav__separator">
+                <li><a href="contact.html">Contact</a></li>
+                <hr class="nav__separator">
+            </ul>
+        </nav>
+            <!-- Menu Desktop -->
+    <nav class="desktop-menu">
+        <ul class="ul-nav-header">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="instructions.html">Mode d'emploi</a></li>
+            <li><a href="velib.html">Trouver un velib</a></li>
+            <li><a href="calculator.html" >Calculateur</a></li>
+            <li><a href="about.html"  class="active">À propos</a></li>
+            <li><a href="contact.html" >Contact</a></li>
+        </ul>
+    </nav>
+    </header>
+
+    <!-- Main - Multi-pages -->
+    <main class="about">
+        <!-- Page 1 -->
+        <section class="about__page active" id="page1" aria-hidden="false">
+            <div class="about__intro">
+                <div class="about__image">
+                    <img src="img/a-propos-pc.svg" alt="Illustration du projet sur ordinateur" class="about__image--pc">
+                    <img src="img/a-propos-feuille.svg" alt="Feuille superposée" class="about__image--overlay">
+
+                </div>
+                <div class="background-about"></div>
+                <div class="about__content">
+                    <div class="circle-about-img1"></div>
+                    <h1 class="about__title">À propos du projet</h1>
+                    <p class="about__text">
+                        Arcu, ultrices amet, ac rhoncus eget egestas diam a malesuada tristique blandit elementum
+                        dapibus
+                        proin pretium rhoncus, viverra sagittis libero, libero varius accumsan ridiculus amet nam duis
+                        sit
+                        vestibulum nibh eget ultrices magna facilisis potenti.
+                    </p>
+                    <hr class="about__separator">
+                    <p class="about__description">
+                        Aenean egestas fermentum, at elementum ut ut eu, feugiat sit feugiat morbi id ipsum tincidunt.
+                    </p>
+                    <p class="about__description2"> ipsum dolor sit amet consectetur.</p>
+
+                    <button class="about__next" data-target="#page2" aria-label="Page suivante">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 1024 1024">
+                            <path fill="currentColor"
+                                d="M338.752 104.704a64 64 0 0 0 0 90.496l316.8 316.8l-316.8 316.8a64 64 0 0 0 90.496 90.496l362.048-362.048a64 64 0 0 0 0-90.496L429.248 104.704a64 64 0 0 0-90.496 0" />
+                        </svg>
+                    </button>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Page 2 -->
+        <!-- Page 2 -->
+        <!-- Page 2 -->
+        <section class="about__page hidden" id="page2" aria-hidden="true">
+            <div class="slide__intro">
+                <!-- Illustration à droite -->
+                <div class="slide__image">
+
+                    <img src="img/tente.svg" alt="Illustration de tente" class="slide__image--overlay">
+                </div>
+
+                <!-- Contenu textuel à gauche -->
+                <div class="slide__content">
+                    <div class="circle-title">
+                        <div class="circle-about-img2"></div>
+                        <h1 class="slide__title">À propos du projet</h1>
+                    </div>
+
+                    <p class="slide__text">
+                        Proin vehicula, libero id suscipit tempus, nunc augue blandit turpis, vel convallis justo nisl
+                        vitae lectus. Suspendisse potenti. Integer non elit vel tortor tincidunt tristique. Lorem ipsum
+                        dolor sit amet consectetur adipisicing elit. Animi tempore illum libero voluptatibus
+                        nam quasi repudiandae nisi alias in vel possimus perferendis natus
+                    </p>
+                    <hr class="slide__separator">
+                    </hr>
+                </div>
+                <!-- Bouton pour revenir à la page précédente -->
+
+                <button class="about__back" data-target="#page1" aria-label="Page précédente">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 1024 1024">
+                        <path fill="currentColor"
+                            d="M338.752 104.704a64 64 0 0 0 0 90.496l316.8 316.8l-316.8 316.8a64 64 0 0 0 90.496 90.496l362.048-362.048a64 64 0 0 0 0-90.496L429.248 104.704a64 64 0 0 0-90.496 0"
+                            transform="scale(-1, 1) translate(-1024, 0)" />
+                    </svg>
+
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-line"></div>
+        <div class="footer-container">
+            <div class="copyright">
+                <p>Copyright © 2022 CO2WEB.</p>
+                <p>All rights reserved.</p>
+            </div>
+            <nav>
+                <ul class="ul-nav-footer">
+                    <div class="nav-responsive">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="instructions.html">Mode d'emploi</a></li>
+                    </div>
+                    <div class="nav-responsive">
+                        <li><a href="velib.html">Trouver un velib</a></li>
+                        <li><a href="calculator.html">Calculateur</a></li>
+                    </div>
+                    <div class="nav-responsive">
+                        <li><a href="about.html">A propos</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </div>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <!-- JavaScript pour navigation multi-pages -->
+    <script src="js/slider.js" defer></script>
+
+</body>
+
+</html>

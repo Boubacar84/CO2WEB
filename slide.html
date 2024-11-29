@@ -1,0 +1,26 @@
+<main class="about">
+    <section class="about__page active" id="page1" aria-hidden="false">
+        <div class="about__content">
+            <h1>À propos du projet</h1>
+            <p>Contenu de la première page...</p>
+            <button class="about__next" data-target="#page2" aria-label="Page suivante">></button>
+        </div>
+    </section>
+    <section class="about__page hidden" id="page2" aria-hidden="true">
+        <div class="about__content">
+            <h1>Notre mission</h1>
+            <p>Contenu de la deuxième page...</p>
+            <button class="about__prev" data-target="#page1" aria-label="Page précédente">
+                << /button>
+                    <button class="about__next" data-target="#page3" aria-label="Page suivante">></button>
+        </div>
+    </section>
+    <section class="about__page hidden" id="page3" aria-hidden="true">
+        <div class="about__content">
+            <h1>Nos valeurs</h1>
+            <p>Contenu de la troisième page...</p>
+            <button class="about__prev" data-target="#page2" aria-label="Page précédente">
+                << /button>
+        </div>
+    </section>
+</main>

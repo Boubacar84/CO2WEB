@@ -1,0 +1,508 @@
+// Section du titre principal
+.title-instructions {
+    text-align: left;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    padding-left: 13rem;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 1rem;
+
+    h1 {
+        font-family: $font-montserrat;
+        font-weight: 600;
+        font-size: 50px;
+    }
+}
+
+// Section des cartes d'instructions
+.carousel {
+    .carousel-indicators {
+        display: none;
+        gap: 0.8rem;
+
+        button {
+            width: 10px;
+            height: 10px;
+            background-color: rgb(194, 211, 226);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            &.active {
+                background-color: $green;
+            }
+        }
+    }
+
+
+    .cards-instructions {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0 2rem 3rem;
+        position: relative;
+        flex-wrap: nowrap;
+        gap: 4rem;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        box-sizing: border-box;
+
+        .card-link {
+            text-decoration: none;
+        }
+    }
+
+}
+
+
+// Carte individuelle
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 370px;
+    height: 400px;
+    padding: 1rem 1.5rem;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    border-radius: 15px;
+    background-color: $white;
+    box-shadow: none;
+    border: 2px solid transparent;
+    transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 2rem;
+    overflow: hidden;
+
+    .img-instruction {
+        width: 135px;
+        height: 135px;
+        margin-bottom: 1rem;
+    }
+
+    h2 {
+        font-family: $font-montserrat;
+        font-weight: 600;
+        font-size: 1.3rem;
+        line-height: 1.4;
+        margin-bottom: 1rem;
+        color: $black;
+        text-align: center;
+        word-wrap: break-word;
+        max-width: 100%;
+    }
+
+    .card-text {
+        font-size: large;
+        font-family: $font-roboto;
+        font-weight: 400;
+        color: $black;
+        line-height: 1.5;
+    }
+
+    .card:not(.middle-card) {
+        position: relative;
+        z-index: 0; // En dessous des cercles
+    }
+}
+
+// Carte du milieu avec effet de hover permanent
+.middle-card {
+    position: relative;
+    z-index: 2;
+    background-color: $white;
+    border: 2px solid $white;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+
+
+    .circle-inside {
+        position: absolute;
+        width: 175px;
+        height: 175px;
+        background: linear-gradient(to bottom right, $lightergreen, $greendark);
+        border-radius: 50%;
+        top: -13%;
+        right: -11%;
+        transition: transform 0.3s ease;
+    }
+
+    &:hover {
+        transform: scale(1.05);
+
+        .circle-inside {
+            transform: scale(1.05);
+        }
+    }
+
+    .white-circle {
+        position: absolute;
+        width: 130px;
+        height: 130px;
+        background: $white;
+        border-radius: 50%;
+        top: -8.4%;
+        right: -6.4%;
+        transition: transform 0.3s ease;
+        z-index: 1;
+    }
+}
+
+// Cercles de la card du milieu
+.circle-top-1,
+.circle-top-2,
+.circle-top-3,
+.circle-bot-1,
+.circle-bot-2,
+.circle-bot-3 {
+    position: absolute;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.circle-top-1 {
+    width: 100px;
+    height: 100px;
+    top: 26.5%;
+    right: 36.5%;
+    background-color: $greendark;
+    z-index: 0;
+}
+
+.circle-top-2 {
+    width: 45px;
+    height: 45px;
+    top: 35%;
+    right: 34.3%;
+    background-color: $lightergreen;
+    z-index: 1;
+}
+
+.circle-top-3 {
+    width: 17px;
+    height: 17px;
+    top: 40%;
+    right: 37.6%;
+    background-color: $greenlight;
+    z-index: 0;
+}
+
+.circle-bot-1 {
+    width: 100px;
+    height: 100px;
+    top: 68%;
+    right: 58%;
+    background-color: $lightergreen;
+    z-index: 0;
+}
+
+.circle-bot-2 {
+    width: 45px;
+    height: 45px;
+    top: 75.5%;
+    right: 55.5%;
+    background-color: $green;
+    z-index: 0;
+}
+
+.circle-bot-3 {
+    width: 17px;
+    height: 17px;
+    top: 79%;
+    right: 58.7%;
+    background-color: $greendark;
+    z-index: 0;
+}
+
+// Responsive pour mobile
+@media screen and (max-width: 360px) {
+    .carousel {
+        position: relative;
+        width: 100%;
+        max-width: 800px;
+        margin: auto;
+        overflow: hidden;
+        gap: 1rem;
+
+        .carousel-indicators {
+            display: flex;
+            position: absolute;
+            top: 85%;
+            right: 42%;
+        }
+
+        .cards-instructions {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            will-change: transform;
+
+            .card {
+                min-width: 100%;
+                box-sizing: border-box;
+                padding: 20px;
+                text-align: center;
+                background: $white;
+                border-radius: 10px;
+                margin-bottom: 0;
+                margin-top: 1rem;
+
+            }
+
+            .middle-card {
+                border: none;
+                box-shadow: none;
+
+                .circle-inside,
+                .white-circle {
+                    display: none;
+                }
+
+                a {
+                    pointer-events: none; // Désactive les interactions sur la carte
+                    cursor: default;
+                }
+
+                &:hover {
+                    transform: scale(1.00);
+                }
+            }
+
+            .img-instruction {
+                width: 130px;
+                height: 130px;
+                margin-bottom: 0;
+            }
+
+            h2 {
+                font-size: 1.45rem;
+                font-weight: 500;
+            }
+
+            .card-text {
+                margin-top: 0;
+                font-size: 15px;
+            }
+        }
+
+        .carousel-control {
+            position: absolute;
+            top: 25%;
+            transform: translateY(-50%);
+            background: none;
+            color: $greenlight;
+            border: 2px solid $greenlight;
+            border: none;
+            font-size: 12px;
+            font-weight: 900;
+            cursor: pointer;
+            z-index: 10;
+            border-radius: 50%;
+
+
+            &.prev {
+                left: 20px;
+            }
+
+            &.next {
+                right: 20px;
+            }
+        }
+    }
+
+
+    .title-instructions {
+        padding-left: 1.5rem;
+        padding-bottom: 0rem;
+        padding-top: 4rem;
+
+        h1 {
+            font-size: 30px;
+            line-height: 0.5rem;
+            margin-bottom: 0;
+        }
+
+    }
+
+    .circle-top-1,
+    .circle-top-2,
+    .circle-top-3,
+    .circle-bot-1,
+    .circle-bot-2,
+    .circle-bot-3,
+    .circle-inside {
+        display: none;
+    }
+
+
+}
+
+// Responsive pour tablette
+@media screen and (min-width: 361px) and (max-width: 768px) {
+    .carousel {
+        .carousel-indicators {
+            display: none;
+
+            button {
+                position: relative;
+                top: -10%;
+            }
+        }
+
+        .cards-instructions {
+            flex-direction: column;
+            gap: 2rem;
+            padding-bottom: 0;
+
+            .card {
+                margin-bottom: 0;
+                width: 375px;
+                height: 275px;
+            }
+
+            .img-instruction {
+                width: 75px;
+                height: 75px;
+                margin-bottom: 0;
+            }
+
+            h2 {
+                font-size: 1.1rem;
+            }
+
+            .card-text {
+                font-size: 16px;
+            }
+        }
+    }
+
+
+    .title-instructions {
+        line-height: 1rem;
+        padding-left: 7rem;
+        padding-bottom: 0rem;
+        padding-top: 4rem;
+
+        h1 {
+            font-size: 35px;
+            line-height: 1rem;
+        }
+
+    }
+
+    .circle-top-1,
+    .circle-top-2,
+    .circle-top-3,
+    .circle-bot-1,
+    .circle-bot-2,
+    .circle-bot-3,
+    .circle-inside {
+        display: none;
+    }
+
+
+}
+
+// Responsive pour Notebook
+@media screen and (min-width: 769px) and (max-width: 1366px) {
+    .title-instructions {
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+        padding-left: 8rem;
+
+        h1 {
+            font-size: 40px;
+        }
+    }
+
+    .circle-top-1 {
+        top: 28%;
+        right: 35.5%;
+        width: 80px;
+        height: 80px;
+    }
+
+    .circle-top-2 {
+        top: 37%;
+        right: 32.5%;
+        width: 35px;
+        height: 35px;
+    }
+
+    .circle-top-3 {
+        top: 42%;
+        right: 36%;
+        width: 14px;
+        height: 14px;
+    }
+
+    .circle-bot-1 {
+        top: 70%;
+        right: 58.5%;
+        width: 80px;
+        height: 80px;
+    }
+
+    .circle-bot-2 {
+        top: 78%;
+        right: 55.5%;
+        width: 35px;
+        height: 35px;
+    }
+
+    .circle-bot-3 {
+        top: 81.5%;
+        right: 59%;
+        width: 14px;
+        height: 14px;
+    }
+
+    .cards-instructions {
+
+        .card {
+            width: 270px;
+            height: 300px;
+
+
+            .circle-inside {
+                top: -17%;
+                right: -14%;
+                width: 150px;
+                height: 150px;
+            }
+
+            .white-circle {
+                top: -11%;
+                right: -8%;
+                width: 110px;
+                height: 110px;
+            }
+
+
+            .img-instruction {
+                width: 100px;
+                height: 100px;
+                margin-bottom: 0;
+            }
+
+            h2 {
+                font-size: 1.1rem;
+            }
+
+            .card-text {
+                font-size: 16px;
+            }
+        }
+    }
+
+
+}
+
+@media screen and (min-width: 361px) {
+    .carousel-control {
+        display: none;
+        /* Masquer les boutons */
+    }
+}

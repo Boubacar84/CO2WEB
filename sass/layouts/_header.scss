@@ -1,0 +1,272 @@
+header {
+    position: fixed;
+    z-index: 1001;
+    background-color: $white;
+    width: 100%;
+
+    .burger-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        /* Hors de l'écran par défaut */
+        width: 100%;
+        height: 100%;
+        background-color: $white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.4s ease;
+        /* Animation fluide */
+        z-index: 3;
+        transform: translateX(0);
+        font-family: $font-montserrat;
+
+        .burger-nav {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            padding-top: 6rem;
+            width: 360px;
+            height: 800px;
+
+            .nav__separator {
+                border: none;
+                height: 1px;
+                width: 314px;
+                background-color: #4CAF50;
+                top: -15px;
+                position: relative;
+            }
+
+            .active {
+                font-weight: bold;
+            }
+
+            li {
+                margin: 1rem 0;
+
+                a {
+                    text-decoration: none;
+                    color: $greendark;
+                    font-size: 1.3rem;
+                    font-weight: 500;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+        &.active {
+            transform: translateX(-100%);
+            /* Le menu revient à sa position normale */
+        }
+    }
+
+    .burger-toggle {
+        position: fixed;
+        /* Bouton fixe en haut à droite */
+        top: 1rem;
+        right: 1rem;
+        z-index: 4;
+        /* Toujours au-dessus du menu */
+        background: none;
+        border: none;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            /* Animation fluide pour affichage/rotation */
+        }
+
+        .burger-icon {
+            opacity: 1;
+            /* Visible par défaut */
+            position: absolute;
+            /* Superposé à l'icône de fermeture */
+            top: 0;
+            left: 0;
+        }
+
+        .burger-close {
+            opacity: 0;
+            /* Masqué par défaut */
+            position: absolute;
+            /* Superposé à l'icône burger */
+            top: 0;
+            left: 0;
+        }
+
+        &.active {
+            .burger-icon {
+                opacity: 0;
+                /* Masquer l'icône burger */
+                transform: rotate(-90deg);
+                /* Animation de rotation */
+            }
+
+            .burger-close {
+                opacity: 1;
+                /* Afficher l'icône close */
+                transform: rotate(0deg);
+                /* Réinitialisation de l'angle */
+            }
+        }
+    }
+
+    /* Style du logo */
+    .link-img-home img {
+        z-index: 4;
+        width: 120px;
+        /* Taille par défaut du logo */
+        height: auto;
+        /* Garde les proportions du logo */
+        transition: all 0.3s ease;
+        /* Animation fluide pour les changements */
+        position: relative;
+    }
+}
+
+/* Styles Desktop */
+@media (min-width: 769px) {
+    header {
+        z-index: 2;
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        background-color: $white;
+
+        .burger-menu {
+            display: none;
+            /* Cache le menu burger sur desktop */
+        }
+
+        .burger-toggle {
+            display: none;
+            /* Cache le bouton burger sur desktop */
+        }
+
+        .active {
+            font-weight: bold;
+        }
+
+        img {
+            width: 80%;
+            height: 48.733px;
+        }
+
+        .link-img-home {
+            width: 10%;
+            padding-left: 5rem;
+            display: flex;
+            align-items: center;
+            padding-right: 1rem;
+        }
+
+        .desktop-menu {
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            font-style: large;
+
+            .ul-nav-header {
+                display: flex;
+                gap: 2rem;
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+
+                li {
+                    a {
+                        text-decoration: none;
+                        color: $greendark;
+                        font-size: large;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Styles Mobile */
+@media (max-width: 360px) {
+
+    .desktop-menu {
+        display: none;
+    }
+
+    .link-img-home img {
+        width: 30%;
+        padding: 1rem 0 0 1rem;
+        text-decoration: none;
+        /* Taille plus petite pour mobile */
+    }
+
+    a {
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+/* Styles Tablette */
+@media (min-width: 361px) and (max-width: 768px) {
+    .desktop-menu {
+        display: none;
+    }
+
+    header {
+
+        .burger-menu {
+            .burger-nav {
+                width: 768px;
+                gap: 1.5rem;
+
+                .nav__separator {
+                    width: 700px;
+
+                }
+
+                li {
+                    a {
+                        text-decoration: none;
+                        font-size: 1.8rem;
+
+                        &:hover {
+                            text-decoration: none;
+                        }
+                    }
+
+                }
+            }
+        }
+
+        .link-img-home img {
+            padding: 1rem 0 0 1rem;
+            text-decoration: none;
+            /* Taille plus petite pour mobile */
+        }
+
+
+    }
+
+}

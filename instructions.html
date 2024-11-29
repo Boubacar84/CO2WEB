@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mode d'emploi</title>
+    <link rel="stylesheet" href="sass/main.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <script src="js/burger.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" class="link-img-home">
+            <img src="img/logo-CO2.svg" alt="CO2WEB Logo">
+        </a>
+            <!-- Burger Menu -->
+        <button class="burger-toggle" aria-label="Toggle menu">
+            <img src="img/burger.svg" alt="icone burger" class="burger-icon">
+            <img src="img/close.svg" alt="icone burger close" class="burger-close">
+        </button>
+        <nav class="burger-menu">
+            <ul class="burger-nav">
+                <li><a href="index.html">Accueil</a></li>
+                <hr class="nav__separator">
+                <li><a href="instructions.html" class="active">Mode d'emploi</a></li>
+                <hr class="nav__separator">
+                <li><a href="velib.html">Trouver un velib</a></li>
+                <hr class="nav__separator">
+                <li><a href="calculator.html">Calculateur</a></li>
+                <hr class="nav__separator">
+                <li><a href="about.html">À propos</a></li>
+                <hr class="nav__separator">
+                <li><a href="contact.html">Contact</a></li>
+                <hr class="nav__separator">
+            </ul>
+        </nav>
+            <!-- Menu Desktop -->
+    <nav class="desktop-menu">
+        <ul class="ul-nav-header">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="instructions.html" class="active">Mode d'emploi</a></li>
+            <li><a href="velib.html">Trouver un velib</a></li>
+            <li><a href="calculator.html">Calculateur</a></li>
+            <li><a href="about.html">À propos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    </header>
+
+    <main>
+
+
+
+        <section class="title-instructions">
+            <h1>Comment ça</h1>
+            <h1>marche ?</h1>
+        </section>
+
+        <div class="circle-top-1"></div>
+        <div class="circle-top-2"></div>
+        <div class="circle-top-3"></div>
+        <div class="circle-bot-1"></div>
+        <div class="circle-bot-2"></div>
+        <div class="circle-bot-3"></div>
+
+
+        <section class="carousel">
+
+            <div class="cards-instructions">
+
+                <div class="card first-card">
+                    <img src="img/instruction-analyse.svg" alt="Analyse" class="img-instruction">
+                    <h2>Analysez votre site</h2>
+                    <p class="card-text">Et id netus risus et sit id laoreet phasellus elit scelerisque dolor amet,
+                        euismod
+                        sed dignissim quam vestibulum risus at</p>
+                </div>
+
+
+
+                <div class="card middle-card">
+                    <a href="calculator.html" class="card-link">
+                        <div class="white-circle"></div>
+                        <div class="circle-inside"></div>
+                        <img src="img/instruction-ampoule.svg" alt="Calculateur magique" class="img-instruction">
+                        <h2>Utiliser le calculateur magique</h2>
+                        <p class="card-text">Et id netus risus et sit id laoreet phasellus elit scelerisque dolor amet,
+                            euismod sed dignissim quam vestibulum risus at</p>
+                    </a>
+                </div>
+
+
+                <div class="card last-card">
+                    <img src="img/instruction-resultat.svg" alt="Résultats" class="img-instruction">
+                    <h2>Obtenez les résultats</h2>
+                    <p class="card-text">Posuere nisi, ullamcorper sed volutpat cras dignissim a leo iaculis ut lectus
+                        mauris id consequat, mattis interdum viverra eros, amet</p>
+                </div>
+
+
+            </div>
+            <!-- Boutons de navigation -->
+            <button class="carousel-control prev" aria-label="Précédent"> <svg xmlns="http://www.w3.org/2000/svg"
+                    width="2em" height="2em" viewBox="0 0 1024 1024">
+                    <path fill="currentColor"
+                        d="M338.752 104.704a64 64 0 0 0 0 90.496l316.8 316.8l-316.8 316.8a64 64 0 0 0 90.496 90.496l362.048-362.048a64 64 0 0 0 0-90.496L429.248 104.704a64 64 0 0 0-90.496 0"
+                        transform="scale(-1, 1) translate(-1024, 0)" />
+                </svg></button>
+            <button class="carousel-control next" aria-label="Suivant"> <svg xmlns="http://www.w3.org/2000/svg"
+                    width="2em" height="2em" viewBox="0 0 1024 1024">
+                    <path fill="currentColor"
+                        d="M338.752 104.704a64 64 0 0 0 0 90.496l316.8 316.8l-316.8 316.8a64 64 0 0 0 90.496 90.496l362.048-362.048a64 64 0 0 0 0-90.496L429.248 104.704a64 64 0 0 0-90.496 0" />
+                </svg></button>
+
+            <div class="carousel-indicators" aria-hidden="true">
+                <button class="indicator" data-slide="0"></button>
+                <button class="indicator" data-slide="1"></button>
+                <button class="indicator" data-slide="2"></button>
+            </div>
+
+
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <div class="footer-line"></div>
+        <div class="footer-container">
+            <div class="copyright">
+                <p>Copyright © 2022 CO2WEB.</p>
+                <p>All rights reserved.</p>
+            </div>
+            <nav>
+                <ul class="ul-nav-footer">
+                    <div class="nav-responsive">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="instructions.html">Mode d'emploi</a></li>
+                    </div>
+                    <div class="nav-responsive">
+                        <li><a href="velib.html">Trouver un velib</a></li>
+                        <li><a href="calculator.html">Calculateur</a></li>
+                    </div>
+                    <div class="nav-responsive">
+                        <li><a href="about.html">A propos</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </div>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+    <script src="js/carousel.js"></script>
+</body>
+
+</html>

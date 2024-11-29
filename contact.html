@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="sass/main.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <script src="js/burger.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="link-img-home">
+            <img src="img/logo-CO2.svg" alt="CO2WEB Logo">
+        </a>
+        <!-- Burger Menu -->
+        <button class="burger-toggle" aria-label="Toggle menu">
+            <img src="img/burger.svg" alt="icone burger" class="burger-icon">
+            <img src="img/close.svg" alt="icone burger close" class="burger-close">
+        </button>
+        <nav class="burger-menu">
+            <ul class="burger-nav">
+                <li><a href="index.html">Accueil</a></li>
+                <hr class="nav__separator">
+                <li><a href="instructions.html">Mode d'emploi</a></li>
+                <hr class="nav__separator">
+                <li><a href="velib.html">Trouver un velib</a></li>
+                <hr class="nav__separator">
+                <li><a href="calculator.html">Calculateur</a></li>
+                <hr class="nav__separator">
+                <li><a href="about.html">À propos</a></li>
+                <hr class="nav__separator">
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <hr class="nav__separator">
+            </ul>
+        </nav>
+        <!-- Menu Desktop -->
+        <nav class="desktop-menu">
+            <ul class="ul-nav-header">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="instructions.html">Mode d'emploi</a></li>
+                <li><a href="velib.html">Trouver un velib</a></li>
+                <li><a href="calculator.html">Calculateur</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-contact">
+
+        <h1 class="title-contact">Contactez-nous</h1>
+
+        <div class="form-wrapper">
+            <img src="img/calc-haut-gauche.svg" alt="Image à gauche" class="side-image-left-top">
+            <img src="img/calc-bac-gauche.svg" alt="Image à gauche" class="side-image-left-bot">
+            <img src="img/calc-bas-droite.svg" alt="Image à droite" class="side-image-right">
+
+            <div class="circle-img1"></div>
+            <div class="circle-img2"></div>
+            <div class="circle-img3"></div>
+
+            <div class="contact-form">
+                <form action="form" method="post">
+                    <div class="disposition">
+                        <div class="contact-group">
+                            <div class="carre2">
+                                <label for="#">Prénom</label>
+                                <input type="prenom" name="prenom" id="prenom" class="champ" placeholder="Prénom"
+                                    required />
+                            </div>
+
+                            <div class="carre2">
+                                <label for="#">Nom</label>
+                                <input type="text" name="nom" class="champ" placeholder="Nom" required />
+                            </div>
+                        </div>
+                        <div class="contact-group2">
+                            <div class="carre2">
+                                <label for="#">Email</label>
+                                <input type="text" name="email" class="email" placeholder="Votre@email.com" required />
+                            </div>
+
+                            <div class="carre2">
+                                <label for="#">Téléphone</label>
+                                <input type="number" name="telephone" class="telephone" placeholder="Numéro" required />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-message">
+                        <label for="message">Votre message</label>
+                        <textarea id="message" name="message" placeholder="Message"></textarea>
+                    </div>
+
+
+                    <div class="bouton-right">
+                        <button class="form-button">Envoyer</button>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-line"></div>
+        <div class="footer-container">
+            <div class="copyright">
+                <p>Copyright © 2022 CO2WEB.</p>
+                <p>All rights reserved.</p>
+            </div>
+            <nav>
+                <ul class="ul-nav-footer">
+                    <div class="nav-responsive">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="instructions.html">Mode d'emploi</a></li>
+                    </div>
+                    <div class="nav-responsive">
+                        <li><a href="velib.html">Trouver un velib</a></li>
+                        <li><a href="calculator.html">Calculateur</a></li>
+                    </div>
+                    <div class="nav-responsive">
+                        <li><a href="about.html">A propos</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </div>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body>
+
+</html>

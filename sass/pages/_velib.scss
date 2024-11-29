@@ -1,0 +1,91 @@
+.link-img-velib {
+    width: 192px;
+    padding-left: 5rem;
+    display: flex;
+    align-items: center;
+    height: 49px;
+}
+
+.main-velib {
+
+    box-sizing: border-box;
+    min-height: 80vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-size: cover;
+    color: #333;
+    font-family: sans-serif;
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px; // Padding ajusté pour une meilleure présentation
+    background-color: white;
+    backdrop-filter: blur(8px);
+    border-radius: 8px; // Ajout d'un léger arrondi pour le style
+}
+
+#minuteur {
+    display: grid;
+    grid-template-columns: repeat(4, 45px);
+    gap: 15px;
+    margin-bottom: 20px; // Espace entre le minuteur et la description
+}
+
+.box {
+    height: 60px;
+    width: 50px;
+    text-align: center;
+    background-color: $greendark;
+    color: white;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.box>div:first-child {
+    font-size: 24px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding-top: 10px;
+
+}
+
+.unite {
+    font-size: 8px;
+    padding: 5px 0;
+    font-weight: bold;
+    background-color: $greendark;
+    padding-bottom: 10px;
+}
+
+.description-velib {
+    font-family: $font-roboto;
+    color: black;
+    text-align: center;
+    max-width: 400px; // Largeur maximale pour un alignement central
+    line-height: 1.5; // Améliore la lisibilité
+    margin-top: 10px;
+
+    h1 {
+        font-size: 32px; // Taille du texte pour le titre
+        font-weight: 400;
+        margin: 0 0 10px 0; // Espace entre le titre et le paragraphe
+    }
+
+    p {
+        font-size: 16px; // Taille du texte pour le paragraphe
+        margin: 0;
+    }
+
+}
