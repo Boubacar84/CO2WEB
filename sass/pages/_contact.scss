@@ -18,24 +18,13 @@
         padding-bottom: 50px;
 
         .contact-form {
-            .contact-group {
-                .carre2 {
-                    input[type="text"] {
-                        width: 150%;
-                    }
-                }
+            input[type="nom"] {
+                width: 150%;
             }
 
-            .contact-group2 {
-
-                .carre2 {
-                    input[type="number"] {
-                        width: 150%;
-                    }
-                }
-
+            input[type="number"] {
+                width: 150%;
             }
-
         }
 
 
@@ -534,8 +523,8 @@
 
             .side-image-left-bot {
                 top: 40%;
-                left: 6%;
-                width: 220px;
+                left: 6.5%;
+                width: 210px;
             }
 
             .side-image-right {
