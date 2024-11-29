@@ -133,6 +133,7 @@ header {
         /* Garde les proportions du logo */
         transition: all 0.3s ease;
         /* Animation fluide pour les changements */
+        position: relative;
     }
 }
 
@@ -205,7 +206,7 @@ header {
 }
 
 /* Styles Mobile */
-@media (max-width: 768px) {
+@media (max-width: 360px) {
 
     .desktop-menu {
         display: none;
@@ -221,4 +222,48 @@ header {
     a {
         text-decoration: none;
     }
+}
+
+/* Styles Tablette */
+@media (max-width: 768px) {
+
+    .desktop-menu {
+        display: none;
+    }
+
+    header {
+
+        .burger-menu {
+            .burger-nav {
+                width: 768px;
+                gap: 1.5rem;
+
+                .nav__separator {
+                    width: 700px;
+
+                }
+
+                li {
+                    a {
+                        text-decoration: none;
+                        font-size: 1.8rem;
+
+                        &:hover {
+                            text-decoration: none;
+                        }
+                    }
+
+                }
+            }
+        }
+
+        .link-img-home img {
+            padding: 1rem 0 0 1rem;
+            text-decoration: none;
+            /* Taille plus petite pour mobile */
+        }
+
+
+    }
+
 }
