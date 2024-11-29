@@ -134,24 +134,78 @@ header {
 
 /* Styles Desktop */
 @media (min-width: 769px) {
-    .burger-menu {
-        display: none;
-        /* Cache le menu burger sur desktop */
+    header {
+        z-index: 2;
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        background-color: $white;
+
+        .burger-menu {
+            display: none;
+            /* Cache le menu burger sur desktop */
+        }
+
+        .burger-toggle {
+            display: none;
+            /* Cache le bouton burger sur desktop */
+        }
+
+        .active {
+            font-weight: bold;
+        }
+
+        img {
+            width: 80%;
+            height: 48.733px;
+        }
+
+        .link-img-home {
+            width: 10%;
+            padding-left: 5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .desktop-menu {
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            font-style: large;
+
+            .ul-nav-header {
+                display: flex;
+                gap: 2rem;
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+
+                li {
+                    a {
+                        text-decoration: none;
+                        color: $greendark;
+                        font-size: large;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
     }
 
-    .burger-toggle {
-        display: none;
-        /* Cache le bouton burger sur desktop */
-    }
-
-    .link-img-home img {
-        width: 100px;
-        /* Taille réduite pour les écrans larges */
-    }
 }
 
 /* Styles Mobile */
 @media (max-width: 768px) {
+
+    .desktop-menu {
+        display: none;
+    }
+
     .link-img-home img {
         width: 30%;
         padding: 1rem 0 0 1rem;
