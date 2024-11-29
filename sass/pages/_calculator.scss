@@ -5,7 +5,7 @@
     flex-direction: column;
     font-size: 45px;
     font-weight: 600;
-    padding-bottom: 30px;
+    padding-bottom: 50px;
     padding-top: 50px;
 
     h1 {
@@ -15,6 +15,7 @@
         font-size: 45px;
         font-weight: 600;
         line-height: 0rem;
+        margin-bottom: 25px;
     }
 
     .clc-emission3 {
@@ -33,7 +34,6 @@
 .form-content {
     display: flex;
     justify-content: center;
-    text-align: center;
     flex-direction: column;
     margin: 0 auto;
     padding: 30px 100px;
@@ -47,6 +47,16 @@
     font-family: $font-montserrat;
     min-height: 100px; // Ajustez la hauteur selon votre mise en page pour un positionnement optimal
 
+    .button-container {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 1.5rem;
+    }
+
+    .form-footer {
+        display: flex;
+        text-align: center;
+    }
 
     &--label {
         font-weight: 500;
@@ -62,7 +72,7 @@
     width: 100%;
     padding: 10px;
     margin-top: 8px;
-    margin-bottom: 15px;
+    margin-bottom: 2.5rem;
     border: none;
     outline: none;
     border-bottom: 1px solid #ccc;
@@ -149,7 +159,7 @@
     position: absolute;
     border-radius: 50%;
     background-color: $white;
-    z-index: -1;
+    z-index: 3;
 }
 
 .circle-calc-img1 {
@@ -161,18 +171,18 @@
 }
 
 .circle-calc-img2 {
-    width: 60px;
-    height: 60px;
-    top: 17%;
-    right: 12%;
+    width: 70px;
+    height: 70px;
+    top: 15%;
+    right: 11%;
     border: 20px solid #79c258;
 }
 
 .circle-calc-img3 {
     width: 40px;
     height: 40px;
-    top: 30%;
-    right: 13%;
+    top: 29%;
+    right: 11.5%;
     border: 20px solid $lightergreen;
 }
 
@@ -184,21 +194,22 @@
 }
 
 .side-image-calc-left-top {
-    top: 18%;
-    left: 12%;
-    width: 350px;
+    top: 16%;
+    left: 11%;
+    width: 360px;
 }
 
 .side-image-calc-left-bot {
     top: 47%;
-    left: 12%;
-    width: 280px;
+    left: 10.5%;
+    width: 290px;
+    transform: rotate(-15deg);
 }
 
 .side-image-calc-right {
     top: 42%;
-    right: 9%;
-    width: 350px;
+    right: 10%;
+    width: 340px;
     transform: rotate(20deg);
 }
 
@@ -291,7 +302,7 @@
 @media screen and (min-width: 361px) and (max-width: 768px) {
     .title-clc {
         font-size: 20px;
-        padding-top: 20px;
+        padding-top: 4rem;
         padding-bottom: 20px;
         top: 10%;
 
@@ -370,8 +381,12 @@
 @media screen and (min-width: 769px) and (max-width: 1366px) {
     .title-clc {
         font-size: 20px;
-        padding-top: 50px;
-        padding-bottom: 24px;
+        padding-top: 20px;
+        padding-bottom: 10px;
+
+        h1 {
+            font-size: 40px;
+        }
 
         .clc-emission1,
         .clc-emission2 {
@@ -388,13 +403,14 @@
     }
 
     .form-container {
-        padding: 50px 10px;
+        padding: 0 10px;
 
         .form-content {
             padding: 1rem 7rem;
             width: 50%;
             gap: 7px;
             height: 26rem;
+            margin-bottom: 0rem;
 
             .form-footer {
                 font-size: 12px;
@@ -441,13 +457,13 @@
         position: absolute;
         border-radius: 50%;
         background-color: $white;
-        z-index: -1;
+        z-index: 3;
     }
 
     .circle-calc-img1 {
-        width: 70px;
-        height: 70px;
-        top: 27%;
+        width: 100px;
+        height: 100px;
+        top: 23%;
         right: 14%;
         border: 20px solid #019961;
     }
@@ -456,16 +472,16 @@
         width: 50px;
         height: 50px;
         top: 21%;
-        right: 9%;
+        right: 8%;
         border: 14px solid #79c258;
     }
 
     .circle-calc-img3 {
         width: 30px;
         height: 30px;
-        top: 34%;
-        right: 9%;
-        border: 12px solid $lightergreen;
+        top: 33.5%;
+        right: 8.5%;
+        border: 14px solid $lightergreen;
     }
 
     .side-image-calc-left-top,
