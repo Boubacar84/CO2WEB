@@ -256,19 +256,26 @@
                         width: 95%;
                     }
 
-                    input[type="email"] {
-                        width: 97%;
+                    input[type="text"] {
+                        width: 95%;
 
                     }
                 }
             }
 
+            .contact-group {
 
+                .carre2 {
+                    input[type="nom"] {
+                        width: 80%;
+                    }
 
-
-            input[type="nom"] {
-                width: 95%;
+                    input[type="prenom"] {
+                        width: 95%;
+                    }
+                }
             }
+
 
 
 
@@ -473,13 +480,16 @@
             .contact-form {
                 z-index: 3;
 
+
                 .contact-group {
                     .carre2 {
-                        input[type="nom"] {
+                        input[type="text"] {
                             width: 150%;
                         }
                     }
                 }
+
+
 
                 .contact-group2 {
 
@@ -513,8 +523,8 @@
 
             .side-image-left-bot {
                 top: 40%;
-                left: 6.5%;
-                width: 210px;
+                left: 6%;
+                width: 220px;
             }
 
             .side-image-right {
