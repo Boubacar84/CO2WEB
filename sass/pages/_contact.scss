@@ -17,6 +17,15 @@
         align-items: center;
         padding-bottom: 50px;
 
+        .contact-form {
+            input[type="nom"] {
+                width: 150%;
+            }
+
+            input[type="number"] {
+                width: 150%;
+            }
+        }
 
 
         .side-image-left-top {
