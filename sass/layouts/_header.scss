@@ -221,12 +221,15 @@ header {
 
     a {
         text-decoration: none;
+
+        &:hover {
+            text-decoration: none;
+        }
     }
 }
 
 /* Styles Tablette */
-@media (max-width: 768px) {
-
+@media (min-width: 361px) and (max-width: 768px) {
     .desktop-menu {
         display: none;
     }
