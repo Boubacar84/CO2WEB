@@ -414,6 +414,7 @@
 
             textarea {
                 font-family: $font-roboto;
+                width: 110%;
             }
 
         }
@@ -451,6 +452,23 @@
             .contact-form {
                 z-index: 3;
 
+                .contact-group {
+                    .carre2 {
+                        input[type="nom"] {
+                            width: 150%;
+                        }
+                    }
+                }
+
+                .contact-group2 {
+
+                    .carre2 {
+                        input[type="number"] {
+                            width: 150%;
+                        }
+
+                    }
+                }
             }
 
             .side-image-right,
