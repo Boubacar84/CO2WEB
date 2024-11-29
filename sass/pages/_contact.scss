@@ -249,19 +249,29 @@
             flex-direction: column;
             padding: 25px;
 
+            .contact-group2 {
+
+                .carre2 {
+                    input[type="number"] {
+                        width: 95%;
+                    }
+
+                    input[type="email"] {
+                        width: 97%;
+
+                    }
+                }
+            }
+
+
+
 
             input[type="nom"] {
                 width: 95%;
             }
 
-            input[type="email"] {
-                width: 97%;
 
-            }
 
-            input[type="number"] {
-                width: 97%;
-            }
 
             input[type="text"] {
                 width: 100%;
@@ -458,7 +468,7 @@
 
         .form-wrapper {
             position: relative;
-            padding: 50px 10px;
+            padding: 30px 10px;
 
             .contact-form {
                 z-index: 3;
@@ -496,9 +506,9 @@
 
 
             .side-image-left-top {
-                top: 0.3%;
-                left: 8%;
-                width: 240px;
+                top: -7%;
+                left: 7%;
+                width: 260px;
             }
 
             .side-image-left-bot {
@@ -526,27 +536,27 @@
             }
 
             .circle-img1 {
-                width: 70px;
-                height: 70px;
-                top: 2%;
-                right: 14%;
+                width: 90px;
+                height: 90px;
+                top: -3%;
+                right: 17%;
                 border: 20px solid #019961;
                 z-index: 4;
             }
 
             .circle-img2 {
-                width: 50px;
-                height: 50px;
-                top: 0.5%;
-                right: 7%;
+                width: 60px;
+                height: 60px;
+                top: -10%;
+                right: 10.5%;
                 border: 14px solid #79c258;
             }
 
             .circle-img3 {
-                width: 30px;
-                height: 30px;
-                top: 17%;
-                right: 7.5%;
+                width: 40px;
+                height: 40px;
+                top: 11%;
+                right: 11%;
                 border: 12px solid $lightergreen;
             }
         }
